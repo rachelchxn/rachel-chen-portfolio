@@ -1,0 +1,95 @@
+.hFlex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // gap: 32px;
+    // flex: 1 0 0;
+    align-self: stretch;
+  }
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    width: 65%;
+    height: 340px;
+    padding: 32px;
+    border-radius: 36px 0 0 36px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &Alt {
+      @extend .block;
+      border-radius: 0 36px 36px 0;
+
+    }
+}
+
+  
+
+  .tag {
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(47, 47, 47, 0.50);
+    width: max-content;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .tagList {
+    display: flex;
+    position: absolute;
+    bottom: 32px;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  .blockInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    gap: 24px;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 28px;
+    right: 36px;
+    transition: transform 0.3s ease;
+  }
+
+  .imageBlock {
+    height: 340px;
+    width: 35%;
+    border-radius: 0 36px 36px 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    &Alt {
+      @extend .imageBlock;
+      border-radius: 36px 0 0 36px;
+    }
+  }
+
+  .image {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    height: 100%;
+    opacity: 0.7;
+  }
+
+.hFlex:hover .arrow {
+    transform: translateX(6px) translateY(-6px);
+  }
+
+.hFlex:hover .image {
+  transform: scale(1.2);
+  opacity: 1;
+}

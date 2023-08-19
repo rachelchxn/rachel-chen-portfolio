@@ -1,0 +1,38 @@
+
+.iconList {
+    display: flex;
+    position: fixed;
+    bottom: 24px;
+    right: 80px;
+    padding: 0px 8px;
+    align-items: center;
+    gap: 24px;
+
+    
+  }
+
+.icon {
+    opacity: 0.3;
+    transition: all 0.3s ease;
+
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.pfp {
+    position: fixed;
+    bottom: 24px;
+    left: 80px;
+    border-radius: 8px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}

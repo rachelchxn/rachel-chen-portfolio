@@ -1,0 +1,115 @@
+.main {
+  // height: 100vh;
+  padding: 0 80px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0 56px;
+  height: calc(100vh - 100px);
+  max-width: 984px;
+  margin: auto;
+}
+
+.vFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.hFlex {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-self: stretch;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.subheading {
+  max-width: 90%;
+}
+
+.block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-self: stretch;
+  width: 80%;
+  height: calc(200px + 10vh );
+  overflow: hidden;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
+.blockLabel {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: 24px 32px;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.mainArrow {
+  height: 36px;
+  width: 88px;
+  margin: 0 16px;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 36px;
+  transition: transform 0.3s ease;
+}
+
+.mockup {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.fillerBlock {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  padding: 24px 32px;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  border-radius: 36px;
+  border: 1px solid var(--mid-grey);
+}
+
+.image {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.block:hover .arrow {
+  transform: translateX(6px) translateY(-6px);
+}
+
+.block:hover .image {
+  opacity: 1;
+  transform: scale(1.1);
+}
