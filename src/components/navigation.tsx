@@ -27,7 +27,7 @@ export default function Navigation() {
           <Link href={"/dev"}>
             <p
               className={
-                pathname === "/dev"
+                pathname.startsWith("/dev")
                   ? styles.buttonTextCurrent
                   : styles.buttonText
               }
@@ -38,7 +38,7 @@ export default function Navigation() {
           <Link href={"/design"}>
             <p
               className={
-                pathname === "/design"
+                pathname.startsWith("/design")
                   ? styles.buttonTextCurrent
                   : styles.buttonText
               }

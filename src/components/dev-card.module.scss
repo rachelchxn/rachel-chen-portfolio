@@ -1,69 +1,80 @@
 .card {
-    border-radius: 32px;
-    overflow: hidden;
-    cursor: pointer;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &Disabled {
+    @extend .card;
+    opacity: 0.8;
+    cursor: auto;
+  }
 }
 
 .imageBlock {
-    display: flex;
-    height: 320px;
-    overflow: hidden;
-    justify-self: center;
+  display: flex;
+  height: 320px;
+  overflow: hidden;
+  justify-self: center;
 }
 
 .image {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+
+  &Disabled {
     opacity: 0.8;
+  }
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    padding: 32px;
-    gap: 32px;
-    position: relative;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 32px;
+  position: relative;
+  justify-content: space-between;
+  height: 280px;
 }
 
 .infoMain {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .tag {
-    display: flex;
-    padding: 6px 12px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 20px;
-    border: 1px solid rgba(47, 47, 47, 0.50);
-    width: max-content;
-    font-size: 14px;
-    opacity: 0.7;
-  }
+  display: flex;
+  padding: 6px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(47, 47, 47, 0.5);
+  width: max-content;
+  font-size: 14px;
+  opacity: 0.7;
+}
 
-  .tagList {
-    display: flex;
-    bottom: 32px;
-    align-items: center;
-    align-content: center;
-    gap: 10px;
-    align-self: stretch;
-    flex-wrap: wrap;
-  }
+.tagList {
+  display: flex;
+  bottom: 32px;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
 
-  .arrow {
-    position: absolute;
-    bottom: 28px;
-    right: 36px;
-    transition: transform 0.3s ease;
-  }
+.arrow {
+  position: absolute;
+  bottom: 28px;
+  right: 36px;
+  transition: transform 0.3s ease;
+}
 
-  .card:hover .arrow {
-    transform: translateX(6px) translateY(-6px);
-  }
+.card:hover .arrow {
+  transform: translateX(6px) translateY(-6px);
+}
 
 .card:hover .image {
   transform: scale(1.1);
