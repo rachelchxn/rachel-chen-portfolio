@@ -17,12 +17,18 @@ export default function Earth() {
                 <p>Mar - Aug 2023</p>
               </div>
               <div className={styles.detail}>
-                <h5>Timeline</h5>
-                <p>Mar - Aug 2023</p>
+                <h5>Role</h5>
+                <p>Lead Designer, Supporting Developer </p>
               </div>
               <div className={styles.detail}>
-                <h5>Timeline</h5>
-                <p>Mar - Aug 2023</p>
+                <h5>Scope</h5>
+                <p>UX Design</p>
+              </div>
+              <div className={styles.detail}>
+                <h5>Team</h5>
+                <p>1 Designer</p>
+                <p>2 Developers</p>
+                <p>1 PM</p>
               </div>
             </div>
             <div className={styles.title}>

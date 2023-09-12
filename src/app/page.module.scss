@@ -1,6 +1,11 @@
 .main {
-  // height: 100vh;
   padding: 0 80px;
+  min-height: calc(100vh - 77.78px);
+  align-items: flex-start;
+}
+
+@media screen {
+  
 }
 
 .body {
