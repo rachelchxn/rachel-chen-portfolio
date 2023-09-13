@@ -46,7 +46,7 @@ export default function Navigation() {
               Design Work
             </p>
           </Link>
-          <button className="sm-btn">Get in Touch</button>
+          <button className="sm-btn">My Resume</button>
         </div>
       </div>
     </>
