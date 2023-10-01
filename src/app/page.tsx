@@ -23,7 +23,7 @@ export default function Home() {
           </div>
           <div>
             <p className={styles.subheading}>
-              I’m a product designer with a burning passion for building
+              I’m a developer and designer with a burning passion for building
               high-impact experiences with technology. I’m currently scaling
               products for Fortune 500’s at Onova, developing B2B AI solutions,
               and bringing fun ideas to life through code.

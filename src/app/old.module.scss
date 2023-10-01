@@ -35,9 +35,9 @@
   gap: 24px;
   &Main {
     @extend .vFlex;
-  justify-content: center;
-  height: 100%;
-  margin-bottom: 24px;
+    justify-content: center;
+    height: 100%;
+    margin-bottom: 24px;
   }
 }
 
@@ -61,7 +61,7 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  border-bottom: 1px solid var(--dark-grey, #504F4E);
+  border-bottom: 1px solid var(--dark-grey, #504f4e);
 }
 
 .iconList {
@@ -79,7 +79,7 @@
   width: 80%;
   height: 1fr;
   overflow: hidden;
-  border-radius: 36px;
+  border-radius: 32px;
   cursor: pointer;
 }
 
@@ -126,7 +126,7 @@
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
-  border-radius: 36px;
+  border-radius: 32px;
   border: 1px solid var(--mid-grey);
 }
 

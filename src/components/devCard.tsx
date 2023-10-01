@@ -34,7 +34,7 @@ const DevCard: React.FC<DevCardProps> = ({
   return (
     <div
       className={!disabled ? styles.card : styles.cardDisabled}
-      onClick={handleClick}
+      onClick={disabled ? undefined : handleClick}
     >
       <div className={styles.imageBlock}>
         <img

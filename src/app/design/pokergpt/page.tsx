@@ -1,31 +1,30 @@
 // import Image from "next/image";
-import styles from "./earth.module.scss";
+import styles from "./pokergpt.module.scss";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Earth() {
+export default function PokerGPT() {
   return (
     <div>
       <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
-          <img src="/earth-image.svg" alt="Mockup of Earth" />
+          <img src="/pokergpt-image.svg" alt="Mockup of Earth" />
           <div className={styles.overview}>
             <div className={styles.details}>
               <div className={styles.detail}>
                 <h5>Timeline</h5>
-                <p>Feb 2023 - Present</p>
+                <p>May 2023 - Present</p>
               </div>
               <div className={styles.detail}>
                 <h5>Role</h5>
-                <p>Lead Designer, Supporting Developer </p>
+                <p>Founding Designer, Front-End Developer </p>
               </div>
               <div className={styles.detail}>
                 <h5>Scope</h5>
-                <p>
-                  UX Design, UI Design, User Testing, Site Architecture,
-                  Front-End Development
-                </p>
+                <p>UX Design, Brand Design, Front-End Development</p>
               </div>
               <div className={styles.detail}>
                 <h5>Team</h5>
@@ -35,16 +34,16 @@ export default function Earth() {
               </div>
             </div>
             <div className={styles.title}>
-              <h2>A Hackathon Management Platform for Fortune 500 Companies</h2>
+              <h2>The World’s First AI-Powered Poker Coach</h2>
               <p>
-                Onova is an innovation consultancy that hosts large-scale,
-                internal hackathons for some of the world's largest companies.
-                After hearing out our past participants talk discuss the
-                struggles with navigating multiple platforms for functions for
-                team formation, project judging, and attending live events, we
-                decided that there was a better way to do things. Hence, Earth
-                was born -- an all-in-one innovation management platform.
+                To take poker seriously means needing a professional poker
+                coach. But getting a coach is expensive and inaccessible to
+                many. What if there was a way to solve this problem with the
+                emerging opportunity of generative AI?
               </p>
+              <Link href={"https://www.pokergpt.app"} target="_blank">
+                <button>Visit Site</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -53,10 +52,6 @@ export default function Earth() {
             Full case study coming soon!
           </h5>
         </div>
-
-        {/* <div className={styles.sectionB}>
-          <h3>From Just an Idea...</h3>
-        </div> */}
       </div>
     </div>
   );
