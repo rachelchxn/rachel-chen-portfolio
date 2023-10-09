@@ -32,7 +32,13 @@ export default function Dev() {
                 ></Image>
               </button>
             </Link>
-            <button className="btnSecondary">See Resume</button>
+            <Link
+              href="/Rachel_Chen_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btnSecondary">See Resume</button>
+            </Link>
           </div>
         </div>
       </div>

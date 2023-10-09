@@ -46,7 +46,14 @@ export default function Navigation() {
               Design Work
             </p>
           </Link>
-          <button className="sm-btn">My Resume</button>
+          <Link
+            href="/Rachel_Chen_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="sm-btn">My Resume</button>
+          </Link>
+          {/* <button className="sm-btn">My Resume</button> */}
         </div>
       </div>
     </>

@@ -9,6 +9,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Rachel Chen's Portfolio",
   description: "Welcome to my tech space.",
+  icons: "/rachelchenfavicon.png",
 };
 
 export default function RootLayout({
@@ -18,6 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/rachelchenfavicon.ico" sizes="any" />
+      </head>
       <body className={manrope.className}>
         <Navigation />
         {children}
