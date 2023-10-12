@@ -44,6 +44,19 @@
   }
 }
 
+.converge {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 48px;
+  width: 100%;
+  h5 {
+    padding: 24px 48px;
+    background-color: var(--light-grey);
+    border-radius: 32px;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;

@@ -17,13 +17,10 @@ export default function Dev() {
           </p>
         </div>
         <div className={styles.devGrid}>
-          {projects.map((project) => (
-            <Link
-              href={`/dev/${encodeURIComponent(project.title)}`}
-              key={project.title}
-              passHref
-            >
+          {projects.map((project) =>
+            project.disabled ? (
               <DevCard
+                key={project.title}
                 title={project.title}
                 description={project.description}
                 tags={project.tags}
@@ -31,8 +28,23 @@ export default function Dev() {
                 colour={project.colour}
                 disabled={project.disabled}
               />
-            </Link>
-          ))}
+            ) : (
+              <Link
+                href={`/dev/${encodeURIComponent(project.title)}`}
+                key={project.title}
+                passHref
+              >
+                <DevCard
+                  title={project.title}
+                  description={project.description}
+                  tags={project.tags}
+                  imageURL={project.imageURL}
+                  colour={project.colour}
+                  disabled={project.disabled}
+                />
+              </Link>
+            )
+          )}
         </div>
       </div>
     </main>

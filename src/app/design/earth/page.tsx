@@ -65,6 +65,21 @@ export default function Earth() {
             hosting virtual events, event information, and team communication.
           </p>
         </div>
+        <div className={styles.section}>
+          <h3>Our Solution:</h3>
+          <h4>
+            An all-in-one platform for hosting large scale hybrid hackathons.
+          </h4>
+          <p>
+            We set out to converge existing 3rd-party services into a one-stop
+            destination for all innovation needs:
+          </p>
+          <div className={styles.converge}>
+            <h5>Webex</h5>
+            <h5>Hopin</h5>
+            <h5>Agorize</h5>
+          </div>
+        </div>
       </div>
     </div>
   );
