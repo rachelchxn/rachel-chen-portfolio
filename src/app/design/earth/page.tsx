@@ -49,14 +49,22 @@ export default function Earth() {
           </div>
         </div>
         <div className={styles.sectionB}>
-          <h5 style={{ textAlign: "center", width: "100%" }}>
-            Full case study coming soon!
-          </h5>
-        </div>
-
-        {/* <div className={styles.sectionB}>
           <h3>From Just an Idea...</h3>
-        </div> */}
+          <p>
+            In the Onova summer cottage sprint of 2022, an idea was born: an
+            all-in-one hackathon management platform for onova to use in client
+            events.
+          </p>
+          <p>
+            Onova is an innovation consulting company that organizes global
+            hackathons and sprints for fortune 500 companies. throughout the
+            years, the team has found trouble with integrating multiple third
+            party services for running their events. feedback directly from
+            participants and judges has made it clear that it is frustrating and
+            confusing to navigate the various different platforms used for
+            hosting virtual events, event information, and team communication.
+          </p>
+        </div>
       </div>
     </div>
   );

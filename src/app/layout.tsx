@@ -3,13 +3,13 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rachel Chen's Portfolio",
+  title: "Rachel <-> Chen",
   description: "Welcome to my tech space.",
-  icons: "/rachelchenfavicon.png",
 };
 
 export default function RootLayout({
@@ -19,10 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/rachelchenfavicon.ico" sizes="any" />
-      </head>
-      <body className={manrope.className}>
+      <Head>
+        <link rel="icon" href="/rachelchenfavicon.ico" />
+        <title>Rachel Chen's Portfolio</title>
+        <meta name="description" content="Welcome to my tech space." />
+      </Head>
+      <body>
         <Navigation />
         {children}
         <Footer />

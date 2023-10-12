@@ -14,7 +14,12 @@
 
 .backlink {
   display: inline-flex;
+  width: max-content;
   gap: 8px;
+
+  p {
+    width: max-content;
+  }
 }
 
 .backlink:hover .backarrow {
