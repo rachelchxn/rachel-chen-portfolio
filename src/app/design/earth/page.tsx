@@ -76,7 +76,10 @@ export default function Earth() {
           </p>
           <div className={styles.converge}>
             <h5>Webex</h5>
+            <div className={styles.line} />
             <h5>Hopin</h5>
+            <div className={styles.line} />
+
             <h5>Agorize</h5>
           </div>
         </div>

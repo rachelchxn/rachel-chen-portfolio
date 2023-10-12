@@ -28,7 +28,7 @@ export default function RootLayout({
         <title>Rachel Chen's Portfolio</title>
         <meta name="description" content="Welcome to my tech space." />
       </Head>
-      <body>
+      <body className={manrope.className}>
         <Navigation />
         {children}
         <Footer />
