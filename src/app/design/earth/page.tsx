@@ -83,6 +83,25 @@ export default function Earth() {
             <h5>Agorize</h5>
           </div>
         </div>
+        {/* <div className={styles.sectionB}>
+          <h3>The User Perspectives to Consider</h3>
+          <div>
+            <div>
+              <h4>Event Organizers</h4>
+              <p>
+                The primary stakeholders of the project, the PM at the time, and
+                other employees at my company were the target users for the
+                admin-facing side of Earth. As someone who was not experienced
+                with running large-scale corporate hackathons, I consulted
+                regularly throughout the design process with my colleagues and
+                managers to understand their pain points and validate design
+                choices.
+              </p>
+            </div>
+            <h4>Participants</h4>
+            <h4>Judges & Mentors</h4>
+          </div>
+        </div> */}
       </div>
     </div>
   );
