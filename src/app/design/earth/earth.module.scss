@@ -9,6 +9,7 @@
 .overview {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 32px;
 }
 
 .details {
@@ -41,6 +42,19 @@
   &B {
     @extend .section;
     background-color: var(--light-grey);
+
+    &grid {
+      @extend .sectionB;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 32px;
+      }
+    }
   }
 }
 
@@ -76,5 +90,81 @@
     object-fit: cover;
     background-color: #f3f6fc;
     border-radius: 32px;
+  }
+}
+
+.points {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.point {
+  width: 100%;
+  padding: 24px;
+  background-color: var(--primary-white);
+  border-radius: 32px;
+  text-align: center;
+
+  h5 {
+    margin: auto;
+  }
+}
+
+.vFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    width: 70%;
+    margin: auto 15%;
+    flex-shrink: 0;
+  }
+  p {
+    padding: 10px;
+    background-color: var(--mid-grey);
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+
+    &.disabled {
+      cursor: default;
+      opacity: 0.25;
+    }
+  }
+}
+
+.imageSlider {
+  display: flex;
+  transition: transform 0.5s ease; /* This provides the sliding animation */
+}
+
+.eurekaGrid {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  height: fit-content;
+  img {
+    width: 50%;
+    border-radius: 32px;
+    object-fit: contain;
   }
 }

@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import styles from "./pokergpt.module.scss";
+import styles from "./the-cups.module.scss";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import Link from "next/link";
@@ -11,7 +11,11 @@ export default function PokerGPT() {
       <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
-          <img src="/thecups-image.svg" alt="Mockup of The Cups App" />
+          <img
+            className={styles.cover}
+            src="/thecups-image.svg"
+            alt="Mockup of The Cups App"
+          />
           <div className={styles.overview}>
             <div className={styles.details}>
               <div className={styles.detail}>
@@ -45,7 +49,15 @@ export default function PokerGPT() {
                 }
                 target="_blank"
               >
-                <button>Visit Prototype</button>
+                <button>
+                  Visit Prototype{" "}
+                  <Image
+                    src="/arrow.svg"
+                    alt={"->"}
+                    width={18}
+                    height={18}
+                  ></Image>
+                </button>
               </Link>
             </div>
           </div>

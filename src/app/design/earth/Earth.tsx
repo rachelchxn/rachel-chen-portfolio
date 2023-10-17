@@ -1,24 +1,6 @@
-"use client";
 import styles from "./earth.module.scss";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
-import { useState } from "react";
 
 export default function Earth() {
-  const images = ["/earth_redefined_1.png", "/earth_redefined_2.png"];
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevImage = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const nextImage = () => {
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
   return (
     <div>
       <div className={styles.navWrap}></div>
@@ -64,25 +46,23 @@ export default function Earth() {
           </div>
         </div>
         <div className={styles.sectionBgrid}>
-          <img src="/onovafam.jpg" />
-          <div className={styles.vFlex}>
-            <h3>From Just an Idea...</h3>
-            <h4>
-              In the Onova summer cottage sprint of 2022, an idea was born: an
-              all-in-one hackathon management platform for onova to use in
-              client events.
-            </h4>
-            <p>
-              Onova is an innovation consulting company that organizes global
-              hackathons and sprints for fortune 500 companies. throughout the
-              years, the team has found trouble with integrating multiple third
-              party services for running their events. Feedback from
-              participants and judges in post-event surveys has made it clear
-              that it is frustrating and confusing to navigate the various
-              different platforms used for hosting virtual events, event
-              information, and team communication.
-            </p>
-          </div>
+          <img />
+          <h3>From Just an Idea...</h3>
+          <h4>
+            In the Onova summer cottage sprint of 2022, an idea was born: an
+            all-in-one hackathon management platform for onova to use in client
+            events.
+          </h4>
+          <p>
+            Onova is an innovation consulting company that organizes global
+            hackathons and sprints for fortune 500 companies. throughout the
+            years, the team has found trouble with integrating multiple third
+            party services for running their events. Feedback from participants
+            and judges in post-event surveys has made it clear that it is
+            frustrating and confusing to navigate the various different
+            platforms used for hosting virtual events, event information, and
+            team communication.
+          </p>
         </div>
         <div className={styles.section}>
           <h3>Our Solution:</h3>
@@ -130,13 +110,13 @@ export default function Earth() {
           <h3>Some Recurring Points of Frustration:</h3>
           <div className={styles.points}>
             <div className={styles.point}>
-              <h5>Navigating multiple platforms and finding links</h5>
+              <p>Navigating multiple applications and finding specific links</p>
             </div>
             <div className={styles.point}>
-              <h5>Disorganized communication from organizers</h5>
+              <p>Disorganized communication from organizers</p>
             </div>
             <div className={styles.point}>
-              <h5>Inconsistency in judging processes</h5>
+              <p>Inconsistency in judging processes</p>
             </div>
           </div>
         </div>
@@ -156,39 +136,14 @@ export default function Earth() {
         <div className={styles.sectionB}>
           <h3>Redefining Flows</h3>
           <p>
-            Taking over as the lead designer, I redefined the flows and created
-            new layouts based on the existing designs. Based on internal team
+            As part of the project, I redefined the flows and created new
+            layouts based on the existing designs. Based on internal team
             feedback and my own discretion, I identified pages that needed
             restructured layouts and optimized UI's.
           </p>
           <h4>Here are a few examples:</h4>
-          <div className={styles.carousel}>
-            <p
-              className={currentIndex === 0 ? styles.disabled : ""}
-              onClick={prevImage}
-            >
-              {"<"}
-            </p>
-            <div className={styles.imageContainer}>
-              <div
-                className={styles.imageSlider}
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {images.map((src, index) => (
-                  <img src={src} alt={`Carousel ${index}`} />
-                ))}
-              </div>
-            </div>
-            <p
-              className={
-                currentIndex === images.length - 1 ? styles.disabled : ""
-              }
-              onClick={nextImage}
-            >
-              {">"}
-            </p>
-          </div>
           <p>
+            {" "}
             To ensure that the design choices were well-informed, I conducted
             competitive research and noted best practices for specific design
             components. We iterated on our designs based on weekly internal
@@ -203,17 +158,10 @@ export default function Earth() {
             supplied our platform to a student hackathon, which attracted over
             100 users. Fortunately, we encountered no major technical
             difficulties or complaints during this event, indicating the success
-            of our beta launch.
+            of our beta launch. During the hackathon, I conducted user
+            interviews, alongside the PM, gathering valuable feedback that would
+            inform our next steps in Earth’s development process.
           </p>
-          <p>
-            During the hackathon, I conducted user interviews, alongside the PM,
-            gathering valuable feedback that would inform our next steps in
-            Earth’s development process.
-          </p>
-          <div className={styles.eurekaGrid}>
-            <img src="/earth_eureka_1.png" />
-            <img src="/earth_eureka_2.png" />
-          </div>
         </div>
       </div>
     </div>

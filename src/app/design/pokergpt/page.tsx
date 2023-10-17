@@ -11,7 +11,11 @@ export default function PokerGPT() {
       <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
-          <img src="/pokergpt-image.svg" alt="Mockup of Earth" />
+          <img
+            className={styles.cover}
+            src="/pokergpt-image.svg"
+            alt="Mockup of Earth"
+          />
           <div className={styles.overview}>
             <div className={styles.details}>
               <div className={styles.detail}>
@@ -42,7 +46,15 @@ export default function PokerGPT() {
                 emerging opportunity of generative AI?
               </p>
               <Link href={"https://www.pokergpt.app"} target="_blank">
-                <button>Visit Site</button>
+                <button>
+                  Visit Site{" "}
+                  <Image
+                    src="/arrow.svg"
+                    alt={"->"}
+                    width={18}
+                    height={18}
+                  ></Image>
+                </button>
               </Link>
             </div>
           </div>

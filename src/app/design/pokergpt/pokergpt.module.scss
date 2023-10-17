@@ -52,11 +52,11 @@
   padding: 0 15%;
   width: 100%;
   gap: 64px;
+}
 
-  img {
-    height: 400px;
-    object-fit: cover;
-    background-color: #f3f6fc;
-    border-radius: 32px;
-  }
+.cover {
+  height: 400px;
+  object-fit: cover;
+  background-color: #f3f6fc;
+  border-radius: 32px;
 }

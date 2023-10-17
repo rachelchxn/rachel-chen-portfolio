@@ -1,5 +1,7 @@
 .nav {
   display: flex;
+  position: sticky;
+  top: 0;
   padding: 16px 80px;
   justify-content: space-between;
   align-items: center;
