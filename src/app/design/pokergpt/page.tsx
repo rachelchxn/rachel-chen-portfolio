@@ -11,6 +11,10 @@ export default function PokerGPT() {
       <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
+          <Link href={"/design"} className={styles.backlink}>
+            <p className={styles.backarrow}>{"<- "}</p>
+            <p>Back to Projects</p>
+          </Link>
           <img
             className={styles.cover}
             src="/pokergpt-image.svg"

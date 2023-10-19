@@ -60,3 +60,22 @@
   background-color: #f3f6fc;
   border-radius: 32px;
 }
+
+.backlink {
+  display: inline-flex;
+  width: max-content;
+  gap: 8px;
+  margin-bottom: -40px;
+
+  p {
+    width: max-content;
+  }
+}
+
+.backlink:hover .backarrow {
+  transform: translateX(-4px);
+}
+
+.backarrow {
+  transition: all 0.3 ease;
+}

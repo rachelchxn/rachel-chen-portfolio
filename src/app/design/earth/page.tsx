@@ -3,6 +3,7 @@ import styles from "./earth.module.scss";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Earth() {
   const images = ["/earth_redefined_1.png", "/earth_redefined_2.png"];
@@ -24,6 +25,11 @@ export default function Earth() {
       <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
+          <Link href={"/design"} className={styles.backlink}>
+            <p className={styles.backarrow}>{"<- "}</p>
+            <p>Back to Projects</p>
+          </Link>
+
           <img src="/earth-image.svg" alt="Mockup of Earth" />
           <div className={styles.overview}>
             <div className={styles.details}>
