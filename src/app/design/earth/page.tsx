@@ -164,8 +164,8 @@ export default function Earth() {
           <p>
             Taking over as the lead designer, I redefined the flows and created
             new layouts based on the existing designs. Based on internal team
-            feedback and my own discretion, I identified pages that needed
-            restructured layouts and optimized UI's.
+            feedback and my knowledge of UX best practices, I identified pages
+            that needed restructured layouts and optimized UI's.
           </p>
           <h4>Here are a few examples:</h4>
           <div className={styles.carousel}>
@@ -220,6 +220,48 @@ export default function Earth() {
             <img src="/earth_eureka_1.png" />
             <img src="/earth_eureka_2.png" />
           </div>
+          <div></div>
+          <h3>User Feedback Summary:</h3>
+          <div className={styles.chart}>
+            <div>
+              <h5>Likes</h5>
+              <ul>
+                <li>
+                  Home/Event Info Page are part of the site where all the action
+                  happens
+                </li>
+                <li>Clear and intuitive navigation</li>
+                <li>Visually appealing interface</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Dislikes</h5>
+              <ul>
+                <li>No community aspect like Devpost</li>
+                <li>
+                  Schedule component was confusing and optimized for virtual
+                  events
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h5>Improvements</h5>
+              <ul>
+                <li>Clearer flow after judging a project</li>
+                <li>A built-in timer for judging projects</li>
+                <li>Optimize the mobile experience</li>
+              </ul>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div className={styles.sectionB}>
+          <h3>Taking Earth to the Moon 🚀</h3>
+          <p>
+            Our company was approached with the opportunity to organize the 2023
+            Google x Capgemini Generative AI Hackathon. This was Earth's first
+            client event, taking on 1000+ users from Fortune 500 companies.
+          </p>
         </div>
       </div>
     </div>

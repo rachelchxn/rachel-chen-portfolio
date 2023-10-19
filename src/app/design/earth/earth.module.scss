@@ -185,5 +185,23 @@
 }
 
 .backarrow {
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
+}
+
+.chart {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  div {
+    background-color: var(--light-grey);
+    width: 100%;
+    padding: 30px;
+    border-radius: 32px;
+
+    ul {
+      padding-left: 16px;
+      margin-top: 16px;
+      font-size: 20px;
+    }
+  }
 }
