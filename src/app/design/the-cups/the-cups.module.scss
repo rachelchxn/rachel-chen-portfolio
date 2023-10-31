@@ -42,6 +42,26 @@
   &B {
     @extend .section;
     background-color: var(--light-grey);
+
+    &grid {
+      @extend .sectionB;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &Grid {
+    @extend .section;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    gap: 64px;
+  }
+
+  ol {
+    font-size: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -78,4 +98,35 @@
 
 .backarrow {
   transition: all 0.3s ease;
+}
+
+.points {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.point {
+  width: 100%;
+  padding: 32px;
+  background-color: var(--primary-white);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.vFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  border-radius: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--primary-white);
+  gap: 64px;
 }
