@@ -221,7 +221,7 @@ export default function Earth() {
             <img src="/earth_eureka_2.png" />
           </div>
           <div></div>
-          <h3>User Feedback Summary:</h3>
+          <h3>What We Learned From Our Users:</h3>
           <div className={styles.chart}>
             <div>
               <h5>Likes</h5>
@@ -256,11 +256,44 @@ export default function Earth() {
           <div></div>
         </div>
         <div className={styles.sectionB}>
+          <h3>A peek at Earth...</h3>
+          <img
+            style={{ width: "100%" }}
+            src="/earth-shots.png"
+            alt="screenshots of earth"
+          />
+        </div>
+        <div className={styles.section}>
           <h3>Taking Earth to the Moon 🚀</h3>
           <p>
             Our company was approached with the opportunity to organize the 2023
             Google x Capgemini Generative AI Hackathon. This was Earth's first
             client event, taking on 1000+ users from Fortune 500 companies.
+          </p>
+          <h3>Outcomes?</h3>
+          <div className={styles.points}>
+            <div className={styles.pointB}>
+              <h5>Over 1,000 Active Users on the Platform</h5>
+            </div>
+            <div className={styles.pointB}>
+              <h5>96% Satisfaction With the User Experience</h5>
+            </div>
+            <div className={styles.pointB}>
+              <h5>9/10 Would Recommend Earth to a Friend</h5>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.sectionB}>
+          <h3>What's Next?</h3>
+          <p>
+            While Earth began as a helpful tool to compliment Onova's innovation
+            consulting services, we have bigger plans for the platform. As Earth
+            transitions from consulting service upsell {"->"} standalone SaaS
+            product, we are actively designing and building out features like a
+            customizable CMS and restructuring the architecture to optimally
+            support a range of customers on the platform. We can't wait to see
+            where Earth lands next.
           </p>
         </div>
       </div>

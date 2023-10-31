@@ -39,10 +39,45 @@
   align-items: flex-start;
   gap: 32px;
 
+  &Grid {
+    @extend .section;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+
   &B {
     @extend .section;
     background-color: var(--light-grey);
+
+    &grid {
+      @extend .sectionB;
+      display: grid;
+      grid-template-columns: 3fr 0.25fr 1.75fr;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 32px;
+      }
+    }
   }
+}
+
+.vFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
 }
 
 .header {
@@ -78,4 +113,40 @@
 
 .backarrow {
   transition: all 0.3s ease;
+}
+
+.points {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.point {
+  width: 100%;
+  padding: 32px;
+  background-color: var(--light-grey);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.pointB {
+  width: 100%;
+  padding: 32px;
+  background-color: var(--primary-white);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  border-radius: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 32px;
+  margin-top: 32px;
+  background-color: var(--primary-white);
+  align-items: center;
+  gap: 64px;
 }
