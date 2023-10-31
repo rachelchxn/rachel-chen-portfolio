@@ -42,7 +42,7 @@ export default function Home() {
               />
             </Link>
             <Link className={styles.block} href={"/design"}>
-              <img className={styles.image} src="/design-work.svg" />
+              <img className={styles.image} src="/design-work.png" />
               <h4 className={styles.blockLabel}>Design Work</h4>
               <Image
                 className={styles.arrow}

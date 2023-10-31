@@ -47,7 +47,7 @@ export default function Navigation() {
             </p>
           </Link>
           <Link
-            href="/Rachel_Chen_Resume.pdf"
+            href="/RachelChen_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

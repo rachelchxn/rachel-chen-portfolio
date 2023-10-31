@@ -17,7 +17,7 @@ export default function PokerGPT() {
           </Link>
           <img
             className={styles.cover}
-            src="/thecups-image.svg"
+            src="/thecups-mockup.png"
             alt="Mockup of The Cups App"
           />
           <div className={styles.overview}>
