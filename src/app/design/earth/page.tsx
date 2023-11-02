@@ -270,6 +270,24 @@ export default function Earth() {
             Google x Capgemini Generative AI Hackathon. This was Earth's first
             client event, taking on 1000+ users from Fortune 500 companies.
           </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              marginBottom: "20px",
+            }}
+          >
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/YqDScWHR6Xc?si=wOUqF002SfDTBR8-"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <h3>Outcomes?</h3>
           <div className={styles.points}>
             <div className={styles.pointB}>
