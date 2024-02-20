@@ -11,6 +11,7 @@ type ProjectBlockProps = {
   imageURL: string;
   order: boolean;
   colour: string;
+  disabled: boolean;
 };
 
 const ProjectBlock: React.FC<ProjectBlockProps> = ({
@@ -20,6 +21,7 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
   imageURL,
   order,
   colour,
+  disabled,
 }) => {
   const router = useRouter();
 
@@ -53,9 +55,11 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
             </p>
           ))}
         </div>
-        <div className={styles.arrow}>
-          <Image src="arrow.svg" alt="->" width={32} height={32} />
-        </div>
+        {!disabled && (
+          <div className={styles.arrow}>
+            <Image src="arrow.svg" alt="->" width={32} height={32} />
+          </div>
+        )}
       </div>
       {order && (
         <div className={styles.imageBlock}>

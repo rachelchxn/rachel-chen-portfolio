@@ -49,7 +49,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 32px;
+      border-radius: var(--border-radius);
     }
   }
 
@@ -67,7 +67,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 32px;
+        border-radius: var(--border-radius);
       }
     }
   }
@@ -93,7 +93,7 @@
   height: 400px;
   object-fit: cover;
   background-color: #f3f6fc;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
 }
 
 .backlink {
@@ -126,7 +126,7 @@
   width: 100%;
   padding: 32px;
   background-color: var(--light-grey);
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   text-align: center;
 }
 
@@ -134,7 +134,7 @@
   width: 100%;
   padding: 32px;
   background-color: var(--primary-white);
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
 }
@@ -142,7 +142,7 @@
 .grid {
   display: grid;
   width: 100%;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   grid-template-columns: repeat(2, 1fr);
   padding: 32px;
   margin-top: 32px;

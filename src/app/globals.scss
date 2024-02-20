@@ -10,6 +10,8 @@
   --mid-dark-grey: #9a9a9a;
   --dark-grey: #504f4e;
   --primary-dark: #2f2f2f;
+
+  --border-radius: 16px;
 }
 
 * {
@@ -98,7 +100,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   background: var(--mid-grey);
   border: 0;
   font-size: 16px;

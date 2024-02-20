@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Earth() {
   const images = ["/earth_redefined_1.png", "/earth_redefined_2.png"];
@@ -30,7 +31,11 @@ export default function Earth() {
             <p>Back to Projects</p>
           </Link>
 
-          <img src="/earth-image.svg" alt="Mockup of Earth" />
+          <img
+            className={styles.cover}
+            src="/earth-image.svg"
+            alt="Mockup of Earth"
+          />
           <div className={styles.overview}>
             <div className={styles.details}>
               <div className={styles.detail}>
@@ -66,6 +71,17 @@ export default function Earth() {
                 decided that there was a better way to do things. Hence, Earth
                 was born -- an all-in-one innovation management platform.
               </p>
+              <Link href={"https://demo.onova.io/"} target="_blank">
+                <button>
+                  Visit Site{" "}
+                  <Image
+                    src="/arrow.svg"
+                    alt={"->"}
+                    width={18}
+                    height={18}
+                  ></Image>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

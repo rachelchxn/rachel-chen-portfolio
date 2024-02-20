@@ -18,7 +18,7 @@ export default function PokerGPT() {
           <img
             className={styles.cover}
             src="/pokergpt-image.svg"
-            alt="Mockup of Earth"
+            alt="Mockup of PokerGPT"
           />
           <div className={styles.overview}>
             <div className={styles.details}>

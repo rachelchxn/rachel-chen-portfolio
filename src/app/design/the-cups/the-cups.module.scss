@@ -78,7 +78,7 @@
   height: 400px;
   object-fit: cover;
   background-color: #f3f6fc;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
 }
 
 .backlink {
@@ -111,7 +111,7 @@
   width: 100%;
   padding: 32px;
   background-color: var(--primary-white);
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   text-align: center;
 }
 
@@ -125,7 +125,7 @@
 .grid {
   display: grid;
   width: 100%;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--primary-white);
   gap: 64px;

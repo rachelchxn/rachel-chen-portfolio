@@ -23,6 +23,7 @@ export default function Design() {
           imageURL="/earth-image.svg"
           order={true}
           colour="#E2EAFA"
+          disabled={false}
         />
         <ProjectBlock
           title="PokerGPT"
@@ -31,14 +32,25 @@ export default function Design() {
           imageURL="/pokergpt-image.svg"
           order={false}
           colour="#E5DEF8"
+          disabled={false}
         />
         <ProjectBlock
           title="The Cups"
           description="Frozen Dessert-On-Demand for Everyone"
           tags={["UX Design", "UI Design"]}
-          imageURL="/thecups-image.svg"
+          imageURL="/thecups-mockup.png"
           order={true}
           colour="#FCE2E7"
+          disabled={false}
+        />
+        <ProjectBlock
+          title="RBC Design Thinking Program"
+          description="A Community for New Parents to Support New Parents"
+          tags={["UX Research", "UX Design", "UI Design"]}
+          imageURL="/coming-soon.svg"
+          order={false}
+          colour="#E5E4E4"
+          disabled={true}
         />
       </div>
     </main>

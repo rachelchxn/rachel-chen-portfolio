@@ -46,7 +46,7 @@
   width: 80%;
   height: calc(200px + 10vh);
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   cursor: pointer;
 }
 
@@ -92,7 +92,7 @@
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
-  border-radius: 32px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--mid-grey);
 }
 
