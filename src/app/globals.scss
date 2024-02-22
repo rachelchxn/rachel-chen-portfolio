@@ -11,12 +11,35 @@
   --dark-grey: #504f4e;
   --primary-dark: #2f2f2f;
 
-  --border-radius: 16px;
+  --border-radius: 8px;
+  --global-gap: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --global-gap: 16px;
+  }
+  .sm-btn {
+    width: 100%;
+  }
+  a {
+    width: 100%;
+  }
+  .block {
+    height: 20vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .block {
+    height: calc(200px + 10vh);
+    width: 80%;
+  }
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
 }
 
@@ -35,6 +58,23 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+  p {
+    font-size: 16px !important;
+  }
 }
 
 h1 {
@@ -127,4 +167,77 @@ button {
 .sm-btn {
   @extend button;
   padding: 12px 24px;
+}
+
+.block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.blockLabel {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: var(--global-gap) var(--global-gap);
+  margin-top: auto;
+  margin-bottom: 0;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+
+.arrow {
+  position: absolute;
+  bottom: var(--global-gap);
+  right: var(--global-gap);
+  transition: transform 0.3s ease;
+}
+
+.mockup {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.fillerBlock {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  padding: var(--global-gap) var(--global-gap);
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--mid-grey);
+}
+
+.image {
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.block:hover .arrow {
+  transform: translateX(6px) translateY(-6px);
+}
+
+.block:hover .image {
+  opacity: 1;
+  transform: scale(1.1);
 }

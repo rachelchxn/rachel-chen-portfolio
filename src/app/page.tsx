@@ -23,16 +23,16 @@ export default function Home() {
           </div>
           <div>
             <p className={styles.subheading}>
-              I’m a developer and designer with a burning passion for building
+              I’m a designer and developer with a burning passion for building
               high-impact experiences with technology. I’m currently scaling
               products for Fortune 500’s at Onova, developing B2B AI solutions,
               and bringing fun ideas to life through code.
             </p>
           </div>
           <div className={styles.hFlex}>
-            <Link className={styles.block} href={"/dev"}>
-              <img className={styles.image} src="/dev-work.svg" />
-              <h4 className={styles.blockLabel}>Dev Work</h4>
+            <Link className={styles.block} href={"/design"}>
+              <img className={styles.image} src="/design-work.png" />
+              <h4 className={styles.blockLabel}>Design Work</h4>
               <Image
                 className={styles.arrow}
                 src="arrow.svg"
@@ -41,9 +41,9 @@ export default function Home() {
                 height={32}
               />
             </Link>
-            <Link className={styles.block} href={"/design"}>
-              <img className={styles.image} src="/design-work.png" />
-              <h4 className={styles.blockLabel}>Design Work</h4>
+            <Link className={styles.block} href={"/dev"}>
+              <img className={styles.image} src="/dev-work.png" />
+              <h4 className={styles.blockLabel}>Dev Work</h4>
               <Image
                 className={styles.arrow}
                 src="arrow.svg"

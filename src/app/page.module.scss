@@ -1,17 +1,78 @@
 .main {
   padding: 0 80px;
-  min-height: calc(100vh - 77.78px);
+  height: 100vh;
   align-items: flex-start;
 }
 
-@media screen {
+@media only screen and (min-width: 600px) {
+  .main {
+    padding: 0 80px;
+  }
+  .hFlex {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--global-gap);
+    align-self: stretch;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .block {
+    height: calc(200px + 10vh);
+    width: 80%;
+  }
+  .mainArrow {
+    height: 36px;
+    width: 88px;
+    margin: 0 16px;
+  }
+  .subheading {
+    max-width: 90%;
+  }
+  .body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 0 var(--global-gap);
+  }
+  .hFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--global-gap);
+    align-self: stretch;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .block {
+    height: 20vh;
+    width: 100%;
+  }
+  .mainArrow {
+    height: 20px;
+    width: 48px;
+    margin: 0 8px;
+  }
+  .subheading {
+    max-width: 100%;
+  }
+
+  .body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  padding: 16px 0 56px;
-  height: calc(100vh - 100px);
   max-width: 984px;
   margin: auto;
 }
@@ -19,23 +80,10 @@
 .vFlex {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--global-gap);
   justify-content: center;
   height: 100%;
   margin-bottom: 40px;
-}
-
-.hFlex {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  align-self: stretch;
-  width: 100%;
-  margin-top: 8px;
-}
-
-.subheading {
-  max-width: 90%;
 }
 
 .block {
@@ -43,8 +91,6 @@
   position: relative;
   flex-direction: column;
   align-self: stretch;
-  width: 80%;
-  height: calc(200px + 10vh);
   overflow: hidden;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -54,23 +100,18 @@
   display: flex;
   position: absolute;
   bottom: 0;
-  padding: 24px 32px;
+  padding: var(--global-gap) var(--global-gap);
   margin-top: auto;
+  margin-bottom: 0;
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
 }
 
-.mainArrow {
-  height: 36px;
-  width: 88px;
-  margin: 0 16px;
-}
-
 .arrow {
   position: absolute;
-  bottom: 24px;
-  right: 36px;
+  bottom: var(--global-gap);
+  right: var(--global-gap);
   transition: transform 0.3s ease;
 }
 
@@ -88,7 +129,7 @@
   display: flex;
   width: 20%;
   height: 100%;
-  padding: 24px 32px;
+  padding: var(--global-gap) var(--global-gap);
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
