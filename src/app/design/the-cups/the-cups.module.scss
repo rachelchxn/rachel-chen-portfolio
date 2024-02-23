@@ -1,3 +1,15 @@
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 16px !important;
+  }
+  .section {
+    padding: calc(var(--global-gap) * 4) 16px !important;
+  }
+  .overview {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .main {
   min-height: calc(100vh - 77.78px);
 }
@@ -14,7 +26,7 @@
 .details {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--global-gap);
 }
 
 .detail {
@@ -27,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(--global-gap);
 }
 
 .section {
@@ -68,10 +80,10 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin: 40px auto 160px;
+  margin: calc(var(--global-gap) * 5) auto 160px;
   padding: 0 15%;
   width: 100%;
-  gap: 64px;
+  gap: calc(var(--global-gap) * 2);
 }
 
 .cover {
@@ -85,7 +97,6 @@
   display: inline-flex;
   width: max-content;
   gap: 8px;
-  margin-bottom: -40px;
 
   p {
     width: max-content;
@@ -104,7 +115,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  gap: 24px;
+  gap: var(--global-gap);
 }
 
 .point {

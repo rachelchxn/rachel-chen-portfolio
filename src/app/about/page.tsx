@@ -7,7 +7,7 @@ export default function Dev() {
     <main className={styles.main}>
       <div className={styles.header}>
         <div className={styles.headshot}>
-          <Image src="/pfp.svg" alt={"My Headshot"} width={250} height={250} />
+          <Image src="/pfp.png" alt={"My Headshot"} width={250} height={250} />
         </div>
         <div className={styles.vFlex}>
           <h3>Hey, I'm Rachel.</h3>

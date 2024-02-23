@@ -17,7 +17,7 @@ export default function Footer() {
     <>
       <div>
         <Image
-          src={"pfp.svg"}
+          src={"/pfp.png"}
           alt="About"
           width={50}
           height={50}

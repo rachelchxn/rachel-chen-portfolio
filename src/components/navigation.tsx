@@ -86,7 +86,7 @@ function DrawerExample() {
         src={isOpen ? "/close.svg" : "/menu.svg"}
       />
       <Drawer isOpen={isOpen} onClose={onClose} size={"xs"} placement={"top"}>
-        <DrawerOverlay onClick={onClose} />
+        <DrawerOverlay onClick={onClose} bgColor={"#00000020"} />
         <DrawerContent
           h={"fit-content"}
           p={"56px 16px 16px"}

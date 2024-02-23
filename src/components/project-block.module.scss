@@ -1,27 +1,54 @@
+@media only screen and (max-width: 600px) {
+  .hFlex {
+    flex-direction: column;
+  }
+  .block {
+    width: 100%;
+  }
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .imageBlock {
+    height: 240px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .block {
+    height: 340px;
+    width: 65%;
+  }
+  .imageBlock {
+    height: 340px;
+    width: 35%;
+  }
+}
+
 .hFlex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  // gap: 32px;
-  // flex: 1 0 0;
   align-self: stretch;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 .block {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-self: stretch;
-  width: 65%;
-  height: 340px;
-  padding: 32px;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  padding: var(--global-gap);
+  gap: var(--global-gap);
   position: relative;
   transition: 0.3s;
   cursor: pointer;
 
   &Alt {
     @extend .block;
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
   }
 }
 
@@ -40,8 +67,8 @@
 
 .tagList {
   display: flex;
-  position: absolute;
-  bottom: 32px;
+  // position: absolute;
+  bottom: var(--global-gap);
   align-items: center;
   align-content: center;
   gap: 10px;
@@ -53,26 +80,22 @@
   display: flex;
   flex-direction: column;
   max-width: 75%;
-  gap: 24px;
+  gap: var(--global-gap);
 }
 
 .arrow {
   position: absolute;
-  bottom: 28px;
-  right: 36px;
+  bottom: var(--global-gap);
+  right: var(--global-gap);
   transition: transform 0.3s ease;
 }
 
 .imageBlock {
-  height: 340px;
-  width: 35%;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
   overflow: hidden;
   cursor: pointer;
 
   &Alt {
     @extend .imageBlock;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
   }
 }
 

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./project-block.module.scss";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 type ProjectBlockProps = {
   title: string;
@@ -33,9 +34,21 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
     router.push(`/design/${formattedTitle}`);
   };
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={styles.hFlex} onClick={handleClick}>
-      {!order && (
+      {(!order || screenWidth < 600) && (
         <div className={order ? styles.imageBlock : styles.imageBlockAlt}>
           <img className={styles.image} src={`${imageURL}`} />
         </div>
@@ -61,7 +74,7 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
           </div>
         )}
       </div>
-      {order && (
+      {order && screenWidth > 600 && (
         <div className={styles.imageBlock}>
           <img className={styles.image} src={`${imageURL}`} />
         </div>

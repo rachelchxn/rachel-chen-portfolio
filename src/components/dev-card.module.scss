@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .info {
+    height: auto !important;
+  }
+}
+
 .card {
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -20,17 +26,21 @@
 .image {
   transition: all 0.3s ease;
   opacity: 0.8;
+  width: 100%;
+  object-fit: cover;
 
   &Disabled {
     opacity: 0.8;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  gap: 32px;
+  padding: var(--global-gap);
+  gap: var(--global-gap);
   position: relative;
   justify-content: space-between;
   height: 280px;
@@ -57,7 +67,8 @@
 
 .tagList {
   display: flex;
-  bottom: 32px;
+  width: calc(100% - 36px);
+  bottom: var(--global-gap);
   align-items: center;
   align-content: center;
   gap: 10px;
@@ -67,8 +78,8 @@
 
 .arrow {
   position: absolute;
-  bottom: 28px;
-  right: 36px;
+  bottom: var(--global-gap);
+  right: var(--global-gap);
   transition: transform 0.3s ease;
 }
 

@@ -1,3 +1,17 @@
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 16px !important;
+
+    div {
+      width: calc(100vw - 32px);
+    }
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .main {
   min-height: calc(100vh - 77.78px);
 }
@@ -74,10 +88,10 @@
 .header {
   display: flex;
   flex-direction: column;
-  margin: 40px auto 160px;
+  margin: calc(var(--global-gap) * 5) auto 160px;
   padding: 0 15%;
   width: 100%;
-  gap: 64px;
+  gap: calc(var(--global-gap) * 2);
 }
 
 .projectImg {

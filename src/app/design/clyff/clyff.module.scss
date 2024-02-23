@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 160px 15%;
+  padding: calc(var(--global-gap) * 5) 15%;
   width: 100%;
   align-items: flex-start;
   gap: 32px;
@@ -58,7 +58,7 @@
     &grid {
       @extend .sectionB;
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
 
       img {
         width: 100%;
