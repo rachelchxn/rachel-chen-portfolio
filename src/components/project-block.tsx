@@ -34,17 +34,24 @@ const ProjectBlock: React.FC<ProjectBlockProps> = ({
     router.push(`/design/${formattedTitle}`);
   };
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState(0); // Initialize with a default value
 
   useEffect(() => {
-    const handleResize = () => {
+    // Ensure window object is available
+    if (typeof window !== "undefined") {
+      // Now we are in the client, window object is available.
       setScreenWidth(window.innerWidth);
-    };
 
-    window.addEventListener("resize", handleResize);
+      const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+      };
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+      window.addEventListener("resize", handleResize);
+
+      // Clean up
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); // Empty array ensures this runs once on mount
 
   return (
     <div className={styles.hFlex} onClick={handleClick}>
