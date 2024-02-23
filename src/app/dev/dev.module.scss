@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   max-width: 984px;
-  margin: 80px auto 160px;
+  margin: calc(var(--global-gap) * 5) auto 160px;
   gap: var(--global-gap);
 }
 
