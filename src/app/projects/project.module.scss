@@ -1,4 +1,25 @@
 @media only screen and (max-width: 600px) {
+  .projects {
+    width: 100%;
+    padding: var(--global-gap);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .projects {
+    width: 75%;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  max-width: 984px;
+  margin: calc(var(--global-gap) * 5) auto 160px;
+  gap: var(--global-gap);
+}
+
+@media only screen and (max-width: 600px) {
   .header {
     padding: 0 16px !important;
   }
@@ -46,7 +67,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: calc(var(--global-gap) * 5) 15%;
+  padding: 160px 15%;
   width: 100%;
   align-items: flex-start;
   gap: 32px;
@@ -58,7 +79,7 @@
     &grid {
       @extend .sectionB;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
 
       img {
         width: 100%;

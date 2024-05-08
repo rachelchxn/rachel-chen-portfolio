@@ -6,7 +6,8 @@
 
 @media only screen and (min-width: 600px) {
   .main {
-    padding: 0 80px;
+    padding: 0;
+    display: flex;
   }
   .hFlex {
     display: flex;
@@ -73,8 +74,42 @@
 .body {
   display: flex;
   flex-direction: column;
-  max-width: 984px;
-  margin: auto;
+  padding: 0 80px;
+  width: 50vw;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  h2 {
+    margin-right: var(--global-gap);
+  }
+}
+
+.iconList {
+  display: flex;
+  padding-bottom: 16px;
+  gap: 16px;
+}
+
+.icon {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    // transform: scale(1.2);
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  background-color: var(--light-grey);
+  height: 100vh;
 }
 
 .vFlex {
@@ -139,7 +174,9 @@
 
 .image {
   position: absolute;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   top: auto;
   bottom: auto;
   left: 0;
@@ -157,4 +194,54 @@
 .block:hover .image {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.list {
+  gap: 16px;
+  margin-bottom: 12px;
+  h5 {
+    margin-bottom: 12px;
+  }
+  li {
+    margin-left: -12px;
+    margin-top: 4px;
+  }
+}
+
+.tabs {
+  display: flex;
+  padding: 40px 80px 0;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-bottom: 2px solid var(--mid-grey);
+  transition: all 0.3s ease;
+  color: var(--mid-dark-grey);
+
+  &:hover {
+    color: var(--dark-grey);
+    cursor: pointer;
+  }
+
+  &Current {
+    @extend .tab;
+    border-bottom: 2px solid var(--dark-grey);
+    color: var(--dark-grey);
+  }
+}
+
+.projectList {
+  padding: 40px 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--global-gap);
+}
+
+.btnContainer {
+  display: flex;
+  gap: 16px;
 }
