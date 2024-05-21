@@ -6,7 +6,7 @@ import Head from "next/head";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rachel <-> Chen",
+  title: "Rachel Chen",
   description: "Welcome to my tech space.",
 };
 

@@ -53,11 +53,6 @@ const DevCard: React.FC<DevCardProps> = ({
               </p>
             ))}
           </div>
-          {!disabled && (
-            <div className={styles.arrow}>
-              <Image src="arrow.svg" alt="->" width={32} height={32} />
-            </div>
-          )}
         </div>
       </div>
     </div>

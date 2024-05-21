@@ -55,3 +55,24 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
     { slug }
   );
 }
+
+export async function getMore() {
+  const client = createClient({
+    projectId: "q7a7buiu",
+    dataset: "production",
+    apiVersion: "2024-05-05",
+  });
+
+  return client.fetch(
+    groq`*[_type == "more"]{
+        _id,
+        _createdAt,
+        name,
+        headline,
+        overview,
+        tags, 
+        links,
+        "image": image.asset->url,
+    }`
+  );
+}

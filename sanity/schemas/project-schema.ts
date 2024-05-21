@@ -84,7 +84,28 @@ const project = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      marks: {
+        annotations: [
+          {
+            name: "link",
+            type: "object",
+            title: "link",
+            fields: [
+              {
+                name: "url",
+                type: "url",
+              },
+            ],
+          },
+        ],
+      },
+
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+        },
+      ],
     },
   ],
 };

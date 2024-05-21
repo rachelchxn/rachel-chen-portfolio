@@ -8,6 +8,7 @@ export interface Project {
   _createdAt: string;
   url: string;
   name: string;
+  overview: string;
   slug: string;
   image: string;
   content: any;

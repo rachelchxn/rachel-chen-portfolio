@@ -1,27 +1,82 @@
+"use client";
 import Link from "next/link";
 import { getProjectBySlug } from "../../../../sanity/sanity-utils";
 import styles from "../project.module.scss";
-import ProjectPageComponent from "@/components/project-page";
-import { UrlObject } from "url";
 import { PortableText } from "next-sanity";
+import { useEffect, useState } from "react";
+import { Project } from "@/types";
+import { createClient } from "@sanity/client";
+import { UrlObject } from "url";
+import { useNextSanityImage } from "next-sanity-image";
+import Image from "next/image";
+
+const client = createClient({
+  projectId: "q7a7buiu",
+  dataset: "production",
+  useCdn: true,
+});
 
 type Props = {
   params: { project: string };
 };
 
-export default async function ProjectPage({ params }: Props) {
+type SanityImageProps = {
+  asset: {
+    _ref: string;
+  };
+};
+
+const myPortableTextComponents = {
+  types: {
+    image: ({ value }: { value: SanityImageProps }) => {
+      return <SanityImage {...value} />;
+    },
+  },
+};
+
+const SanityImage = ({ asset }: SanityImageProps) => {
+  const imageProps = useNextSanityImage(client, asset);
+
+  if (!imageProps) return null;
+
+  return (
+    <Image
+      {...imageProps}
+      layout="responsive"
+      alt="alt"
+      sizes="(max-width: 800px) 100vw, 800px"
+    />
+  );
+};
+
+export default function ProjectPage({ params }: Props) {
   const slug = params.project;
-  const project = await getProjectBySlug(slug);
+  const [project, setProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProjectBySlug(slug);
+      setProject(data);
+    };
+
+    fetchData();
+  }, []);
 
   if (!project) {
-    return <div>Project not found</div>;
+    return (
+      <div className={styles.main}>
+        <div className={styles.header}>Loading...</div>
+      </div>
+    );
   }
 
   return (
     <div>
-      <div className={styles.navWrap}></div>
       <div className={styles.main}>
         <div className={styles.header}>
+          <Link href={"/"} className={styles.backButton}>
+            {"<"}- Back
+          </Link>
           <img
             className={styles.cover}
             src={project.image}
@@ -41,28 +96,38 @@ export default async function ProjectPage({ params }: Props) {
               </div>
             </div>
             <div>
-              <h5>{project.name}</h5>
+              <div className={styles.detail}>
+                <h5>{project.name}</h5>
 
-              <h3>{project.headline}</h3>
-              {/* <div className={styles.tags}>
-                {project.tags.map((tag: string) => {
-                  <p className={styles.tag}>{tag}</p>;
-                })}
-              </div> */}
-              <div>
-                {project.links.map(
-                  (link: { url: string | UrlObject; text: string }) => {
-                    <Link href={link.url}>
-                      <button>{link.text}</button>
-                    </Link>;
-                  }
-                )}
+                <h2>{project.headline}</h2>
+
+                <div className={styles.tagList}>
+                  {project.tags.map((tag) => (
+                    <p className={styles.tag}>{tag}</p>
+                  ))}
+                </div>
+
+                <p>{project.overview}</p>
+
+                <div className={styles.buttonList}>
+                  {project.links.map((link: { text: string; url: string }) => (
+                    <Link href={link.url} target="_blank">
+                      <button className={styles.btnPrimary}>
+                        {link.text}
+                        <img src="/arrow.svg" width={18} height={18} />
+                      </button>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-          <PortableText value={project.content} />
+        <div className={styles.content}>
+          <PortableText
+            value={project.content}
+            components={myPortableTextComponents}
+          />
         </div>
       </div>
     </div>

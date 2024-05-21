@@ -1,21 +1,29 @@
 "use client";
 import { useState, useEffect } from "react";
 import styles from "./page.module.scss";
-import { getProjects } from "../../sanity/sanity-utils";
+import { getMore, getProjects } from "../../sanity/sanity-utils";
 import HomePage from "@/components/home";
 import ProjectList from "@/components/project-list";
+import MoreList from "@/components/more-list";
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
+  const [more, setMore] = useState([]);
   const [isFeaturedTab, setIsFeaturedTab] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchProjects = async () => {
       const data = await getProjects();
       setProjects(data);
     };
 
-    fetchData();
+    const fetchMore = async () => {
+      const data = await getMore();
+      setMore(data);
+    };
+
+    fetchProjects();
+    fetchMore();
   }, []);
 
   const toggleTab = () => {
@@ -29,7 +37,7 @@ export default function Home() {
       </div>
       <div className={styles.gallery}>
         <div className={styles.tabs}>
-          <h5
+          {/* <h5
             className={isFeaturedTab ? styles.tabCurrent : styles.tab}
             onClick={toggleTab}
           >
@@ -40,12 +48,16 @@ export default function Home() {
             onClick={toggleTab}
           >
             More
-          </h5>
+          </h5> */}
         </div>
-        <ProjectList
-          projects={projects}
-          currTab={isFeaturedTab ? "featured" : "more"}
-        />
+
+        <div className={styles.projectContainer}>
+          {isFeaturedTab ? (
+            <ProjectList projects={projects} />
+          ) : (
+            <MoreList projects={more} />
+          )}
+        </div>
       </div>
     </main>
   );

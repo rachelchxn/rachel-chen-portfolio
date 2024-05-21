@@ -56,24 +56,27 @@ export default function HomePage() {
         </div>
         <h5>Creating meaningful human-tech connections</h5>
       </div>
+      <div></div>
       <p>
         I’m a product designer & developer with a burning passion for building
         high-impact experiences with technology.
       </p>
+      <div></div>
       <div>
         <h5>Currently...</h5>
         <ul className={styles.list}>
           <li>
-            <p>building AI solutions for designers</p>
+            <p>developing HR solutions at RBC</p>
           </li>
           <li>
-            <p>developing at RBC</p>
+            <p>building a platform to connect cool people</p>
           </li>
           <li>
             <p>dancing on weeknights and hacking on weekends</p>
           </li>
         </ul>
       </div>
+      <div></div>
       <div className={styles.btnContainer}>
         <Link
           href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
@@ -84,7 +87,9 @@ export default function HomePage() {
             <Image src="./arrow.svg" alt={"->"} width={18} height={18}></Image>
           </button>
         </Link>
-        <button className="btnSecondary">See My Resume</button>
+        <Link href={"/RachelChen_Resume.pdf"} target="_blank">
+          <button className="btnSecondary">See My Resume</button>
+        </Link>
       </div>
     </div>
   );
