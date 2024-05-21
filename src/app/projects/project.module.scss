@@ -129,27 +129,34 @@
     border-left: 2px solid var(--mid-grey);
     margin: 12px 0;
   }
-  ul,
-  ol {
+  ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: stretch;
     gap: var(--global-gap);
     padding-left: 0;
+    li {
+      font-size: 20px;
+      color: var(--dark-grey);
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: var(--global-gap);
+      background-color: var(--light-grey);
+      width: 100%;
+      border-radius: var(--border-radius);
+    }
   }
-  li {
+
+  ol {
     font-size: 20px;
-    color: var(--dark-grey);
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--global-gap);
-    background-color: var(--light-grey);
-    width: 100%;
-    border-radius: var(--border-radius);
+    padding-left: 20px;
+    li {
+      margin-bottom: 8px;
+    }
   }
 }
 
