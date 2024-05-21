@@ -10,9 +10,10 @@
 
 .card {
   border-radius: var(--border-radius);
+  background-color: #fff;
   overflow: hidden;
-  cursor: pointer;
   display: flex;
+  flex-direction: column;
   transition: all 0.3s ease;
   height: max-content;
   align-items: stretch;
@@ -25,9 +26,7 @@
 }
 
 .imageBlock {
-  max-width: 240px;
   width: 100%;
-  min-width: 120px;
   min-height: 210px;
   display: flex;
   overflow: hidden;
@@ -53,10 +52,8 @@
   display: flex;
   flex-direction: column;
   padding: var(--global-gap);
+  gap: var(--global-gap);
   position: relative;
-  justify-content: space-between;
-  min-height: 210px;
-  height: 100%;
   width: 100%;
   align-self: stretch;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
@@ -105,6 +102,13 @@
   transition: all 0.3s ease;
 }
 
-.card:hover {
-  opacity: 0.7;
+.link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }

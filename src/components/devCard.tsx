@@ -9,6 +9,7 @@ type DevCardProps = {
   description: string;
   tags: string[];
   imageURL: string;
+  url: string;
   colour: string;
   disabled: boolean;
 };
@@ -18,17 +19,14 @@ const DevCard: React.FC<DevCardProps> = ({
   description,
   tags,
   imageURL,
+  url,
   colour,
   disabled,
 }) => {
   const router = useRouter();
 
   const handleClick = () => {
-    const formattedTitle = title
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-]/g, "");
-    router.push(`/dev/${formattedTitle}`);
+    router.push(`/projects/${url}`);
   };
 
   return (
@@ -55,11 +53,6 @@ const DevCard: React.FC<DevCardProps> = ({
               </p>
             ))}
           </div>
-          {!disabled && (
-            <div className={styles.arrow}>
-              <Image src="arrow.svg" alt="->" width={32} height={32} />
-            </div>
-          )}
         </div>
       </div>
     </div>

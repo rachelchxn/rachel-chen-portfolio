@@ -1,58 +1,62 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect } from "react";
 import styles from "./page.module.scss";
-import Navigation from "@/components/navigation";
-import Link from "next/link";
-import Footer from "@/components/footer";
+import { getMore, getProjects } from "../../sanity/sanity-utils";
+import HomePage from "@/components/home";
+import ProjectList from "@/components/project-list";
+import MoreList from "@/components/more-list";
 
 export default function Home() {
+  const [projects, setProjects] = useState([]);
+  const [more, setMore] = useState([]);
+  const [isFeaturedTab, setIsFeaturedTab] = useState(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const data = await getProjects();
+      setProjects(data);
+    };
+
+    const fetchMore = async () => {
+      const data = await getMore();
+      setMore(data);
+    };
+
+    fetchProjects();
+    fetchMore();
+  }, []);
+
+  const toggleTab = () => {
+    setIsFeaturedTab(!isFeaturedTab);
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.body}>
-        <div className={styles.vFlex}>
-          <div>
-            <h1>I create meaningful</h1>
-            <h1>
-              human
-              <img
-                src="main-arrow.svg"
-                alt="<->"
-                className={styles.mainArrow}
-              />
-              tech connections
-            </h1>
-          </div>
-          <div>
-            <p className={styles.subheading}>
-              I’m a designer and developer with a burning passion for building
-              high-impact experiences with technology. I’m currently scaling
-              products for Fortune 500’s at Onova, developing B2B AI solutions,
-              and bringing fun ideas to life through code.
-            </p>
-          </div>
-          <div className={styles.hFlex}>
-            <Link className={styles.block} href={"/design"}>
-              <img className={styles.image} src="/design-work.png" />
-              <h4 className={styles.blockLabel}>Design Work</h4>
-              <Image
-                className={styles.arrow}
-                src="arrow.svg"
-                alt="->"
-                width={32}
-                height={32}
-              />
-            </Link>
-            <Link className={styles.block} href={"/dev"}>
-              <img className={styles.image} src="/dev-work.png" />
-              <h4 className={styles.blockLabel}>Dev Work</h4>
-              <Image
-                className={styles.arrow}
-                src="arrow.svg"
-                alt="->"
-                width={32}
-                height={32}
-              />
-            </Link>
-          </div>
+        <HomePage />
+      </div>
+      <div className={styles.gallery}>
+        <div className={styles.tabs}>
+          {/* <h5
+            className={isFeaturedTab ? styles.tabCurrent : styles.tab}
+            onClick={toggleTab}
+          >
+            Featured
+          </h5>
+          <h5
+            className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
+            onClick={toggleTab}
+          >
+            More
+          </h5> */}
+        </div>
+
+        <div className={styles.projectContainer}>
+          {isFeaturedTab ? (
+            <ProjectList projects={projects} />
+          ) : (
+            <MoreList projects={more} />
+          )}
         </div>
       </div>
     </main>

@@ -1,12 +1,8 @@
-.main {
-  padding: 0 80px;
-  height: 100vh;
-  align-items: flex-start;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .main {
-    padding: 0 80px;
+    height: 100vh;
+    align-items: flex-start;
+    display: flex;
   }
   .hFlex {
     display: flex;
@@ -30,15 +26,24 @@
   }
   .body {
     height: 100%;
+    width: 50vw;
+    padding: 0 4vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+  .btnContainer {
+    display: flex;
+    gap: 16px;
+  }
+  .gallery {
+    width: 50vw;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .main {
-    padding: 0 var(--global-gap);
+    height: 100vh;
+    align-items: flex-start;
   }
   .hFlex {
     display: flex;
@@ -64,17 +69,62 @@
 
   .body {
     height: 100%;
+    width: 100%;
+    padding: 0 var(--global-gap);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    a {
+      width: 100%;
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  .gallery {
+    width: 100vw;
   }
 }
 
-.body {
+.heroTitle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  h2 {
+    margin-right: var(--global-gap);
+  }
+}
+
+.iconList {
+  display: flex;
+  padding-bottom: 12px;
+  gap: 12px;
+}
+
+.icon {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+    // transform: scale(1.2);
+  }
+}
+
+.gallery {
   display: flex;
   flex-direction: column;
-  max-width: 984px;
-  margin: auto;
+  background-color: var(--light-grey);
+  height: 100vh;
 }
 
 .vFlex {
@@ -139,7 +189,9 @@
 
 .image {
   position: absolute;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   top: auto;
   bottom: auto;
   left: 0;
@@ -157,4 +209,57 @@
 .block:hover .image {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.list {
+  gap: 16px;
+  margin-bottom: 12px;
+  h5 {
+    border-top: 2px solid var(--lig);
+    padding-top: 12px;
+    margin-bottom: 12px;
+  }
+  li {
+    margin-left: -12px;
+    margin-top: 4px;
+  }
+}
+
+.tabs {
+  display: flex;
+  padding: 40px 4vw 0;
+}
+
+.tab {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-bottom: 2px solid var(--mid-grey);
+  transition: all 0.3s ease;
+  color: var(--mid-dark-grey);
+
+  &:hover {
+    color: var(--dark-grey);
+    cursor: pointer;
+  }
+
+  &Current {
+    @extend .tab;
+    border-bottom: 2px solid var(--dark-grey);
+    color: var(--dark-grey);
+  }
+}
+
+.projectContainer {
+  padding: 40px 4vw;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.projectList {
+  flex-direction: column;
+  display: flex;
+  gap: 40px;
+  height: max-content;
 }
