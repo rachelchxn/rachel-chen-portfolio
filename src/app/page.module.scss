@@ -38,6 +38,12 @@
   .gallery {
     width: 50vw;
   }
+
+  .moreList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--global-gap);
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -90,6 +96,12 @@
 
   .gallery {
     width: 100vw;
+  }
+
+  .moreList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--global-gap);
   }
 }
 

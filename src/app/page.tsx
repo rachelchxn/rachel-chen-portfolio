@@ -37,7 +37,7 @@ export default function Home() {
       </div>
       <div className={styles.gallery}>
         <div className={styles.tabs}>
-          {/* <h5
+          <h5
             className={isFeaturedTab ? styles.tabCurrent : styles.tab}
             onClick={toggleTab}
           >
@@ -48,7 +48,7 @@ export default function Home() {
             onClick={toggleTab}
           >
             More
-          </h5> */}
+          </h5>
         </div>
 
         <div className={styles.projectContainer}>
