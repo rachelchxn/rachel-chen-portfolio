@@ -69,7 +69,7 @@ export async function getMore() {
         _createdAt,
         name,
         headline,
-        overview,
+        badge,
         tags, 
         links,
         "image": image.asset->url,

@@ -33,8 +33,8 @@ const more = {
       of: [{ type: "string" }],
     },
     {
-      name: "overview",
-      title: "Overview",
+      name: "badge",
+      title: "Badge",
       type: "string",
     },
     {

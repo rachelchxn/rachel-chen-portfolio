@@ -54,12 +54,10 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <h5>Creating meaningful human-tech connections</h5>
       </div>
-      <div></div>
       <p>
         I’m a product designer & developer with a burning passion for building
-        high-impact experiences with technology.
+        meaningful human-tech experiences from 0.
       </p>
       <div></div>
       <div>

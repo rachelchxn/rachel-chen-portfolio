@@ -9,7 +9,7 @@ type ProjectListProps = {
 
 const MoreList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
-    <div className={styles.projectList}>
+    <div className={styles.moreList}>
       {projects.map((project) => (
         <MoreCard
           key={project.slug}
