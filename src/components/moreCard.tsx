@@ -30,6 +30,7 @@ const MoreCard: React.FC<moreCardProps> = ({
       className={!disabled ? styles.card : styles.cardDisabled}
       onClick={() => useRouter}
       href={links[0].url}
+      target="_blank"
     >
       <div className={styles.imageBlock}>
         <img

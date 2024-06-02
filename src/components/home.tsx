@@ -57,7 +57,7 @@ export default function HomePage() {
       </div>
       <p>
         I’m a product designer & developer with a burning passion for building
-        meaningful human-tech experiences from 0.
+        meaningful human-tech experiences from the ground up.
       </p>
       <div></div>
       <div>
