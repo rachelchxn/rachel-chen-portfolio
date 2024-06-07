@@ -272,6 +272,6 @@
 .projectList {
   flex-direction: column;
   display: flex;
-  gap: 40px;
+  gap: var(--global-gap);
   height: max-content;
 }

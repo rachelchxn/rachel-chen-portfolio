@@ -8,6 +8,7 @@ import Link from "next/link";
 type moreCardProps = {
   title: string;
   description: string;
+  badge: string;
   tags: string[];
   imageURL: string;
   url: string;
@@ -17,7 +18,7 @@ type moreCardProps = {
 
 const MoreCard: React.FC<moreCardProps> = ({
   title,
-  description,
+  badge,
   tags,
   imageURL,
   links,
@@ -42,6 +43,7 @@ const MoreCard: React.FC<moreCardProps> = ({
         <div className={styles.info}>
           <div className={styles.infoMain}>
             <h4>{title}</h4>
+            {badge?.length > 0 && <div className={styles.badge}>{badge}</div>}
             <div className={styles.tagList}>
               {tags.map((tag, index) => (
                 <p key={index} className={styles.tag}>
