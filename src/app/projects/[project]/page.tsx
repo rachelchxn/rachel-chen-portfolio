@@ -75,7 +75,8 @@ export default function ProjectPage({ params }: Props) {
       <div className={styles.main}>
         <div className={styles.header}>
           <Link href={"/"} className={styles.backButton}>
-            {"<"}- Back
+            <Image src={"/back.svg"} width={16} height={16} alt={""} />
+            Back
           </Link>
           <img
             className={styles.cover}

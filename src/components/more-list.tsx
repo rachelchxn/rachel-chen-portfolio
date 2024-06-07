@@ -18,6 +18,7 @@ const MoreList: React.FC<ProjectListProps> = ({ projects }) => {
           tags={project.tags}
           imageURL={project.image}
           links={project.links}
+          badge={project.badge}
           disabled={false}
           url={project.slug}
         />
