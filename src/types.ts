@@ -1,5 +1,7 @@
 export interface Project {
   timeline: string;
+  company: string;
+  projecttype: string;
   roles: string[];
   headline: string;
   tags: string[];

@@ -90,9 +90,9 @@ export default function ProjectPage({ params }: Props) {
                 <p>{project.timeline}</p>
               </div>
               <div className={styles.detail}>
-                <h5>Roles</h5>
-                {project.roles.map((role: string) => (
-                  <p>{role}</p>
+                <h5>Scope</h5>
+                {project.tags.map((tag: string) => (
+                  <p>{tag}</p>
                 ))}
               </div>
             </div>
@@ -103,9 +103,8 @@ export default function ProjectPage({ params }: Props) {
                 <h2>{project.headline}</h2>
 
                 <div className={styles.tagList}>
-                  {project.tags.map((tag) => (
-                    <p className={styles.tag}>{tag}</p>
-                  ))}
+                  <p className={styles.tagPrimary}>{project.company}</p>
+                  <p className={styles.tag}>{project.projecttype}</p>
                 </div>
 
                 <p>{project.overview}</p>
