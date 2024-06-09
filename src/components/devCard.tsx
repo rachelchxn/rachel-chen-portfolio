@@ -8,6 +8,8 @@ type DevCardProps = {
   title: string;
   description: string;
   tags: string[];
+  company: string;
+  projecttype: string;
   imageURL: string;
   url: string;
   colour: string;
@@ -18,6 +20,8 @@ const DevCard: React.FC<DevCardProps> = ({
   title,
   description,
   tags,
+  company,
+  projecttype,
   imageURL,
   url,
   colour,
@@ -47,11 +51,8 @@ const DevCard: React.FC<DevCardProps> = ({
         </div>
         <div>
           <div className={styles.tagList}>
-            {tags.map((tag, index) => (
-              <p key={index} className={styles.tag}>
-                {tag}
-              </p>
-            ))}
+            <p className={styles.tagPrimary}>{company}</p>
+            <p className={styles.tag}>{projecttype}</p>
           </div>
         </div>
       </div>

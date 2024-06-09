@@ -47,6 +47,17 @@ const project = {
       type: "array",
       of: [{ type: "string" }],
     },
+
+    {
+      name: "company",
+      title: "Company",
+      type: "string",
+    },
+    {
+      name: "projecttype",
+      title: "Project Type",
+      type: "string",
+    },
     {
       name: "tags",
       title: "Tags",
