@@ -130,7 +130,8 @@
   gap: 20px;
 
   img {
-    margin-top: 16px;
+    margin-top: 24px;
+    margin-bottom: 12px;
   }
 
   h4 {
@@ -146,7 +147,8 @@
   }
   blockquote {
     background-color: var(--light-grey);
-    font-style: italic;
+    // font-style: italic;
+
     font-size: 20px;
     padding: 20px;
     width: 100%;
