@@ -67,7 +67,18 @@ export default function HomePage() {
             <p>developing HR solutions at RBC</p>
           </li>
           <li>
-            <p>building a platform to connect cool people</p>
+            <p>
+              building a{" "}
+              <span>
+                <Link
+                  className="link"
+                  href={"https://startchattin.vercel.app"}
+                  target="_blank"
+                >
+                  platform to connect cool people
+                </Link>
+              </span>
+            </p>
           </li>
           <li>
             <p>dancing on weeknights and hacking on weekends</p>

@@ -238,3 +238,12 @@ button {
   opacity: 1;
   transform: scale(1.1);
 }
+
+.link {
+  opacity: 0.5;
+  text-decoration: underline;
+  font-weight: 400;
+  :hover {
+    opacity: 1 !important;
+  }
+}
