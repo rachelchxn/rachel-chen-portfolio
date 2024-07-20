@@ -151,6 +151,7 @@ button {
 .btnSecondary {
   background: var(--primary-white);
   border: 1px solid var(--primary-dark);
+  height: 54px;
 
   &:hover {
     background: var(--light-grey);
