@@ -20,7 +20,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
           projecttype={project.projecttype}
           imageURL={project.image}
           colour={"#fff"}
-          disabled={false}
+          disabled={project.name === "heyHR" ? true : false}
           url={project.slug}
         />
       ))}
