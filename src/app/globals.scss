@@ -107,6 +107,7 @@ h5 {
 .button-text {
   font-size: 16px;
   font-weight: 500;
+  color: var(--primary-dark);
 }
 
 .lg-p {
@@ -141,6 +142,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   transition: all 0.3s ease;
+  color: var(--primary-dark);
 
   &:hover {
     background: #dadada;
@@ -152,6 +154,7 @@ button {
   background: var(--primary-white);
   border: 1px solid var(--primary-dark);
   height: 54px;
+  color: var(--primary-dark);
 
   &:hover {
     background: var(--light-grey);
