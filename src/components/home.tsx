@@ -64,7 +64,7 @@ export default function HomePage() {
         <h5>Currently...</h5>
         <ul className={styles.list}>
           <li>
-            <p>developing HR solutions at RBC</p>
+            <p>developing AI-powered enterprise solutions at RBC</p>
           </li>
           <li>
             <p>
