@@ -43,6 +43,11 @@ const DevCard: React.FC<DevCardProps> = ({
           className={!disabled ? styles.image : styles.imageDisabled}
           src={`${imageURL}`}
         />
+        {disabled && (
+          <div className={styles.comingSoon}>
+            <img src="/comingsoon.svg" />
+          </div>
+        )}
       </div>
       <div className={styles.info} style={{ backgroundColor: colour }}>
         <div className={styles.infoMain}>

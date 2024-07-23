@@ -26,10 +26,6 @@ export default function Home() {
     fetchMore();
   }, []);
 
-  const toggleTab = () => {
-    setIsFeaturedTab(!isFeaturedTab);
-  };
-
   return (
     <main className={styles.main}>
       <div className={styles.body}>
@@ -39,13 +35,13 @@ export default function Home() {
         <div className={styles.tabs}>
           <h5
             className={isFeaturedTab ? styles.tabCurrent : styles.tab}
-            onClick={toggleTab}
+            onClick={() => setIsFeaturedTab(true)}
           >
             Featured
           </h5>
           <h5
             className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
-            onClick={toggleTab}
+            onClick={() => setIsFeaturedTab(false)}
           >
             More
           </h5>

@@ -114,7 +114,12 @@ export default function ProjectPage({ params }: Props) {
                     <Link href={link.url} target="_blank">
                       <button className={styles.btnPrimary}>
                         {link.text}
-                        <img src="/arrow.svg" width={18} height={18} />
+                        <img
+                          src="/arrow.svg"
+                          width={20}
+                          height={20}
+                          style={{ marginBottom: "-1px" }}
+                        />
                       </button>
                     </Link>
                   ))}
