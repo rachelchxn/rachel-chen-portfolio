@@ -8,51 +8,6 @@ export default function HomePage() {
       <div>
         <div className={styles.heroTitle}>
           <h2>Rachel Chen</h2>
-          <div className={styles.iconList}>
-            <Link
-              href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="linkedin-icon.svg"
-                alt="Linkedin"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link
-              href={"https://devpost.com/rachelc0715"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="devpost-icon.svg"
-                alt="Devpost"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link
-              href={"https://github.com/rachelchxn"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="github-icon.svg"
-                alt="Github"
-                width={24}
-                height={24}
-              />
-            </Link>
-            <Link
-              href={"mailto:rachelc0715@gmail.com"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image src="email-icon.svg" alt="Email" width={24} height={24} />
-            </Link>
-          </div>
         </div>
       </div>
       <p>
@@ -98,6 +53,41 @@ export default function HomePage() {
         </Link>
         <Link href={"/RachelChen_Resume.pdf"} target="_blank">
           <button className="btnSecondary">See My Resume</button>
+        </Link>
+      </div>
+      <div className={styles.iconList}>
+        <Link
+          href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
+          target="_blank"
+          className={styles.icon}
+        >
+          <Image
+            src="linkedin-icon.svg"
+            alt="Linkedin"
+            width={24}
+            height={24}
+          />
+        </Link>
+        <Link
+          href={"https://devpost.com/rachelc0715"}
+          target="_blank"
+          className={styles.icon}
+        >
+          <Image src="devpost-icon.svg" alt="Devpost" width={24} height={24} />
+        </Link>
+        <Link
+          href={"https://github.com/rachelchxn"}
+          target="_blank"
+          className={styles.icon}
+        >
+          <Image src="github-icon.svg" alt="Github" width={24} height={24} />
+        </Link>
+        <Link
+          href={"mailto:rachelc0715@gmail.com"}
+          target="_blank"
+          className={styles.icon}
+        >
+          <Image src="email-icon.svg" alt="Email" width={24} height={24} />
         </Link>
       </div>
     </div>
