@@ -5,18 +5,17 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <div className={styles.vFlex}>
-      <div>
-        <div className={styles.heroTitle}>
-          <h2>Rachel Chen</h2>
-        </div>
+      <div className={styles.heroTitle}>
+        <h2>Rachel Chen</h2>
+        <p>
+          I’m a product designer & developer with a burning passion for building
+          meaningful human-tech experiences from the ground up.
+        </p>
       </div>
-      <p>
-        I’m a product designer & developer with a burning passion for building
-        meaningful human-tech experiences from the ground up.
-      </p>
+
       <div></div>
       <div>
-        <h5>Currently...</h5>
+        <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
         <ul className={styles.list}>
           <li>
             <p>developing AI-powered enterprise solutions at RBC</p>
@@ -26,7 +25,7 @@ export default function HomePage() {
               building a{" "}
               <span>
                 <Link
-                  className="link"
+                  className={styles.url}
                   href={"https://startchattin.vercel.app"}
                   target="_blank"
                 >
@@ -48,7 +47,13 @@ export default function HomePage() {
         >
           <button>
             Let's Connect
-            <Image src="./arrow.svg" alt={"->"} width={18} height={18}></Image>
+            <Image
+              src="./arrow.svg"
+              alt={"->"}
+              width={20}
+              height={20}
+              style={{ marginBottom: "-1px" }}
+            />
           </button>
         </Link>
         <Link href={"/RachelChen_Resume.pdf"} target="_blank">

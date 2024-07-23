@@ -108,13 +108,8 @@
 
 .heroTitle {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
-
-  h2 {
-    margin-right: var(--global-gap);
-  }
+  flex-direction: column;
+  gap: 4px;
 }
 
 .iconList {

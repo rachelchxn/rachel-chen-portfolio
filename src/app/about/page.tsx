@@ -24,12 +24,12 @@ export default function Dev() {
             >
               <button>
                 Let's Connect!
-                <Image
+                {/* <Image
                   src="./arrow.svg"
                   alt={"->"}
                   width={18}
                   height={18}
-                ></Image>
+                ></Image> */}
               </button>
             </Link>
             <Link
