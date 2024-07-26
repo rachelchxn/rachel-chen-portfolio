@@ -45,6 +45,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--global-gap);
   }
+
+  .footer {
+    position: absolute;
+    bottom: var(--global-gap);
+    justify-content: space-between;
+    width: calc(100% - 8vw);
+    display: flex;
+    align-items: center;
+    gap: var(--global-gap);
+
+    h5 {
+      color: var(--mid-dark-grey);
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -104,6 +118,20 @@
     grid-template-columns: 1fr;
     gap: var(--global-gap);
   }
+
+  .footer {
+    position: absolute;
+    bottom: var(--global-gap);
+    justify-content: space-between;
+    width: calc(100% - 8vw);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--global-gap);
+    h5 {
+      color: var(--mid-dark-grey);
+    }
+  }
 }
 
 .heroTitle {
@@ -113,10 +141,7 @@
 }
 
 .iconList {
-  position: absolute;
-  bottom: var(--global-gap);
   display: flex;
-  padding-bottom: 12px;
   gap: 12px;
 }
 
@@ -272,4 +297,21 @@
   display: flex;
   gap: var(--global-gap);
   height: max-content;
+}
+
+.url {
+  opacity: 0.5 !important;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+
+  img {
+    margin-bottom: -3.5px;
+    margin-left: 2px;
+  }
 }

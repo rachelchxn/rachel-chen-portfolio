@@ -23,13 +23,10 @@ export default function HomePage() {
           <li>
             <p>
               building a{" "}
-              <span>
-                <Link
-                  className={styles.url}
-                  href={"https://startchattin.vercel.app"}
-                  target="_blank"
-                >
+              <span className={styles.url}>
+                <Link href={"https://startchattin.vercel.app"} target="_blank">
                   platform to connect cool people
+                  <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
             </p>
@@ -60,40 +57,48 @@ export default function HomePage() {
           <button className="btnSecondary">See My Resume</button>
         </Link>
       </div>
-      <div className={styles.iconList}>
-        <Link
-          href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
-          target="_blank"
-          className={styles.icon}
-        >
-          <Image
-            src="linkedin-icon.svg"
-            alt="Linkedin"
-            width={24}
-            height={24}
-          />
-        </Link>
-        <Link
-          href={"https://devpost.com/rachelc0715"}
-          target="_blank"
-          className={styles.icon}
-        >
-          <Image src="devpost-icon.svg" alt="Devpost" width={24} height={24} />
-        </Link>
-        <Link
-          href={"https://github.com/rachelchxn"}
-          target="_blank"
-          className={styles.icon}
-        >
-          <Image src="github-icon.svg" alt="Github" width={24} height={24} />
-        </Link>
-        <Link
-          href={"mailto:rachelc0715@gmail.com"}
-          target="_blank"
-          className={styles.icon}
-        >
-          <Image src="email-icon.svg" alt="Email" width={24} height={24} />
-        </Link>
+      <div className={styles.footer}>
+        <h5>Made with ❤ by Rachel</h5>
+        <div className={styles.iconList}>
+          <Link
+            href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
+            target="_blank"
+            className={styles.icon}
+          >
+            <Image
+              src="linkedin-icon.svg"
+              alt="Linkedin"
+              width={24}
+              height={24}
+            />
+          </Link>
+          <Link
+            href={"https://devpost.com/rachelc0715"}
+            target="_blank"
+            className={styles.icon}
+          >
+            <Image
+              src="devpost-icon.svg"
+              alt="Devpost"
+              width={24}
+              height={24}
+            />
+          </Link>
+          <Link
+            href={"https://github.com/rachelchxn"}
+            target="_blank"
+            className={styles.icon}
+          >
+            <Image src="github-icon.svg" alt="Github" width={24} height={24} />
+          </Link>
+          <Link
+            href={"mailto:rachelc0715@gmail.com"}
+            target="_blank"
+            className={styles.icon}
+          >
+            <Image src="email-icon.svg" alt="Email" width={24} height={24} />
+          </Link>
+        </div>
       </div>
     </div>
   );
