@@ -56,8 +56,8 @@ const MoreCard: React.FC<moreCardProps> = ({
           <div className={styles.links}>
             {links.map((link: { text: string; url: string }) => (
               <div className={styles.link}>
-                {link.text}
-                <img src="/arrow.svg" width={18} height={18} />
+                <p>{link.text}</p>
+                <img src="/arrow-dark.svg" width={18} height={18} />
               </div>
             ))}
           </div>
