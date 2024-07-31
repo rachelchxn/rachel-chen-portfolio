@@ -12,18 +12,13 @@ export default function Home() {
   const [isFeaturedTab, setIsFeaturedTab] = useState(true);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await getProjects();
-      setProjects(data);
+    const getData = async () => {
+      const [projects, more] = await Promise.all([getProjects(), getMore()]);
+      setProjects(projects);
+      setMore(more);
     };
 
-    const fetchMore = async () => {
-      const data = await getMore();
-      setMore(data);
-    };
-
-    fetchProjects();
-    fetchMore();
+    getData();
   }, []);
 
   return (

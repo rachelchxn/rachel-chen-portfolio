@@ -6,37 +6,31 @@ export default function HomePage() {
   return (
     <div className={styles.vFlex}>
       <div className={styles.heroTitle}>
-        <h2>Rachel Chen</h2>
+        <h2>👋 Hi, I'm Rachel.</h2>
         <p>
           I’m a product designer & developer with a burning passion for building
           meaningful human-tech experiences from the ground up.
         </p>
       </div>
 
-      <div></div>
-      <div>
+      <div className={styles.currently}>
         <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
-        <ul className={styles.list}>
-          <li>
-            <p>developing AI-powered enterprise solutions at RBC</p>
-          </li>
-          <li>
-            <p>
-              building a{" "}
-              <span className={styles.url}>
-                <Link href={"https://startchattin.vercel.app"} target="_blank">
-                  platform to connect cool people
-                  <img src="/arrow-dark.svg" width={20} height={20} />
-                </Link>
-              </span>
-            </p>
-          </li>
-          <li>
-            <p>dancing on weeknights and hacking on weekends</p>
-          </li>
-        </ul>
+        <div className={styles.list}>
+          <p>💰{"  "} developing AI-powered enterprise solutions at RBC</p>
+
+          <p>
+            🤝{"  "} building a{" "}
+            <span className={styles.url}>
+              <Link href={"https://startchattin.vercel.app"} target="_blank">
+                platform to connect cool people
+                <img src="/arrow-dark.svg" width={20} height={20} />
+              </Link>
+            </span>
+          </p>
+
+          <p>🕺{"  "} dancing on weeknights and hacking on weekends</p>
+        </div>
       </div>
-      <div></div>
       <div className={styles.btnContainer}>
         <Link
           href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
@@ -58,7 +52,9 @@ export default function HomePage() {
         </Link>
       </div>
       <div className={styles.footer}>
-        <h5>Made with ❤ by Rachel</h5>
+        <p>
+          Designed and built with <span>♥</span> by Rachel
+        </p>
         <div className={styles.iconList}>
           <Link
             href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
@@ -68,8 +64,8 @@ export default function HomePage() {
             <Image
               src="linkedin-icon.svg"
               alt="Linkedin"
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
           </Link>
           <Link
@@ -80,8 +76,8 @@ export default function HomePage() {
             <Image
               src="devpost-icon.svg"
               alt="Devpost"
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
           </Link>
           <Link
@@ -89,14 +85,14 @@ export default function HomePage() {
             target="_blank"
             className={styles.icon}
           >
-            <Image src="github-icon.svg" alt="Github" width={24} height={24} />
+            <Image src="github-icon.svg" alt="Github" width={20} height={20} />
           </Link>
           <Link
             href={"mailto:rachelc0715@gmail.com"}
             target="_blank"
             className={styles.icon}
           >
-            <Image src="email-icon.svg" alt="Email" width={24} height={24} />
+            <Image src="email-icon.svg" alt="Email" width={20} height={20} />
           </Link>
         </div>
       </div>
