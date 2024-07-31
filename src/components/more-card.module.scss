@@ -18,7 +18,7 @@
   height: max-content;
   align-items: stretch;
   min-height: 400px;
-  cursor: pointer;
+  cursor: url("/cursors/pointer.png"), pointer;
 
   &Disabled {
     @extend .card;

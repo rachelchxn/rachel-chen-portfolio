@@ -11,7 +11,7 @@
 .card {
   border-radius: var(--border-radius);
   overflow: hidden;
-  cursor: pointer;
+  cursor: url("/cursors/pointer.png"), pointer;
   display: flex;
   transition: all 0.3s ease;
   height: max-content;

@@ -52,6 +52,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: url("/cursors/pointer.png"), pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -145,7 +146,7 @@ button {
 
   &:hover {
     opacity: 0.9;
-    cursor: pointer;
+    cursor: url("/cursors/pointer.png"), pointer;
   }
 }
 
@@ -157,7 +158,7 @@ button {
 
   &:hover {
     background: var(--light-grey);
-    cursor: pointer;
+    cursor: url("/cursors/pointer.png"), pointer;
   }
 }
 
@@ -173,7 +174,7 @@ button {
   align-self: stretch;
   overflow: hidden;
   border-radius: var(--border-radius);
-  cursor: pointer;
+  cursor: url("/cursors/pointer.png"), pointer;
 }
 
 .blockLabel {
