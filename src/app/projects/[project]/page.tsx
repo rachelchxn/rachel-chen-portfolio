@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { getProjectBySlug } from "../../../../sanity/sanity-utils";
 import styles from "../project.module.scss";
@@ -60,15 +61,32 @@ export default function ProjectPage({ params }: Props) {
     };
 
     fetchData();
+
+    const handleScroll = () => {
+      const button = document.getElementById("backToTopButton");
+      if (!button) return;
+      if (window.scrollY > 300) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   if (!project) {
     return (
-      <div className={styles.main}>
-        <div className={styles.header}>Loading...</div>
+      <div className={styles.spinnerContainer}>
+        <div className={styles.spinner}></div>;
       </div>
     );
   }
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div>
@@ -133,6 +151,14 @@ export default function ProjectPage({ params }: Props) {
             value={project.content}
             components={myPortableTextComponents}
           />
+        </div>
+        <div
+          id="backToTopButton"
+          className={styles.backToTop}
+          onClick={scrollToTop}
+        >
+          <img src="/top.svg" width={12} height={12} alt="Back to Top" />
+          Back to Top
         </div>
       </div>
     </div>

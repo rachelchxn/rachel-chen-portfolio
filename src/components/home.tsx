@@ -16,10 +16,12 @@ export default function HomePage() {
       <div className={styles.currently}>
         <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
         <div className={styles.list}>
-          <p>💰{"  "} developing AI-powered enterprise solutions at RBC</p>
+          <p>
+            <span>💰</span> developing AI-powered enterprise solutions at RBC
+          </p>
 
           <p>
-            🤝{"  "} building a{" "}
+            <span>🤝</span> building a{" "}
             <span className={styles.url}>
               <Link href={"https://startchattin.vercel.app"} target="_blank">
                 platform to connect cool people
@@ -28,7 +30,9 @@ export default function HomePage() {
             </span>
           </p>
 
-          <p>🕺{"  "} dancing on weeknights and hacking on weekends</p>
+          <p>
+            <span>🕺</span> dancing on weeknights and hacking on weekends
+          </p>
         </div>
       </div>
       <div className={styles.btnContainer}>
