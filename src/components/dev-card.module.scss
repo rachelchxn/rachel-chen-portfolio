@@ -13,12 +13,14 @@
   overflow: hidden;
   cursor: url("/cursors/pointer.png"), pointer;
   display: flex;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   height: max-content;
   align-items: stretch;
+  box-sizing: border-box;
 
   &:hover {
-    opacity: 0.8;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 0 1px var(--mid-dark-grey);
   }
 
   &Disabled {
@@ -133,4 +135,32 @@
   bottom: var(--global-gap);
   right: var(--global-gap);
   transition: all 0.3s ease;
+}
+
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 200px;
+}
+
+.skeletonText {
+  height: 20px;
+  margin: 10px 0;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }

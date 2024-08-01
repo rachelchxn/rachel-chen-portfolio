@@ -20,6 +20,11 @@
   min-height: 400px;
   cursor: url("/cursors/pointer.png"), pointer;
 
+  &:hover {
+    transition: all 0.2s ease;
+    box-shadow: 0 0 0 1px var(--mid-dark-grey);
+  }
+
   &Disabled {
     @extend .card;
     opacity: 0.8;
@@ -28,10 +33,6 @@
 
   h4 {
     margin: 0;
-  }
-
-  &:hover {
-    opacity: 0.7;
   }
 
   &:hover .link p,
