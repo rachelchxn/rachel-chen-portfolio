@@ -12,22 +12,35 @@ export default function HomePage() {
           meaningful human-tech experiences from the ground up.
         </p>
       </div>
-
       <div className={styles.currently}>
         <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
         <div className={styles.list}>
           <p>
-            <span>💰</span> developing AI-powered enterprise solutions at RBC
+            <span>🔬</span>
+            <div>
+              building the face of
+              <span className={styles.url}>
+                <Link href={"https://www.mybiogenesis.com/"} target="_blank">
+                  {" "}
+                  Biogenesis
+                  <img src="/arrow-primary.svg" width={20} height={20} />
+                </Link>
+              </span>
+            </div>
           </p>
 
           <p>
-            <span>🤝</span> building a{" "}
-            <span className={styles.url}>
-              <Link href={"https://startchattin.vercel.app"} target="_blank">
-                platform to connect cool people
-                <img src="/arrow-dark.svg" width={20} height={20} />
-              </Link>
-            </span>
+            <span>🤝</span>
+            <div>
+              {" "}
+              building a{" "}
+              <span className={styles.url}>
+                <Link href={"https://startchattin.vercel.app"} target="_blank">
+                  platform to connect cool people
+                  <img src="/arrow-primary.svg" width={20} height={20} />
+                </Link>
+              </span>
+            </div>
           </p>
 
           <p>

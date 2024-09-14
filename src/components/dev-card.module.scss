@@ -20,7 +20,7 @@
 
   &:hover {
     transition: all 0.2s ease;
-    box-shadow: 0 0 0 1px var(--mid-dark-grey);
+    box-shadow: 0 0 0 1px var(--primary);
   }
 
   &Disabled {
@@ -105,16 +105,18 @@
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-  color: var(--dark-grey);
-  background-color: var(--mid-grey);
   width: max-content;
   font-size: 13px;
-  opacity: 0.7;
+  opacity: 1;
+  background-color: var(--primary-white);
+  color: var(--primary);
+  border: 1px solid #eec5bf50;
 
   &Primary {
     @extend .tag;
-    background-color: var(--dark-grey);
-    color: var(--primary-white);
+    background-color: var(--highlight);
+    color: var(--primary);
+    border: 1px solid var(--highlight);
   }
 }
 

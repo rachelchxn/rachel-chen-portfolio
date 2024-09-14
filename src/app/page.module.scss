@@ -262,6 +262,9 @@
   display: flex;
   flex-direction: column;
   gap: calc(var(--global-gap) / 2);
+  padding: 24px;
+  border-radius: var(--border-radius);
+  background-color: var(--highlight);
 }
 
 .list {
@@ -278,8 +281,9 @@
     margin-left: -12px;
     margin-top: 4px;
   }
-  span {
-    padding-right: 4px;
+  p {
+    display: flex;
+    gap: 8px;
   }
 }
 
@@ -304,8 +308,14 @@
 
   &Current {
     @extend .tab;
-    border-bottom: 2px solid var(--dark-grey);
-    color: var(--dark-grey);
+    border-bottom: 2px solid var(--primary);
+    opacity: 1;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--primary);
+      cursor: url("/cursors/pointer.png"), pointer;
+    }
   }
 }
 
@@ -323,14 +333,15 @@
 }
 
 .url {
-  opacity: 0.5 !important;
+  opacity: 1 !important;
+  color: var(--primary) !important;
   font-weight: 400;
   transition: all 0.3s ease;
   cursor: url("/cursors/pointer.png"), pointer;
   align-items: center;
 
   &:hover {
-    opacity: 1 !important;
+    opacity: 0.5 !important;
   }
 
   img {
