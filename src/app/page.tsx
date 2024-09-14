@@ -10,12 +10,14 @@ export default function Home() {
   const [projects, setProjects] = useState([]);
   const [more, setMore] = useState([]);
   const [isFeaturedTab, setIsFeaturedTab] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       const [projects, more] = await Promise.all([getProjects(), getMore()]);
       setProjects(projects);
       setMore(more);
+      setIsLoading(false);
     };
 
     getData();
@@ -44,9 +46,9 @@ export default function Home() {
 
         <div className={styles.projectContainer}>
           {isFeaturedTab ? (
-            <ProjectList projects={projects} />
+            <ProjectList loading={isLoading} projects={projects} />
           ) : (
-            <MoreList projects={more} />
+            <MoreList loading={isLoading} projects={more} />
           )}
         </div>
       </div>

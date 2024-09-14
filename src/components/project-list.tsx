@@ -5,9 +5,17 @@ import { Project } from "@/types";
 
 type ProjectListProps = {
   projects: any[];
+  loading: boolean;
 };
 
-const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
+const ProjectList: React.FC<ProjectListProps> = ({ projects, loading }) => {
+  if (loading) {
+    return (
+      <div className={styles.spinnerContainer}>
+        <div className={styles.spinner}></div>
+      </div>
+    );
+  }
   return (
     <div className={styles.projectList}>
       {projects.map((project: Project) => (

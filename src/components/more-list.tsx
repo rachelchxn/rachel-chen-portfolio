@@ -5,9 +5,17 @@ import MoreCard from "./moreCard";
 
 type ProjectListProps = {
   projects: any[];
+  loading: boolean;
 };
 
-const MoreList: React.FC<ProjectListProps> = ({ projects }) => {
+const MoreList: React.FC<ProjectListProps> = ({ projects, loading }) => {
+  if (loading) {
+    return (
+      <div className={styles.spinnerContainer}>
+        <div className={styles.spinner}></div>
+      </div>
+    );
+  }
   return (
     <div className={styles.moreList}>
       {projects.map((project) => (

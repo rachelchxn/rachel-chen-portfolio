@@ -15,9 +15,9 @@ export default function HomePage() {
       <div className={styles.currently}>
         <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
         <div className={styles.list}>
-          <p>
+          <div className={styles.bullet}>
             <span>🔬</span>
-            <div>
+            <p>
               building the face of
               <span className={styles.url}>
                 <Link href={"https://www.mybiogenesis.com/"} target="_blank">
@@ -26,12 +26,12 @@ export default function HomePage() {
                   <img src="/arrow-primary.svg" width={20} height={20} />
                 </Link>
               </span>
-            </div>
-          </p>
+            </p>
+          </div>
 
-          <p>
+          <div className={styles.bullet}>
             <span>🤝</span>
-            <div>
+            <p>
               {" "}
               building a{" "}
               <span className={styles.url}>
@@ -40,12 +40,12 @@ export default function HomePage() {
                   <img src="/arrow-primary.svg" width={20} height={20} />
                 </Link>
               </span>
-            </div>
-          </p>
+            </p>
+          </div>
 
-          <p>
-            <span>🕺</span> dancing on weeknights and hacking on weekends
-          </p>
+          <div className={styles.bullet}>
+            <span>🕺</span> <p>dancing on weeknights and hacking on weekends</p>
+          </div>
         </div>
       </div>
       <div className={styles.btnContainer}>

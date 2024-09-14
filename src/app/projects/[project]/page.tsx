@@ -1,13 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { getProjectBySlug } from "../../../../sanity/sanity-utils";
+import {
+  getNextProjects,
+  getProjectBySlug,
+} from "../../../../sanity/sanity-utils";
 import styles from "../project.module.scss";
 import { PortableText } from "next-sanity";
 import { useEffect, useState } from "react";
 import { Project } from "@/types";
 import { createClient } from "@sanity/client";
-import { UrlObject } from "url";
 import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 
@@ -53,11 +55,14 @@ const SanityImage = ({ asset }: SanityImageProps) => {
 export default function ProjectPage({ params }: Props) {
   const slug = params.project;
   const [project, setProject] = useState<Project | null>(null);
+  const [nextProjects, setNextProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await getProjectBySlug(slug);
+      const nextProjects = await Promise.all([getNextProjects(slug)]);
       setProject(data);
+      setNextProjects(nextProjects[0]);
     };
 
     fetchData();
@@ -79,7 +84,7 @@ export default function ProjectPage({ params }: Props) {
   if (!project) {
     return (
       <div className={styles.spinnerContainer}>
-        <div className={styles.spinner}></div>;
+        <div className={styles.spinner}></div>
       </div>
     );
   }
@@ -152,13 +157,20 @@ export default function ProjectPage({ params }: Props) {
             components={myPortableTextComponents}
           />
         </div>
-        <div
-          id="backToTopButton"
-          className={styles.backToTop}
-          onClick={scrollToTop}
-        >
-          <img src="/top.svg" width={12} height={12} alt="Back to Top" />
-          Back to Top
+        <div className={styles.projectFooter}>
+          <h5>Continue your journey:</h5>
+          <div className={styles.nextProjects}>
+            {nextProjects.length > 0 &&
+              nextProjects.map((project) => (
+                <Link
+                  href={"/projects/" + project.slug}
+                  className={styles.nextProject}
+                >
+                  <h5>{project.name}</h5>
+                  <p>{project.headline}</p>
+                </Link>
+              ))}
+          </div>
         </div>
       </div>
     </div>

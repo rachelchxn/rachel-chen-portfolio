@@ -60,6 +60,36 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
   );
 }
 
+export async function getNextProjects(slug: string) {
+  const client = createClient({
+    projectId: "q7a7buiu",
+    dataset: "production",
+    apiVersion: "2024-05-05",
+  });
+
+  return client.fetch(
+    groq`*[_type == "project" && slug.current != $slug && slug.current != "heyhr" ] | order(_updatedAt desc){
+            _id,
+            _createdAt,
+            slug,
+            name,
+            headline,
+            overview,
+            timeline,
+            company,
+            projecttype,
+            roles,
+            tags, 
+            links,
+            "slug": slug.current,
+            "image": image.asset->url,
+            url,
+            content
+        }`,
+    { slug }
+  );
+}
+
 export async function getMore() {
   const client = createClient({
     projectId: "q7a7buiu",
