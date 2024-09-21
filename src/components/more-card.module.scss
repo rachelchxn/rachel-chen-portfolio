@@ -40,10 +40,9 @@
   }
   &:hover .link {
     transition: all 0.3s ease;
-    path {
+    img {
       opacity: 1;
       transition: all 0.3s ease;
-      fill: var(--primary);
     }
   }
 }
@@ -152,8 +151,9 @@
     transition: all 0.3s ease;
   }
 
-  svg {
+  img {
     transition: all 0.3s ease;
+    opacity: 0.5;
     margin-bottom: -1px;
   }
 }

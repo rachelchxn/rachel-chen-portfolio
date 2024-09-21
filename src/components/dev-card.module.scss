@@ -109,14 +109,14 @@
   font-size: 13px;
   opacity: 1;
   background-color: var(--primary-white);
-  color: var(--primary);
-  border: 1px solid #eec5bf50;
+  color: var(--mid-dark-grey);
 
   &Primary {
     @extend .tag;
-    background-color: var(--highlight);
-    color: var(--primary);
-    border: 1px solid var(--highlight);
+    background-color: var(--dark-grey);
+    color: var(--primary-white);
+    border: none;
+    opacity: 0.8;
   }
 }
 

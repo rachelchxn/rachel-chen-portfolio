@@ -6,7 +6,7 @@ import {
   getProjectBySlug,
 } from "../../../../sanity/sanity-utils";
 import styles from "../project.module.scss";
-import { PortableText } from "next-sanity";
+import { PortableText, PortableTextReactComponents } from "next-sanity";
 import { useEffect, useState } from "react";
 import { Project } from "@/types";
 import { createClient } from "@sanity/client";
@@ -27,29 +27,6 @@ type SanityImageProps = {
   asset: {
     _ref: string;
   };
-};
-
-const myPortableTextComponents = {
-  types: {
-    image: ({ value }: { value: SanityImageProps }) => {
-      return <SanityImage {...value} />;
-    },
-  },
-};
-
-const SanityImage = ({ asset }: SanityImageProps) => {
-  const imageProps = useNextSanityImage(client, asset);
-
-  if (!imageProps) return null;
-
-  return (
-    <Image
-      {...imageProps}
-      layout="responsive"
-      alt="alt"
-      sizes="(max-width: 800px) 100vw, 800px"
-    />
-  );
 };
 
 export default function ProjectPage({ params }: Props) {
@@ -93,6 +70,104 @@ export default function ProjectPage({ params }: Props) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const SanityImage = ({ asset }: SanityImageProps) => {
+    const imageProps = useNextSanityImage(client, asset);
+
+    if (!imageProps) return null;
+
+    return (
+      <Image
+        {...imageProps}
+        layout="responsive"
+        alt="alt"
+        sizes="(max-width: 800px) 100vw, 800px"
+      />
+    );
+  };
+
+  const myPortableTextComponents: Partial<PortableTextReactComponents> = {
+    types: {
+      image: ({ value }: { value: SanityImageProps }) => {
+        const isGif = value.asset._ref.endsWith("gif");
+        return (
+          <div className={isGif ? styles.gifImage : styles.regularImage}>
+            <SanityImage {...value} />
+          </div>
+        );
+      },
+    },
+    marks: {
+      link: ({ value, children }) => {
+        const url = value.href;
+        const isYouTube =
+          url.includes("youtube.com") || url.includes("youtu.be");
+        if (isYouTube) {
+          const videoId = url.split("v=")[1] || url.split("/").pop();
+          const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+          return (
+            <div
+              className={styles.youtubeEmbed}
+              style={{
+                width: "100%",
+                position: "relative",
+                paddingBottom: "56.25%",
+                height: "0",
+              }}
+            >
+              <iframe
+                src={embedUrl}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                }}
+              ></iframe>
+            </div>
+          );
+        }
+        return <a href={url}>{children}</a>;
+      },
+    },
+    block: {
+      blockquote: ({ children }) => (
+        <blockquote
+          style={{
+            backgroundColor: colourSecondary,
+            color: colourPrimary,
+            padding: "1em",
+            margin: "1em 0",
+            borderLeft: `4px solid ${colourPrimary}`,
+          }}
+        >
+          {children}
+        </blockquote>
+      ),
+    },
+  };
+
+  const colourPrimary =
+    project.name == "Earth"
+      ? "#1351C9"
+      : project.name == "PokerGPT"
+        ? "#764FE4"
+        : project.name == "LinkedIn"
+          ? "#2D64BC"
+          : "#000";
+
+  const colourSecondary =
+    project.name == "Earth"
+      ? "#E4EBF7"
+      : project.name == "PokerGPT"
+        ? "#EBE6F6"
+        : project.name == "LinkedIn"
+          ? "#EAF4F8"
+          : "#e6e6e6";
+
   return (
     <div>
       <div className={styles.main}>
@@ -126,8 +201,24 @@ export default function ProjectPage({ params }: Props) {
                 <h2>{project.headline}</h2>
 
                 <div className={styles.tagList}>
-                  <p className={styles.tagPrimary}>{project.company}</p>
-                  <p className={styles.tag}>{project.projecttype}</p>
+                  <p
+                    className={styles.tagPrimary}
+                    style={{
+                      backgroundColor: colourPrimary,
+                      color: "var(--primary-white)",
+                    }}
+                  >
+                    {project.company}
+                  </p>
+                  <p
+                    className={styles.tag}
+                    style={{
+                      backgroundColor: colourSecondary,
+                      color: colourPrimary,
+                    }}
+                  >
+                    {project.projecttype}
+                  </p>
                 </div>
 
                 <p>{project.overview}</p>
@@ -135,7 +226,10 @@ export default function ProjectPage({ params }: Props) {
                 <div className={styles.buttonList}>
                   {project.links.map((link: { text: string; url: string }) => (
                     <Link href={link.url} target="_blank">
-                      <button className={styles.btnPrimary}>
+                      <button
+                        className={styles.btnPrimary}
+                        style={{ backgroundColor: colourPrimary }}
+                      >
                         {link.text}
                         <img
                           src="/arrow.svg"

@@ -23,7 +23,7 @@ export default function HomePage() {
                 <Link href={"https://www.mybiogenesis.com/"} target="_blank">
                   {" "}
                   Biogenesis
-                  <img src="/arrow-primary.svg" width={20} height={20} />
+                  <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
             </p>
@@ -37,7 +37,7 @@ export default function HomePage() {
               <span className={styles.url}>
                 <Link href={"https://startchattin.vercel.app"} target="_blank">
                   platform to connect cool people
-                  <img src="/arrow-primary.svg" width={20} height={20} />
+                  <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
             </p>

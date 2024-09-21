@@ -24,7 +24,6 @@ const DevCard: React.FC<DevCardProps> = ({
   projecttype,
   imageURL,
   url,
-  colour,
   disabled,
 }) => {
   const router = useRouter();
@@ -32,6 +31,24 @@ const DevCard: React.FC<DevCardProps> = ({
   const handleClick = () => {
     router.push(`/projects/${url}`);
   };
+
+  const colourPrimary =
+    title == "Earth"
+      ? "#1351C9"
+      : title == "PokerGPT"
+        ? "#764FE4"
+        : title == "LinkedIn"
+          ? "#2D64BC"
+          : "#000";
+
+  const colourSecondary =
+    title == "Earth"
+      ? "#E4EBF7"
+      : title == "PokerGPT"
+        ? "#EBE6F6"
+        : title == "LinkedIn"
+          ? "#EAF4F8"
+          : "#e6e6e6";
 
   return (
     <div
@@ -49,15 +66,28 @@ const DevCard: React.FC<DevCardProps> = ({
           </div>
         )}
       </div>
-      <div className={styles.info} style={{ backgroundColor: colour }}>
+      <div
+        className={styles.info}
+        style={{ backgroundColor: "var(--primary-white)" }}
+      >
         <div className={styles.infoMain}>
           <h5>{title}</h5>
           <h3>{description}</h3>
         </div>
         <div>
           <div className={styles.tagList}>
-            <p className={styles.tagPrimary}>{company}</p>
-            <p className={styles.tag}>{projecttype}</p>
+            <p
+              className={styles.tagPrimary}
+              style={{ backgroundColor: colourPrimary }}
+            >
+              {company}
+            </p>
+            <p
+              className={styles.tag}
+              style={{ backgroundColor: colourSecondary, color: colourPrimary }}
+            >
+              {projecttype}
+            </p>
           </div>
         </div>
       </div>
