@@ -36,7 +36,7 @@ const DevCard: React.FC<DevCardProps> = ({
     title == "Earth"
       ? "#1351C9"
       : title == "PokerGPT"
-        ? "#764FE4"
+        ? "#5E3FB6"
         : title == "LinkedIn"
           ? "#2D64BC"
           : "#000";
@@ -45,7 +45,7 @@ const DevCard: React.FC<DevCardProps> = ({
     title == "Earth"
       ? "#E4EBF7"
       : title == "PokerGPT"
-        ? "#EBE6F6"
+        ? "#F4F1FA"
         : title == "LinkedIn"
           ? "#EAF4F8"
           : "#e6e6e6";

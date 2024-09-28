@@ -154,16 +154,16 @@ export default function ProjectPage({ params }: Props) {
     project.name == "Earth"
       ? "#1351C9"
       : project.name == "PokerGPT"
-        ? "#764FE4"
+        ? "#5E3FB6"
         : project.name == "LinkedIn"
           ? "#2D64BC"
           : "#000";
 
   const colourSecondary =
     project.name == "Earth"
-      ? "#E4EBF7"
+      ? "#E7F0FC"
       : project.name == "PokerGPT"
-        ? "#EBE6F6"
+        ? "#F4F1FA"
         : project.name == "LinkedIn"
           ? "#EAF4F8"
           : "#e6e6e6";

@@ -6,17 +6,48 @@ export default function HomePage() {
   return (
     <div className={styles.vFlex}>
       <div className={styles.heroTitle}>
-        <h2>👋 Hi, I'm Rachel.</h2>
+        <h2>
+          <span style={{ marginBottom: "-8px", paddingTop: "8px" }}>
+            <img src="/wave.png" width={48} height={48} />
+          </span>{" "}
+          Hi, I'm Rachel.
+        </h2>
         <p>
-          I’m a product designer & developer with a burning passion for building
-          meaningful human-tech experiences from the ground up.
+          I’m a builder who loves to{" "}
+          <span style={{ color: "#3974BA" }}>
+            <img
+              src="/data.png"
+              width={20}
+              height={20}
+              style={{ marginBottom: "-2px" }}
+            />{" "}
+            play around with data{" "}
+          </span>{" "}
+          and{" "}
+          <span style={{ color: "#D56F4A" }}>
+            <img
+              src="/blush.png"
+              width={20}
+              height={20}
+              style={{ marginBottom: "-2px" }}
+            />{" "}
+            craft experiences for humans
+          </span>
+          .
         </p>
       </div>
       <div className={styles.currently}>
         <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
         <div className={styles.list}>
           <div className={styles.bullet}>
-            <span>🔬</span>
+            <span>
+              <img
+                src="/bio.png"
+                width={20}
+                height={20}
+                style={{ marginBottom: "-2px" }}
+              />{" "}
+            </span>
             <p>
               building the face of
               <span className={styles.url}>
@@ -30,10 +61,17 @@ export default function HomePage() {
           </div>
 
           <div className={styles.bullet}>
-            <span>🤝</span>
+            <span>
+              <img
+                src="/shake.png"
+                width={20}
+                height={20}
+                style={{ marginBottom: "-2px" }}
+              />{" "}
+            </span>
             <p>
               {" "}
-              building a{" "}
+              launching a{" "}
               <span className={styles.url}>
                 <Link href={"https://startchattin.vercel.app"} target="_blank">
                   platform to connect cool people
@@ -44,7 +82,15 @@ export default function HomePage() {
           </div>
 
           <div className={styles.bullet}>
-            <span>🕺</span> <p>dancing on weeknights and hacking on weekends</p>
+            <span>
+              <img
+                src="/dance.png"
+                width={20}
+                height={20}
+                style={{ marginBottom: "-2px" }}
+              />{" "}
+            </span>{" "}
+            <p>dancing on weeknights and hacking on weekends</p>
           </div>
         </div>
       </div>
