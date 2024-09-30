@@ -179,6 +179,8 @@
   flex-direction: column;
   gap: calc(var(--global-gap) * 2);
   justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
   height: 100%;
   margin-bottom: 40px;
 }
@@ -265,13 +267,16 @@
   padding: 24px;
   border-radius: var(--border-radius);
   background-color: var(--highlight);
+
+  h5 {
+    margin-bottom: 8px;
+  }
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 12px;
 
   h5 {
     border-top: 2px solid var(--lig);
@@ -338,23 +343,19 @@
 
 .url {
   opacity: 1 !important;
+  font-weight: 500;
   color: var(--primary) !important;
-  text-decoration: underline;
   transition: all 0.3s ease;
   cursor: url("/cursors/pointer.png"), pointer;
   align-items: center;
 
   &:hover {
     opacity: 0.5 !important;
-    img {
-      opacity: 0.6;
-    }
   }
 
   img {
-    margin-bottom: -3.5px;
+    margin-bottom: -5px;
     transition: all 0.3s ease;
-    margin-left: 2px;
     opacity: 1;
   }
 }

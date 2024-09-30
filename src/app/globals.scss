@@ -4,14 +4,14 @@
   --max-width: 1100px;
   --border-radius: 12px;
 
-  --primary-white: #fefdfc;
-  --primary: #2f2f2f;
-  --highlight: #f8f6f5;
-  --light-grey: #f8f6f5;
-  --mid-grey: #e5e4e4;
-  --mid-dark-grey: #9a9a9a;
-  --dark-grey: #504f4e;
-  --primary-dark: #2f2f2f;
+  --primary-white: #fff;
+  --primary: #111;
+  --highlight: #f8f8f8;
+  --light-grey: #f8f8f8;
+  --mid-grey: #e5e5e5;
+  --mid-dark-grey: #999999;
+  --dark-grey: #555555;
+  --primary-dark: #111;
 
   --border-radius: 8px;
   --global-gap: 20px;
@@ -77,53 +77,54 @@ a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 100%;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 120%;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0.7;
   margin-bottom: 0;
 }
 
 .button-text {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--primary-dark);
 }
 
-.lg-p {
-  font-size: 1.5rem;
+.lgP {
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 18px;
   font-weight: 400;
+  color: var(--dark-grey);
 }
 
 .sm-p {
@@ -143,7 +144,9 @@ p {
 
 button {
   display: inline-flex;
-  padding: 16px 30px 16px 32px;
+  border: 1px solid var(--primary);
+  padding: 12px 24px;
+  line-height: 24px;
   justify-content: center;
   align-items: center;
   gap: 4px;
@@ -165,9 +168,9 @@ button {
 
 .btnSecondary {
   background: var(--primary-white);
-  border: 1px solid #c6c5c5;
-  height: 54px;
+  border: 1px solid var(--mid-grey);
   color: var(--primary-dark);
+  height: 48px;
 
   &:hover {
     background: var(--light-grey);

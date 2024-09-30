@@ -7,37 +7,28 @@ export default function HomePage() {
     <div className={styles.vFlex}>
       <div className={styles.heroTitle}>
         <h2>
-          <span style={{ marginBottom: "-8px", paddingTop: "8px" }}>
-            <img src="/wave.png" width={48} height={48} />
+          <span
+            style={{
+              marginRight: "4px",
+              marginTop: "4px",
+            }}
+          >
+            <img
+              src="/wave.png"
+              width={40}
+              height={40}
+              style={{ marginBottom: "-4px" }}
+            />
           </span>{" "}
           Hi, I'm Rachel.
         </h2>
-        <p>
-          I’m a builder who loves to{" "}
-          <span style={{ color: "#3974BA" }}>
-            <img
-              src="/data.png"
-              width={20}
-              height={20}
-              style={{ marginBottom: "-2px" }}
-            />{" "}
-            play around with data{" "}
-          </span>{" "}
-          and{" "}
-          <span style={{ color: "#D56F4A" }}>
-            <img
-              src="/blush.png"
-              width={20}
-              height={20}
-              style={{ marginBottom: "-2px" }}
-            />{" "}
-            craft experiences for humans
-          </span>
-          .
+        <p className={styles.lgP} style={{ maxWidth: "480px" }}>
+          I’m a 0 to 1 product builder with a special love for playing around
+          with data and analyzing human psychology.
         </p>
       </div>
       <div className={styles.currently}>
-        <h5 style={{ marginBottom: "8px" }}>Currently...</h5>
+        <h5>Currently...</h5>
         <div className={styles.list}>
           <div className={styles.bullet}>
             <span>
@@ -45,7 +36,7 @@ export default function HomePage() {
                 src="/bio.png"
                 width={20}
                 height={20}
-                style={{ marginBottom: "-2px" }}
+                style={{ marginTop: "-2px" }}
               />{" "}
             </span>
             <p>
@@ -66,7 +57,7 @@ export default function HomePage() {
                 src="/shake.png"
                 width={20}
                 height={20}
-                style={{ marginBottom: "-2px" }}
+                style={{ marginTop: "-2px" }}
               />{" "}
             </span>
             <p>
@@ -87,7 +78,7 @@ export default function HomePage() {
                 src="/dance.png"
                 width={20}
                 height={20}
-                style={{ marginBottom: "-2px" }}
+                style={{ marginTop: "-2px" }}
               />{" "}
             </span>{" "}
             <p>dancing on weeknights and hacking on weekends</p>
