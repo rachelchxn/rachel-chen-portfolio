@@ -43,7 +43,7 @@ const DevCard: React.FC<DevCardProps> = ({
 
   const colourSecondary =
     title == "Earth"
-      ? "#E4EBF7"
+      ? "#EFF4FF"
       : title == "PokerGPT"
         ? "#F4F1FA"
         : title == "LinkedIn"

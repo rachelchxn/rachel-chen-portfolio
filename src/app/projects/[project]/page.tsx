@@ -161,7 +161,7 @@ export default function ProjectPage({ params }: Props) {
 
   const colourSecondary =
     project.name == "Earth"
-      ? "#E7F0FC"
+      ? "#EFF4FF"
       : project.name == "PokerGPT"
         ? "#F4F1FA"
         : project.name == "LinkedIn"
