@@ -157,7 +157,7 @@ export default function ProjectPage({ params }: Props) {
         ? "#5E3FB6"
         : project.name == "LinkedIn"
           ? "#2D64BC"
-          : "#000";
+          : "#EE5253";
 
   const colourSecondary =
     project.name == "Earth"
@@ -166,7 +166,7 @@ export default function ProjectPage({ params }: Props) {
         ? "#F4F1FA"
         : project.name == "LinkedIn"
           ? "#EAF4F8"
-          : "#e6e6e6";
+          : "#FDECEA";
 
   return (
     <div>

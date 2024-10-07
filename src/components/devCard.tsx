@@ -39,7 +39,7 @@ const DevCard: React.FC<DevCardProps> = ({
         ? "#5E3FB6"
         : title == "LinkedIn"
           ? "#2D64BC"
-          : "#000";
+          : "#EE5253";
 
   const colourSecondary =
     title == "Earth"
@@ -48,7 +48,7 @@ const DevCard: React.FC<DevCardProps> = ({
         ? "#F4F1FA"
         : title == "LinkedIn"
           ? "#EAF4F8"
-          : "#e6e6e6";
+          : "#FDECEA";
 
   return (
     <div

@@ -34,13 +34,13 @@ export default function Home() {
             className={isFeaturedTab ? styles.tabCurrent : styles.tab}
             onClick={() => setIsFeaturedTab(true)}
           >
-            Featured
+            Case Studies
           </h5>
           <h5
             className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
             onClick={() => setIsFeaturedTab(false)}
           >
-            More
+            Fun Projects
           </h5>
         </div>
 

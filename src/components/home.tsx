@@ -33,6 +33,27 @@ export default function HomePage() {
           <div className={styles.bullet}>
             <span>
               <img
+                src="/shake.png"
+                width={20}
+                height={20}
+                style={{ marginBottom: "-2px" }}
+              />{" "}
+            </span>
+            <p>
+              {" "}
+              launching a dating-app-style{" "}
+              <span className={styles.url}>
+                <Link href={"https://startchattin.vercel.app"} target="_blank">
+                  platform to connect people
+                  <img src="/arrow-dark.svg" width={20} height={20} />
+                </Link>
+              </span>
+            </p>
+          </div>
+
+          <div className={styles.bullet}>
+            <span>
+              <img
                 src="/bio.png"
                 width={20}
                 height={20}
@@ -45,27 +66,6 @@ export default function HomePage() {
                 <Link href={"https://www.mybiogenesis.com/"} target="_blank">
                   {" "}
                   Biogenesis
-                  <img src="/arrow-dark.svg" width={20} height={20} />
-                </Link>
-              </span>
-            </p>
-          </div>
-
-          <div className={styles.bullet}>
-            <span>
-              <img
-                src="/shake.png"
-                width={20}
-                height={20}
-                style={{ marginTop: "-2px" }}
-              />{" "}
-            </span>
-            <p>
-              {" "}
-              launching a{" "}
-              <span className={styles.url}>
-                <Link href={"https://startchattin.vercel.app"} target="_blank">
-                  platform to connect cool people
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
