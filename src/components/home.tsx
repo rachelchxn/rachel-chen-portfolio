@@ -23,8 +23,8 @@ export default function HomePage() {
           Hi, I'm Rachel.
         </h2>
         <p className={styles.lgP} style={{ maxWidth: "480px" }}>
-          I’m a 0 to 1 product builder with a special love for playing around
-          with data and analyzing human psychology.
+          I'm a 0 to 1 product builder who designs, codes, and ships fast --
+          using data to prioritize user experiences.
         </p>
       </div>
       <div className={styles.currently}>
@@ -70,6 +70,18 @@ export default function HomePage() {
                 </Link>
               </span>
             </p>
+          </div>
+
+          <div className={styles.bullet}>
+            <span>
+              <img
+                src="/stats.png"
+                width={20}
+                height={20}
+                style={{ marginTop: "-2px" }}
+              />{" "}
+            </span>
+            <p>detecting fraud with stats and machine learning for CIBC</p>
           </div>
 
           <div className={styles.bullet}>
