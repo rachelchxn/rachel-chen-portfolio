@@ -22,12 +22,12 @@ export default function HomePage() {
           </span>{" "}
           Hi, I'm Rachel.
         </h2>
-        <p className={styles.lgP} style={{ maxWidth: "480px" }}>
+        <p className={styles.lgP} style={{ maxWidth: "540px" }}>
           I'm a 0 to 1 product builder who designs, codes, and ships fast --
           using data to prioritize user experiences.
         </p>
       </div>
-      <div className={styles.currently}>
+      <div className={styles.currently} style={{ maxWidth: "560px" }}>
         <h5>Currently...</h5>
         <div className={styles.list}>
           <div className={styles.bullet}>
@@ -41,16 +41,37 @@ export default function HomePage() {
             </span>
             <p>
               {" "}
-              launching a dating-app-style{" "}
+              launching{" "}
               <span className={styles.url}>
                 <Link href={"https://startchattin.vercel.app"} target="_blank">
-                  platform to connect people
+                  an app
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
+              for casual professional connections
             </p>
           </div>
 
+          <div className={styles.bullet}>
+            <span>
+              <img
+                src="/brain.png"
+                width={20}
+                height={20}
+                style={{ marginTop: "-2px" }}
+              />{" "}
+            </span>
+            <p>
+              making{" "}
+              <span className={styles.url}>
+                <Link href={"https://numeracyscreener.com/"} target="_blank">
+                  {" "}
+                  educational screening accessible
+                  <img src="/arrow-dark.svg" width={20} height={20} />
+                </Link>{" "}
+              </span>
+            </p>
+          </div>
           <div className={styles.bullet}>
             <span>
               <img
@@ -65,7 +86,7 @@ export default function HomePage() {
               <span className={styles.url}>
                 <Link href={"https://www.mybiogenesis.com/"} target="_blank">
                   {" "}
-                  Biogenesis
+                  a novel biotech startup
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
@@ -75,13 +96,22 @@ export default function HomePage() {
           <div className={styles.bullet}>
             <span>
               <img
-                src="/stats.png"
+                src="/plane.png"
                 width={20}
                 height={20}
                 style={{ marginTop: "-2px" }}
               />{" "}
             </span>
-            <p>detecting fraud with stats and machine learning for CIBC</p>
+            <p>
+              designing a
+              <span className={styles.url}>
+                <Link href={"https://hackwestern.com/"} target="_blank">
+                  {" "}
+                  delightful hacker experience
+                  <img src="/arrow-dark.svg" width={20} height={20} />
+                </Link>
+              </span>
+            </p>
           </div>
 
           <div className={styles.bullet}>
