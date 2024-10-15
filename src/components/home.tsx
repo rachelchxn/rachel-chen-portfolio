@@ -22,7 +22,7 @@ export default function HomePage() {
           </span>{" "}
           Hi, I'm Rachel.
         </h2>
-        <p className={styles.lgP} style={{ maxWidth: "540px" }}>
+        <p className={styles.lgP} style={{ maxWidth: "560px" }}>
           I'm a 0 to 1 product builder who designs, codes, and ships fast --
           using data to prioritize user experiences.
         </p>
@@ -113,20 +113,26 @@ export default function HomePage() {
               </span>
             </p>
           </div>
-
-          <div className={styles.bullet}>
-            <span>
-              <img
-                src="/dance.png"
-                width={20}
-                height={20}
-                style={{ marginTop: "-2px" }}
-              />{" "}
-            </span>{" "}
-            <p>dancing on weeknights and hacking on weekends</p>
-          </div>
         </div>
       </div>
+      <div
+        className={styles.bullet}
+        style={{ fontStyle: "italic", marginTop: "-8px" }}
+      >
+        <p>
+          P.S.{" "}
+          {/* <span>
+            <img
+              src="/dance.png"
+              width={20}
+              height={20}
+              style={{ marginBottom: "-2px" }}
+            />{" "}
+          </span>{" "} */}
+          You can find me dancing on weeknights and hacking on weekends
+        </p>
+      </div>
+
       <div className={styles.btnContainer}>
         <Link
           href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
