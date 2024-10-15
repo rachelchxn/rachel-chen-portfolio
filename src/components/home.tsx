@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className={styles.vFlex}>
       <div className={styles.heroTitle}>
-        <h2>
+        <h2 style={{ fontSize: "24px", maxWidth: "560px" }}>
           <span
             style={{
               marginRight: "4px",
@@ -15,52 +15,52 @@ export default function HomePage() {
           >
             <img
               src="/wave.png"
-              width={40}
-              height={40}
+              width={32}
+              height={32}
               style={{ marginBottom: "-4px" }}
             />
           </span>{" "}
-          Hi, I'm Rachel.
+          Hey, I'm Rachel!{" "}
+          <span style={{ color: "var(--dark-grey)", fontWeight: "400" }}>
+            I'm a 0 -{">"} 1 product builder who ships simple + delightful user
+            experiences that solve problems.
+          </span>
         </h2>
-        <p className={styles.lgP} style={{ maxWidth: "560px" }}>
-          I'm a 0 to 1 product builder who designs, codes, and ships fast --
-          using data to prioritize user experiences.
-        </p>
+        {/* <p style={{ maxWidth: "560px" }}>
+          I'm a 0 to 1 product builder who ships simple and delightful user
+          experiences that solve problems.
+        </p> */}
       </div>
+
       <div className={styles.currently} style={{ maxWidth: "560px" }}>
         <h5>Currently...</h5>
         <div className={styles.list}>
           <div className={styles.bullet}>
-            <span>
-              <img
-                src="/shake.png"
-                width={20}
-                height={20}
-                style={{ marginBottom: "-2px" }}
-              />{" "}
-            </span>
+            <img
+              src="/shake.png"
+              width={20}
+              height={20}
+              style={{ marginBottom: "-2px" }}
+            />{" "}
             <p>
               {" "}
-              launching{" "}
+              making professional connections more casual with{" "}
               <span className={styles.url}>
                 <Link href={"https://startchattin.vercel.app"} target="_blank">
-                  an app
+                  chattin
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
-              for casual professional connections
             </p>
           </div>
 
-          <div className={styles.bullet}>
-            <span>
-              <img
-                src="/brain.png"
-                width={20}
-                height={20}
-                style={{ marginTop: "-2px" }}
-              />{" "}
-            </span>
+          {/* <div className={styles.bullet}>
+            <img
+              src="/brain.png"
+              width={20}
+              height={20}
+              style={{ marginTop: "-2px" }}
+            />{" "}
             <p>
               making{" "}
               <span className={styles.url}>
@@ -71,22 +71,21 @@ export default function HomePage() {
                 </Link>{" "}
               </span>
             </p>
-          </div>
+          </div> */}
+
           <div className={styles.bullet}>
-            <span>
-              <img
-                src="/bio.png"
-                width={20}
-                height={20}
-                style={{ marginTop: "-2px" }}
-              />{" "}
-            </span>
+            <img
+              src="/bio.png"
+              width={20}
+              height={20}
+              style={{ marginTop: "-2px" }}
+            />{" "}
             <p>
               building the face of
               <span className={styles.url}>
                 <Link href={"https://www.mybiogenesis.com/"} target="_blank">
                   {" "}
-                  a novel biotech startup
+                  Biogenesis
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
@@ -94,43 +93,33 @@ export default function HomePage() {
           </div>
 
           <div className={styles.bullet}>
-            <span>
-              <img
-                src="/plane.png"
-                width={20}
-                height={20}
-                style={{ marginTop: "-2px" }}
-              />{" "}
-            </span>
+            <img
+              src="/plane.png"
+              width={20}
+              height={20}
+              style={{ marginTop: "-2px" }}
+            />{" "}
             <p>
-              designing a
+              designing delightful experiences at
               <span className={styles.url}>
                 <Link href={"https://hackwestern.com/"} target="_blank">
                   {" "}
-                  delightful hacker experience
+                  Hack Western
                   <img src="/arrow-dark.svg" width={20} height={20} />
                 </Link>
               </span>
             </p>
           </div>
-        </div>
-      </div>
-      <div
-        className={styles.bullet}
-        style={{ fontStyle: "italic", marginTop: "-8px" }}
-      >
-        <p>
-          P.S.{" "}
-          {/* <span>
+          <div className={styles.bullet}>
             <img
               src="/dance.png"
               width={20}
               height={20}
-              style={{ marginBottom: "-2px" }}
+              style={{ marginTop: "-2px" }}
             />{" "}
-          </span>{" "} */}
-          You can find me dancing on weeknights and hacking on weekends
-        </p>
+            <p>dancing on weeknights and hacking on weekends</p>
+          </div>
+        </div>
       </div>
 
       <div className={styles.btnContainer}>
