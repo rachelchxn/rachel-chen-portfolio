@@ -27,29 +27,32 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.body}>
         <HomePage />
-      </div>
-      <div className={styles.gallery}>
-        <div className={styles.tabs}>
-          <h5
-            className={isFeaturedTab ? styles.tabCurrent : styles.tab}
-            onClick={() => setIsFeaturedTab(true)}
-          >
-            Case Studies
-          </h5>
-          <h5
-            className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
-            onClick={() => setIsFeaturedTab(false)}
-          >
-            Fun Projects
-          </h5>
-        </div>
 
-        <div className={styles.projectContainer}>
-          {isFeaturedTab ? (
-            <ProjectList loading={isLoading} projects={projects} />
-          ) : (
-            <MoreList loading={isLoading} projects={more} />
-          )}
+        <div className={styles.gallery}>
+          <div className={styles.tabsContainer}>
+            <div className={styles.tabs}>
+              <h5
+                className={isFeaturedTab ? styles.tabCurrent : styles.tab}
+                onClick={() => setIsFeaturedTab(true)}
+              >
+                Case Studies
+              </h5>
+              <h5
+                className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
+                onClick={() => setIsFeaturedTab(false)}
+              >
+                Fun Projects
+              </h5>
+            </div>
+          </div>
+
+          <div className={styles.projectContainer}>
+            {isFeaturedTab ? (
+              <ProjectList loading={isLoading} projects={projects} />
+            ) : (
+              <MoreList loading={isLoading} projects={more} />
+            )}
+          </div>
         </div>
       </div>
     </main>

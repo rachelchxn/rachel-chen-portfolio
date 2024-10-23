@@ -19,6 +19,7 @@
   align-items: stretch;
   min-height: 400px;
   cursor: url("/cursors/pointer.png"), pointer;
+  border: 1px solid var(--mid-grey);
 
   &:hover {
     transition: all 0.2s ease;
