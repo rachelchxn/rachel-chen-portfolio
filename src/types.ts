@@ -14,4 +14,6 @@ export interface Project {
   slug: string;
   image: string;
   content: any;
+  primarycolour: string;
+  secondarycolour: string;
 }

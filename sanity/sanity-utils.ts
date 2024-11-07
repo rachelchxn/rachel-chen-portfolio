@@ -24,6 +24,8 @@ export async function getProjects() {
         links,
         "slug": slug.current,
         "image": image.asset->url,
+        primarycolour,
+        secondarycolour,
         url,
         content
     }`
@@ -53,6 +55,8 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
             links,
             "slug": slug.current,
             "image": image.asset->url,
+            primarycolour,
+            secondarycolour,
             url,
             content
         }`,

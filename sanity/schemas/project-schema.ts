@@ -32,6 +32,16 @@ const project = {
       ],
     },
     {
+      name: "primarycolour",
+      title: "Primary Colour",
+      type: "string",
+    },
+    {
+      name: "secondarycolour",
+      title: "Secondary Colour",
+      type: "string",
+    },
+    {
       name: "url",
       title: "URL",
       type: "url",
