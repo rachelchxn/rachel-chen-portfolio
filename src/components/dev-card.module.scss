@@ -1,10 +1,16 @@
 @media only screen and (max-width: 800px) {
   .info {
     height: auto !important;
+    min-height: 240px;
+  }
+
+  .imageBlock {
+    min-height: 320px !important;
   }
 
   .card {
     height: fit-content !important;
+    flex-direction: column;
   }
 }
 
@@ -14,14 +20,18 @@
   cursor: url("/cursors/pointer.png"), pointer;
   display: flex;
   transition: all 0.2s ease;
-  height: max-content;
   align-items: stretch;
   box-sizing: border-box;
-  border: 1px solid var(--mid-grey);
 
+  height: fit-content;
+  min-height: 360px;
   &:hover {
     transition: all 0.2s ease;
-    box-shadow: 0 0 0 1px var(--primary);
+    box-shadow: 0 0 0 1px var(--border-colour);
+  }
+  &:hover .link {
+    transition: all 0.3s ease;
+    opacity: 1;
   }
 
   &Disabled {
@@ -39,27 +49,23 @@
 }
 
 .imageBlock {
-  max-width: 280px;
+  max-width: 400px;
   width: 100%;
-  min-width: 120px;
-  min-height: 210px;
+  min-width: 160px;
+  min-height: 360px;
   display: flex;
   overflow: hidden;
-  justify-self: center;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
   position: relative;
+  padding-left: 24px;
 }
 
 .image {
   transition: all 0.3s ease;
-  height: inherit;
-  width: inherit;
-  object-fit: cover;
-
-  &Disabled {
-    width: 100%;
-    object-fit: cover;
-  }
+  min-width: 400px;
+  height: 100%;
+  object-fit: contain;
 }
 
 .comingSoon {
@@ -82,21 +88,25 @@
   padding: var(--global-gap);
   position: relative;
   justify-content: space-between;
-  min-height: 210px;
-  height: 100%;
+  height: auto;
   width: 100%;
   align-self: stretch;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  gap: 12px;
+
   h5 {
-    color: var(--mid-dark-grey);
+    color: var(--border-colour);
     font-size: 14px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 8px !important;
   }
 }
 
 .infoMain {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .tag {
@@ -105,10 +115,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   width: max-content;
   font-size: 13px;
-  opacity: 1;
+  opacity: 0.7;
   background-color: var(--primary-white);
   color: var(--mid-dark-grey);
 
@@ -130,6 +140,31 @@
   gap: 10px;
   align-self: stretch;
   flex-wrap: wrap;
+}
+
+.link {
+  position: absolute;
+  display: flex;
+  padding-top: 16px;
+  width: 100%;
+  bottom: var(--global-gap);
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+
+  p {
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  img {
+    transition: all 0.3s ease;
+    margin-bottom: -1px;
+  }
 }
 
 .arrow {

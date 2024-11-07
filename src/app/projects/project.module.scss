@@ -30,10 +30,17 @@
   }
 
   .cover {
-    height: 280px;
-    object-fit: cover;
-    background-color: #f3f6fc;
+    height: 320px;
+    width: 100%;
     border-radius: var(--border-radius);
+    padding: var(--global-gap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 320px !important;
+      object-fit: contain;
+    }
   }
 
   .details {
@@ -92,10 +99,18 @@
   }
 
   .cover {
-    height: 420px;
-    object-fit: cover;
-    background-color: #f3f6fc;
+    height: 440px;
+    width: 100%;
     border-radius: var(--border-radius);
+    padding: var(--global-gap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
   }
 
   .details {

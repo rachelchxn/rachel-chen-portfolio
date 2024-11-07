@@ -137,11 +137,11 @@ export default function ProjectPage({ params }: Props) {
       blockquote: ({ children }) => (
         <blockquote
           style={{
-            backgroundColor: colourSecondary,
-            color: colourPrimary,
+            backgroundColor: project.secondarycolour,
+            color: project.primarycolour,
             padding: "1em",
             margin: "1em 0",
-            borderLeft: `4px solid ${colourPrimary}`,
+            borderLeft: `4px solid ${project.primarycolour}`,
           }}
         >
           {children}
@@ -149,24 +149,6 @@ export default function ProjectPage({ params }: Props) {
       ),
     },
   };
-
-  const colourPrimary =
-    project.name == "Earth"
-      ? "#1351C9"
-      : project.name == "PokerGPT"
-        ? "#5E3FB6"
-        : project.name == "LinkedIn"
-          ? "#2D64BC"
-          : "#EE5253";
-
-  const colourSecondary =
-    project.name == "Earth"
-      ? "#EFF4FF"
-      : project.name == "PokerGPT"
-        ? "#F4F1FA"
-        : project.name == "LinkedIn"
-          ? "#EAF4F8"
-          : "#FDECEA";
 
   return (
     <div>
@@ -176,11 +158,12 @@ export default function ProjectPage({ params }: Props) {
             <Image src={"/back.svg"} width={16} height={16} alt={""} />
             Back
           </Link>
-          <img
+          <div
             className={styles.cover}
-            src={project.image}
-            alt={project.name}
-          />
+            style={{ backgroundColor: project.secondarycolour }}
+          >
+            <img src={project.image} alt={project.name} />
+          </div>
           <div className={styles.overview}>
             <div className={styles.details}>
               <div className={styles.detail}>
@@ -204,7 +187,7 @@ export default function ProjectPage({ params }: Props) {
                   <p
                     className={styles.tagPrimary}
                     style={{
-                      backgroundColor: colourPrimary,
+                      backgroundColor: project.primarycolour,
                       color: "var(--primary-white)",
                     }}
                   >
@@ -213,8 +196,8 @@ export default function ProjectPage({ params }: Props) {
                   <p
                     className={styles.tag}
                     style={{
-                      backgroundColor: colourSecondary,
-                      color: colourPrimary,
+                      backgroundColor: project.secondarycolour,
+                      color: project.primarycolour,
                     }}
                   >
                     {project.projecttype}
@@ -228,7 +211,7 @@ export default function ProjectPage({ params }: Props) {
                     <Link href={link.url} target="_blank">
                       <button
                         className={styles.btnPrimary}
-                        style={{ backgroundColor: colourPrimary }}
+                        style={{ backgroundColor: project.primarycolour }}
                       >
                         {link.text}
                         <img
