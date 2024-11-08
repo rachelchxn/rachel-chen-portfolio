@@ -207,22 +207,23 @@ export default function ProjectPage({ params }: Props) {
                 <p>{project.overview}</p>
 
                 <div className={styles.buttonList}>
-                  {project.links.map((link: { text: string; url: string }) => (
-                    <Link href={link.url} target="_blank">
-                      <button
-                        className={styles.btnPrimary}
-                        style={{ backgroundColor: project.primarycolour }}
-                      >
-                        {link.text}
-                        <img
-                          src="/arrow.svg"
-                          width={20}
-                          height={20}
-                          style={{ marginBottom: "-1px" }}
-                        />
-                      </button>
-                    </Link>
-                  ))}
+                  {project.links &&
+                    project.links.map((link: { text: string; url: string }) => (
+                      <Link href={link.url} target="_blank">
+                        <button
+                          className={styles.btnPrimary}
+                          style={{ backgroundColor: project.primarycolour }}
+                        >
+                          {link.text}
+                          <img
+                            src="/arrow.svg"
+                            width={20}
+                            height={20}
+                            style={{ marginBottom: "-1px" }}
+                          />
+                        </button>
+                      </Link>
+                    ))}
                 </div>
               </div>
             </div>
