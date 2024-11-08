@@ -29,7 +29,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, loading }) => {
           imageURL={project.image}
           primarycolour={project.primarycolour}
           secondarycolour={project.secondarycolour}
-          disabled={project.name === "heyHR" ? true : false}
+          disabled={false}
           url={project.slug}
         />
       ))}
