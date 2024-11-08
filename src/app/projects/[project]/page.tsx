@@ -172,8 +172,8 @@ export default function ProjectPage({ params }: Props) {
               </div>
               <div className={styles.detail}>
                 <h5>Scope</h5>
-                {project.tags.map((tag: string) => (
-                  <p>{tag}</p>
+                {project.roles.map((role: string) => (
+                  <p>{role}</p>
                 ))}
               </div>
             </div>
@@ -184,6 +184,20 @@ export default function ProjectPage({ params }: Props) {
                 <h2>{project.headline}</h2>
 
                 <div className={styles.tagList}>
+                  {project.tags.map((tag: string) => (
+                    <p
+                      className={styles.tag}
+                      style={{
+                        backgroundColor: project.secondarycolour,
+                        color: project.primarycolour,
+                      }}
+                    >
+                      {tag}
+                    </p>
+                  ))}
+                </div>
+
+                {/* <div className={styles.tagList}>
                   <p
                     className={styles.tagPrimary}
                     style={{
@@ -202,7 +216,7 @@ export default function ProjectPage({ params }: Props) {
                   >
                     {project.projecttype}
                   </p>
-                </div>
+                </div> */}
 
                 <p>{project.overview}</p>
 

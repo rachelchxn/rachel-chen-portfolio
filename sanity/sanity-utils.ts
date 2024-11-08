@@ -72,7 +72,7 @@ export async function getNextProjects(slug: string) {
   });
 
   return client.fetch(
-    groq`*[_type == "project" && slug.current != $slug && slug.current != "heyhr" ] | order(_updatedAt desc){
+    groq`*[_type == "project" && slug.current != $slug ] | order(_updatedAt desc){
             _id,
             _createdAt,
             slug,
