@@ -153,51 +153,52 @@ export default function ProjectPage({ params }: Props) {
   return (
     <div>
       <div className={styles.main}>
-        <div className={styles.header}>
-          <Link href={"/"} className={styles.backButton}>
-            <Image src={"/back.svg"} width={16} height={16} alt={""} />
-            Back
-          </Link>
-          <div
-            className={styles.cover}
-            style={{ backgroundColor: project.secondarycolour }}
-          >
-            <img src={project.image} alt={project.name} />
-          </div>
-          <div className={styles.overview}>
-            <div className={styles.details}>
-              <div className={styles.detail}>
-                <h5>Timeline</h5>
-                <p>{project.timeline}</p>
-              </div>
-              <div className={styles.detail}>
-                <h5>Scope</h5>
-                {project.roles.map((role: string) => (
-                  <p>{role}</p>
-                ))}
-              </div>
+        <div className={styles.projectpage}>
+          <div className={styles.header}>
+            <Link href={"/"} className={styles.backButton}>
+              <Image src={"/back.svg"} width={16} height={16} alt={""} />
+              Back
+            </Link>
+            <div
+              className={styles.cover}
+              style={{ backgroundColor: project.secondarycolour }}
+            >
+              <img src={project.image} alt={project.name} />
             </div>
-            <div>
-              <div className={styles.detail}>
-                <h5>{project.name}</h5>
-
-                <h2>{project.headline}</h2>
-
-                <div className={styles.tagList}>
-                  {project.tags.map((tag: string) => (
-                    <p
-                      className={styles.tag}
-                      style={{
-                        backgroundColor: project.secondarycolour,
-                        color: project.primarycolour,
-                      }}
-                    >
-                      {tag}
-                    </p>
+            <div className={styles.overview}>
+              <div className={styles.details}>
+                <div className={styles.detail}>
+                  <h5>Timeline</h5>
+                  <p>{project.timeline}</p>
+                </div>
+                <div className={styles.detail}>
+                  <h5>Scope</h5>
+                  {project.roles.map((role: string) => (
+                    <p>{role}</p>
                   ))}
                 </div>
+              </div>
+              <div>
+                <div className={styles.detail}>
+                  <h5>{project.name}</h5>
 
-                {/* <div className={styles.tagList}>
+                  <h2>{project.headline}</h2>
+
+                  <div className={styles.tagList}>
+                    {project.tags.map((tag: string) => (
+                      <p
+                        className={styles.tag}
+                        style={{
+                          backgroundColor: project.secondarycolour,
+                          color: project.primarycolour,
+                        }}
+                      >
+                        {tag}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* <div className={styles.tagList}>
                   <p
                     className={styles.tagPrimary}
                     style={{
@@ -218,50 +219,53 @@ export default function ProjectPage({ params }: Props) {
                   </p>
                 </div> */}
 
-                <p>{project.overview}</p>
+                  <p>{project.overview}</p>
 
-                <div className={styles.buttonList}>
-                  {project.links &&
-                    project.links.map((link: { text: string; url: string }) => (
-                      <Link href={link.url} target="_blank">
-                        <button
-                          className={styles.btnPrimary}
-                          style={{ backgroundColor: project.primarycolour }}
-                        >
-                          {link.text}
-                          <img
-                            src="/arrow.svg"
-                            width={20}
-                            height={20}
-                            style={{ marginBottom: "-1px" }}
-                          />
-                        </button>
-                      </Link>
-                    ))}
+                  <div className={styles.buttonList}>
+                    {project.links &&
+                      project.links.map(
+                        (link: { text: string; url: string }) => (
+                          <Link href={link.url} target="_blank">
+                            <button
+                              className={styles.btnPrimary}
+                              style={{ backgroundColor: project.primarycolour }}
+                            >
+                              {link.text}
+                              <img
+                                src="/arrow.svg"
+                                width={20}
+                                height={20}
+                                style={{ marginBottom: "-1px" }}
+                              />
+                            </button>
+                          </Link>
+                        )
+                      )}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.content}>
-          <PortableText
-            value={project.content}
-            components={myPortableTextComponents}
-          />
-        </div>
-        <div className={styles.projectFooter}>
-          <h5>Continue your journey:</h5>
-          <div className={styles.nextProjects}>
-            {nextProjects.length > 0 &&
-              nextProjects.map((project) => (
-                <Link
-                  href={"/projects/" + project.slug}
-                  className={styles.nextProject}
-                >
-                  <h5>{project.name}</h5>
-                  <p>{project.headline}</p>
-                </Link>
-              ))}
+          <div className={styles.content}>
+            <PortableText
+              value={project.content}
+              components={myPortableTextComponents}
+            />
+          </div>
+          <div className={styles.projectFooter}>
+            <h5>Continue your journey:</h5>
+            <div className={styles.nextProjects}>
+              {nextProjects.length > 0 &&
+                nextProjects.map((project) => (
+                  <Link
+                    href={"/projects/" + project.slug}
+                    className={styles.nextProject}
+                  >
+                    <h5>{project.name}</h5>
+                    <p>{project.headline}</p>
+                  </Link>
+                ))}
+            </div>
           </div>
         </div>
       </div>

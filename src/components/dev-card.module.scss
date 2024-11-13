@@ -1,11 +1,12 @@
 @media only screen and (max-width: 800px) {
   .info {
     height: auto !important;
-    min-height: 240px;
+    min-height: 200px;
   }
 
   .imageBlock {
     height: 300px !important;
+    min-height: 240px !important;
   }
 
   .card {
@@ -19,12 +20,14 @@
   overflow: hidden;
   cursor: url("/cursors/pointer.png"), pointer;
   display: flex;
+  flex-direction: column;
   transition: all 0.2s ease;
   align-items: stretch;
   box-sizing: border-box;
-
   height: fit-content;
   min-height: 400px;
+  position: relative;
+
   &:hover {
     transition: all 0.2s ease;
     box-shadow: 0 0 0 1px var(--border-colour);
@@ -50,19 +53,20 @@
 
 .imageBlock {
   width: 100%;
-  min-width: 160px;
-  min-height: 400px;
+  min-height: 480px;
   display: flex;
   overflow: hidden;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   position: relative;
 }
 
 .image {
   transition: all 0.3s ease;
-  width: 125%;
-  max-width: 500px;
+  max-width: 640px;
+  max-height: 440px;
+  padding-bottom: 40px;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -87,7 +91,6 @@
   position: relative;
   justify-content: space-between;
   height: auto;
-  max-width: 320px;
   width: 100%;
   align-self: stretch;
   gap: 12px;
@@ -145,11 +148,10 @@
   position: absolute;
   display: flex;
   padding-top: 16px;
-  width: 100%;
   bottom: var(--global-gap);
+  left: var(--global-gap);
   align-items: center;
   gap: 4px;
-  width: 100%;
   opacity: 0.5;
   transition: all 0.3s ease;
 
