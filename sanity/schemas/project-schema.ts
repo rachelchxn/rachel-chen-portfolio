@@ -19,6 +19,11 @@ const project = {
       type: "slug",
     },
     {
+      name: "order",
+      title: "Order",
+      type: "number",
+    },
+    {
       name: "image",
       title: "image",
       type: "image",
@@ -127,6 +132,13 @@ const project = {
           type: "image",
         },
       ],
+    },
+  ],
+  orderings: [
+    {
+      title: "Featured",
+      name: "featured",
+      by: [{ field: "order", direction: "desc" }],
     },
   ],
 };

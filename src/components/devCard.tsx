@@ -48,6 +48,17 @@ const DevCard: React.FC<DevCardProps> = ({
         ...cssVariables,
       }}
     >
+      <div className={styles.imageBlock}>
+        <img
+          className={!disabled ? styles.image : styles.imageDisabled}
+          src={`${imageURL}`}
+        />
+        {disabled && (
+          <div className={styles.comingSoon}>
+            <img src="/comingsoon.svg" />
+          </div>
+        )}
+      </div>
       <div className={styles.info}>
         <div className={styles.infoMain}>
           <h5>{title}</h5>
@@ -66,41 +77,30 @@ const DevCard: React.FC<DevCardProps> = ({
             ))}
           </div>
         </div>
-      </div>
-      <div className={styles.imageBlock}>
-        <img
-          className={!disabled ? styles.image : styles.imageDisabled}
-          src={`${imageURL}`}
-        />
-        {disabled && (
-          <div className={styles.comingSoon}>
-            <img src="/comingsoon.svg" />
-          </div>
-        )}
-      </div>
-      <div className={styles.link}>
-        <p style={{ color: primarycolour }}>View Project</p>
+        <div className={styles.link}>
+          <p style={{ color: primarycolour }}>View Project</p>
 
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g id="Arrow forward" clip-path="url(#clip0_1225_719)">
-            <path
-              id="Vector"
-              d="M8.45753 8.45753V11.1162L18.9887 11.1257L7.51472 22.5997L9.40034 24.4853L20.8743 13.0113L20.8838 23.5425H23.5425V8.45753H8.45753Z"
-              fill={primarycolour}
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_1225_719">
-              <rect width="32" height="32" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Arrow forward" clip-path="url(#clip0_1225_719)">
+              <path
+                id="Vector"
+                d="M8.45753 8.45753V11.1162L18.9887 11.1257L7.51472 22.5997L9.40034 24.4853L20.8743 13.0113L20.8838 23.5425H23.5425V8.45753H8.45753Z"
+                fill={primarycolour}
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1225_719">
+                <rect width="32" height="32" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
       </div>
     </div>
   );

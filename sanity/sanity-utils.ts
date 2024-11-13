@@ -9,10 +9,11 @@ export async function getProjects() {
   });
 
   return client.fetch(
-    groq`*[_type == "project"] | order(_updatedAt desc){
+    groq`*[_type == "project"] | order(featured desc){
         _id,
         _createdAt,
         slug,
+        order,
         name,
         headline,
         overview,
@@ -40,10 +41,11 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
   });
 
   return client.fetch(
-    groq`*[_type == "project" && slug.current == $slug] | order(_updatedAt desc)[0]{
+    groq`*[_type == "project" && slug.current == $slug] | order(featured desc)[0]{
             _id,
             _createdAt,
             slug,
+            order,
             name,
             headline,
             overview,
@@ -72,10 +74,11 @@ export async function getNextProjects(slug: string) {
   });
 
   return client.fetch(
-    groq`*[_type == "project" && slug.current != $slug ] | order(_updatedAt desc){
+    groq`*[_type == "project" && slug.current != $slug ] | order(featured desc){
             _id,
             _createdAt,
             slug,
+            order,
             name,
             headline,
             overview,

@@ -1,7 +1,7 @@
 @media only screen and (max-width: 800px) {
   .info {
-    height: auto !important;
-    min-height: 200px;
+    height: fit-content !important;
+    min-height: 240px;
   }
 
   .imageBlock {
@@ -12,6 +12,10 @@
   .card {
     height: fit-content !important;
     flex-direction: column;
+  }
+
+  .link {
+    left: var(--global-gap) !important;
   }
 }
 
@@ -53,19 +57,19 @@
 
 .imageBlock {
   width: 100%;
-  min-height: 480px;
+  min-height: 420px;
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 24px;
 }
 
 .image {
   transition: all 0.3s ease;
   max-width: 640px;
-  max-height: 440px;
-  padding-bottom: 40px;
+  max-height: 420px;
   width: 100%;
   object-fit: contain;
 }
@@ -87,10 +91,10 @@
 .info {
   display: flex;
   flex-direction: column;
-  padding: var(--global-gap) 0 var(--global-gap) var(--global-gap);
+  padding: var(--global-gap);
   position: relative;
   justify-content: space-between;
-  height: auto;
+  height: fit-content;
   width: 100%;
   align-self: stretch;
   gap: 12px;
@@ -109,6 +113,9 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: max-content;
+  max-width: 100%;
+  height: fit-content;
 }
 
 .tag {
@@ -149,7 +156,7 @@
   display: flex;
   padding-top: 16px;
   bottom: var(--global-gap);
-  left: var(--global-gap);
+  right: var(--global-gap);
   align-items: center;
   gap: 4px;
   opacity: 0.5;
