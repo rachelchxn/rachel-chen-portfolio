@@ -5,7 +5,7 @@
   }
 
   .imageBlock {
-    min-height: 320px !important;
+    height: 300px !important;
   }
 
   .card {
@@ -24,7 +24,7 @@
   box-sizing: border-box;
 
   height: fit-content;
-  min-height: 360px;
+  min-height: 400px;
   &:hover {
     transition: all 0.2s ease;
     box-shadow: 0 0 0 1px var(--border-colour);
@@ -49,22 +49,20 @@
 }
 
 .imageBlock {
-  max-width: 400px;
   width: 100%;
   min-width: 160px;
-  min-height: 360px;
+  min-height: 400px;
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: start;
   position: relative;
-  padding-left: 24px;
 }
 
 .image {
   transition: all 0.3s ease;
-  min-width: 400px;
-  height: 100%;
+  width: 125%;
+  max-width: 500px;
   object-fit: contain;
 }
 
@@ -85,10 +83,11 @@
 .info {
   display: flex;
   flex-direction: column;
-  padding: var(--global-gap);
+  padding: var(--global-gap) 0 var(--global-gap) var(--global-gap);
   position: relative;
   justify-content: space-between;
   height: auto;
+  max-width: 320px;
   width: 100%;
   align-self: stretch;
   gap: 12px;

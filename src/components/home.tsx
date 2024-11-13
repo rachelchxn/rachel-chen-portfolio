@@ -52,7 +52,7 @@ export default function HomePage() {
               />{" "}
               <p>
                 {" "}
-                making professional connections casual with{" "}
+                making networking casual with{" "}
                 <span className={styles.url}>
                   <Link
                     href={"https://startchattin.vercel.app"}
@@ -111,7 +111,7 @@ export default function HomePage() {
                 style={{ marginTop: "-2px" }}
               />{" "}
               <p>
-                designing delightful experiences at
+                designing hacker experiences at
                 <span className={styles.url}>
                   <Link href={"https://hackwestern.com/"} target="_blank">
                     {" "}
