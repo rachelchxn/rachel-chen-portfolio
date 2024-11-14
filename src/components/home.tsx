@@ -35,8 +35,8 @@ export default function HomePage() {
               maxWidth: "460px",
             }}
           >
-            I'm a 0 -{">"} 1 product builder who ships simple + delightful user
-            experiences that bring value to the world.
+            I'm a 0 -{">"} 1 product builder who ships delightful experiences
+            that empower users.
           </h2>
         </div>
 
