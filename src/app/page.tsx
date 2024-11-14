@@ -27,7 +27,6 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.body}>
         <HomePage />
-
         <div className={styles.gallery}>
           <div className={styles.tabsContainer}>
             <div className={styles.tabs}>
@@ -46,14 +45,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.projectContainer}>
-            {isFeaturedTab ? (
-              <ProjectList loading={isLoading} projects={projects} />
-            ) : (
-              <MoreList loading={isLoading} projects={more} />
-            )}
-          </div>
+          {/* <div className={styles.projectContainer}> */}
+          {isFeaturedTab ? (
+            <ProjectList loading={isLoading} projects={projects} />
+          ) : (
+            <MoreList loading={isLoading} projects={more} />
+          )}
         </div>
+        {/* </div> */}
       </div>
     </main>
   );

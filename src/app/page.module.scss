@@ -1,7 +1,7 @@
 @media only screen and (min-width: 800px) {
   .main {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow-y: scroll;
     display: flex;
     justify-content: center;
@@ -45,10 +45,10 @@
   }
   .body {
     height: max-content;
-    width: 100%;
+    width: 100vw;
     max-width: 1400px;
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: auto auto;
     position: relative;
   }
   .btnContainer {
@@ -201,6 +201,8 @@
   flex-direction: column;
   padding: 40px;
   gap: 40px;
+  width: 100%;
+  max-width: 60vw;
 }
 
 .vFlex {
@@ -384,6 +386,7 @@
   gap: var(--global-gap);
   height: max-content;
   padding-bottom: 40px;
+  width: 100%;
 }
 
 .url {
