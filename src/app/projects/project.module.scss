@@ -1,14 +1,22 @@
 .projects {
   display: flex;
   flex-direction: column;
-  max-width: 984px;
+  max-width: 1000px;
   margin: calc(var(--global-gap) * 5) auto 160px;
   gap: var(--global-gap);
 }
 
+.projectpage {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 40px;
+  align-items: center;
+}
+
 @media only screen and (max-width: 800px) {
   .header {
-    padding: 40px var(--global-gap) 0;
+    width: 100%;
+    max-width: 1000px;
   }
   .section {
     padding: 40px var(--global-gap);
@@ -50,7 +58,8 @@
   }
 
   .content {
-    padding: 40px var(--global-gap) 80px;
+    width: 100%;
+    max-width: 1000px;
     ul {
       flex-direction: column;
     }
@@ -60,9 +69,10 @@
       justify-content: left;
     }
   }
+
   .projectFooter {
-    padding: 40px var(--global-gap) 40px;
-    margin: auto;
+    max-width: 1000px;
+    padding-top: 80px;
     width: 100%;
     gap: 24px;
     display: flex;
@@ -80,7 +90,8 @@
 
 @media only screen and (min-width: 800px) {
   .header {
-    padding: 40px 20% 0;
+    width: 100%;
+    max-width: 1000px;
   }
 
   .section {
@@ -93,7 +104,8 @@
   }
 
   .content {
-    padding: 40px 20% 80px;
+    width: 100%;
+    max-width: 1000px;
   }
 
   .buttonList {
@@ -124,7 +136,9 @@
   }
 
   .content {
-    padding: 40px 20% 80px;
+    width: 100%;
+    max-width: 1000px;
+
     ul {
       flex-direction: row;
       li {
@@ -135,11 +149,11 @@
   }
 
   .projectFooter {
-    padding: 40px 20% 80px;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin: auto;
+    padding-top: 160px;
     width: 100%;
   }
 
@@ -256,6 +270,10 @@
   flex-direction: column;
   width: 100%;
   gap: calc(var(--global-gap) * 2);
+
+  h2 {
+    margin-bottom: var(--global-gap);
+  }
 
   .backButton {
     width: fit-content;
@@ -422,12 +440,13 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  justify-content: center;
+  justify-content: start;
   padding: 24px;
   border-radius: var(--border-radius);
   border: 1px solid var(--mid-grey);
   transition: all 0.3s ease;
   width: 100%;
+  min-height: 165px;
 
   &:hover {
     background-color: var(--highlight);
