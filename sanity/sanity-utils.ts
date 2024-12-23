@@ -49,6 +49,7 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
             company,
             projecttype,
             roles,
+            team,
             tags, 
             links,
             "slug": slug.current,
