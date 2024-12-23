@@ -1,47 +1,37 @@
 import styles from "../app/page.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import IconList from "./icon-list";
 
 export default function HomePage() {
   return (
     <div className={styles.home}>
       <div className={styles.homeBody}>
         <div className={styles.heroTitle}>
-          <h2 style={{ fontSize: "24px", maxWidth: "540px" }}>
-            <span
-              style={{
-                marginRight: "4px",
-                marginTop: "4px",
-              }}
+          <div className={styles.profileCard}>
+            <Image
+              className={styles.pfp}
+              src="/pfp.png"
+              width={128}
+              height={128}
+              alt={"rachel-chen"}
+            />
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
             >
-              <img
-                src="/wave.png"
-                width={32}
-                height={32}
-                style={{ marginBottom: "-4px" }}
-              />
-            </span>{" "}
-            Hey, I'm Rachel!{" "}
-            {/* <span style={{ color: "var(--dark-grey)", fontWeight: "400" }}>
-            I'm a 0 -{">"} 1 product builder who ships simple + delightful user
-            experiences that solve problems.
-          </span> */}
-          </h2>
-          <h2
-            style={{
-              fontSize: "24px",
-              color: "var(--dark-grey)",
-              fontWeight: "400",
-              maxWidth: "460px",
-            }}
-          >
-            I'm a 0 -{">"} 1 product builder who ships intuitive + delightful
-            experiences that empower users.
-          </h2>
+              <h2>Rachel Chen</h2>
+              <IconList />
+            </div>
+          </div>
         </div>
 
+        <p>
+          I’m a 0 to 1 product designer who codes and builds products that
+          empower ✨
+        </p>
+
         <div className={styles.currently} style={{ maxWidth: "560px" }}>
-          <h5>Currently...</h5>
+          <h3>Currently...</h3>
           <div className={styles.list}>
             <div className={styles.bullet}>
               <img
@@ -52,7 +42,7 @@ export default function HomePage() {
               />{" "}
               <p>
                 {" "}
-                making networking casual with{" "}
+                Making networking casual with{" "}
                 <span className={styles.url}>
                   <Link
                     href={"https://startchattin.vercel.app"}
@@ -92,7 +82,7 @@ export default function HomePage() {
                 style={{ marginTop: "-2px" }}
               />{" "}
               <p>
-                building the face of
+                Building the face of
                 <span className={styles.url}>
                   <Link href={"https://www.mybiogenesis.com/"} target="_blank">
                     {" "}
@@ -111,7 +101,7 @@ export default function HomePage() {
                 style={{ marginTop: "-2px" }}
               />{" "}
               <p>
-                designing hacker experiences at
+                Designing hacker experiences at
                 <span className={styles.url}>
                   <Link href={"https://hackwestern.com/"} target="_blank">
                     {" "}
@@ -128,7 +118,7 @@ export default function HomePage() {
                 height={20}
                 style={{ marginTop: "-2px" }}
               />{" "}
-              <p>dancing on weeknights and hacking on weekends</p>
+              <p>Dancing on weeknights and hacking on weekends</p>
             </div>
           </div>
         </div>
@@ -157,51 +147,6 @@ export default function HomePage() {
           {/* <p>
             Designed and built with <span>♥</span> by Rachel
           </p> */}
-          <div className={styles.iconList}>
-            <Link
-              href={"https://www.linkedin.com/in/rachel-jiayi-chen/"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="linkedin-icon.svg"
-                alt="Linkedin"
-                width={20}
-                height={20}
-              />
-            </Link>
-            <Link
-              href={"https://devpost.com/rachelc0715"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="devpost-icon.svg"
-                alt="Devpost"
-                width={20}
-                height={20}
-              />
-            </Link>
-            <Link
-              href={"https://github.com/rachelchxn"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image
-                src="github-icon.svg"
-                alt="Github"
-                width={20}
-                height={20}
-              />
-            </Link>
-            <Link
-              href={"mailto:rachelc0715@gmail.com"}
-              target="_blank"
-              className={styles.icon}
-            >
-              <Image src="email-icon.svg" alt="Email" width={20} height={20} />
-            </Link>
-          </div>
         </div>
       </div>
     </div>

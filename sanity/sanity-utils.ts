@@ -1,13 +1,13 @@
 import { Project } from "@/types";
 import { createClient, groq } from "next-sanity";
 
-export async function getProjects() {
-  const client = createClient({
-    projectId: "q7a7buiu",
-    dataset: "production",
-    apiVersion: "2024-05-05",
-  });
+const client = createClient({
+  projectId: "q7a7buiu",
+  dataset: "production",
+  apiVersion: "2024-05-05",
+});
 
+export async function getProjects() {
   return client.fetch(
     groq`*[_type == "project"] | order(featured desc){
         _id,
@@ -21,6 +21,7 @@ export async function getProjects() {
         company,
         projecttype,
         roles,
+        team,
         tags, 
         links,
         "slug": slug.current,
@@ -28,18 +29,13 @@ export async function getProjects() {
         primarycolour,
         secondarycolour,
         url,
+        intro,
         content
     }`
   );
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project> {
-  const client = createClient({
-    projectId: "q7a7buiu",
-    dataset: "production",
-    apiVersion: "2024-05-05",
-  });
-
   return client.fetch(
     groq`*[_type == "project" && slug.current == $slug] | order(featured desc)[0]{
             _id,
@@ -67,12 +63,6 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
 }
 
 export async function getNextProjects(slug: string) {
-  const client = createClient({
-    projectId: "q7a7buiu",
-    dataset: "production",
-    apiVersion: "2024-05-05",
-  });
-
   return client.fetch(
     groq`*[_type == "project" && slug.current != $slug ] | order(featured desc){
             _id,
@@ -85,6 +75,7 @@ export async function getNextProjects(slug: string) {
             timeline,
             company,
             projecttype,
+            secondarycolour,
             roles,
             tags, 
             links,
@@ -98,12 +89,6 @@ export async function getNextProjects(slug: string) {
 }
 
 export async function getMore() {
-  const client = createClient({
-    projectId: "q7a7buiu",
-    dataset: "production",
-    apiVersion: "2024-05-05",
-  });
-
   return client.fetch(
     groq`*[_type == "more"] | order(_updatedAt desc){
         _id,

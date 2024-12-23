@@ -1,9 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import Head from "next/head";
-
-const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rachel Chen",
@@ -21,7 +18,7 @@ export default function RootLayout({
         <title>Rachel Chen's Portfolio</title>
         <meta name="description" content="Welcome to my tech space." />
       </Head>
-      <body className={manrope.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

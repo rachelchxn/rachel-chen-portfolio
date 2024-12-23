@@ -62,7 +62,12 @@ const project = {
       type: "array",
       of: [{ type: "string" }],
     },
-
+    {
+      name: "team",
+      title: "Team",
+      type: "array",
+      of: [{ type: "string" }],
+    },
     {
       name: "company",
       title: "Company",
@@ -103,6 +108,33 @@ const project = {
               type: "url",
             },
           ],
+        },
+      ],
+    },
+    {
+      name: "intro",
+      title: "Intro",
+      type: "array",
+      marks: {
+        annotations: [
+          {
+            name: "link",
+            type: "object",
+            title: "link",
+            fields: [
+              {
+                name: "url",
+                type: "url",
+              },
+            ],
+          },
+        ],
+      },
+
+      of: [
+        { type: "block" },
+        {
+          type: "image",
         },
       ],
     },

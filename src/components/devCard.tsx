@@ -61,8 +61,12 @@ const DevCard: React.FC<DevCardProps> = ({
       </div>
       <div className={styles.info}>
         <div className={styles.infoMain}>
-          <h5>{title}</h5>
-          <h3>{description}</h3>
+          <p className="lg-p">
+            <span style={{ fontWeight: "500", color: "var(--primary-dark)" }}>
+              {title}{" "}
+            </span>
+            <span>— {description}</span>
+          </p>
           <div className={styles.tagList}>
             {tags.map((tag, index) => (
               <p

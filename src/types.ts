@@ -3,6 +3,7 @@ export interface Project {
   company: string;
   projecttype: string;
   roles: string[];
+  team: string[];
   headline: string;
   tags: string[];
   links: any;
