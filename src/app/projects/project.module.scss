@@ -232,8 +232,15 @@
     width: 100%;
   }
 
+  h2 {
+    margin-top: 4px;
+  }
+
   h4 {
     width: 100%;
+    margin-bottom: -8px;
+    margin-top: 16px;
+    padding-bottom: 0;
   }
 
   h5 {
@@ -256,6 +263,7 @@
     border-left: 2px solid var(--primary);
     margin: 12px 0;
   }
+
   ul {
     display: flex;
     width: 100%;
@@ -264,6 +272,8 @@
     gap: var(--global-gap);
     padding-top: 12px;
     padding-left: 0;
+    padding-bottom: 12px;
+    text-align: left;
 
     li {
       list-style: none;
@@ -272,10 +282,12 @@
       width: 100%;
       font-family: "NewYork";
       font-size: 1.5rem;
+      text-align: left;
 
       li {
         font-family: "Geist";
         font-size: 1.125rem;
+        color: var(--dark-grey);
       }
     }
   }
@@ -299,6 +311,9 @@
 
   img {
     width: 560px !important;
+    border: 1px solid var(--mid-grey);
+    box-shadow: 0px 2px 8px 0px rgba(153, 153, 153, 0.3);
+    border-radius: 3px;
   }
 
   div {
@@ -306,12 +321,6 @@
     flex-direction: column;
     gap: 12px;
   }
-}
-
-.reflection h4 {
-  margin-bottom: 0;
-  margin-top: 16px;
-  padding-bottom: 0;
 }
 
 .head {
