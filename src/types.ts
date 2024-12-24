@@ -20,4 +20,5 @@ export interface Project {
   reflection: any;
   primarycolour: string;
   secondarycolour: string;
+  gradientcolour: string;
 }

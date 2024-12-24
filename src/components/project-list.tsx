@@ -29,6 +29,7 @@ const ProjectList: React.FC<ProjectListProps> = ({ projects, loading }) => {
           imageURL={project.image}
           primarycolour={project.primarycolour}
           secondarycolour={project.secondarycolour}
+          gradientcolour={project.gradientcolour}
           disabled={false}
           url={project.slug}
         />

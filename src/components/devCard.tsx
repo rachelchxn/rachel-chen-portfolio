@@ -15,6 +15,7 @@ type DevCardProps = {
   disabled: boolean;
   primarycolour: string;
   secondarycolour: string;
+  gradientcolour: string;
 };
 
 const DevCard: React.FC<DevCardProps> = ({
@@ -22,8 +23,7 @@ const DevCard: React.FC<DevCardProps> = ({
   description,
   primarycolour,
   secondarycolour,
-  company,
-  projecttype,
+  gradientcolour,
   imageURL,
   url,
   tags,
@@ -45,6 +45,7 @@ const DevCard: React.FC<DevCardProps> = ({
       onClick={disabled ? undefined : handleClick}
       style={{
         backgroundColor: secondarycolour,
+        backgroundImage: `linear-gradient(135deg, ${secondarycolour} 0%, ${gradientcolour} 100%)`,
         ...cssVariables,
       }}
     >

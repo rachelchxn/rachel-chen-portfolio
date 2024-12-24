@@ -28,6 +28,7 @@ export async function getProjects() {
         "image": image.asset->url,
         primarycolour,
         secondarycolour,
+        gradientcolour,
         url,
         intro,
         content
@@ -56,6 +57,7 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
             "image": image.asset->url,
             primarycolour,
             secondarycolour,
+            gradientcolour,
             url,
             intro,
             content,
@@ -80,6 +82,7 @@ export async function getNextProjects(slug: string) {
             company,
             projecttype,
             secondarycolour,
+            gradientcolour,
             roles,
             tags, 
             links,

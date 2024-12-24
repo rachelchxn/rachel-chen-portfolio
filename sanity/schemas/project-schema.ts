@@ -47,6 +47,11 @@ const project = {
       type: "string",
     },
     {
+      name: "gradientcolour",
+      title: "Gradient Colour",
+      type: "string",
+    },
+    {
       name: "url",
       title: "URL",
       type: "url",

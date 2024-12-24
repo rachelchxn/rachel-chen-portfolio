@@ -206,7 +206,10 @@ export default function ProjectPage({ params }: Props) {
               <p>{project.overview}</p>
               <div
                 className={styles.cover}
-                style={{ backgroundColor: project.secondarycolour }}
+                style={{
+                  backgroundColor: project.secondarycolour,
+                  backgroundImage: `linear-gradient(135deg, ${project.secondarycolour} 0%, ${project.gradientcolour} 100%)`,
+                }}
               >
                 <img src={project.image} alt={project.name} />
               </div>
@@ -289,7 +292,10 @@ export default function ProjectPage({ params }: Props) {
                     >
                       <div
                         className={styles.nextCover}
-                        style={{ backgroundColor: project.secondarycolour }}
+                        style={{
+                          backgroundColor: project.secondarycolour,
+                          backgroundImage: `linear-gradient(135deg, ${project.secondarycolour} 0%, ${project.gradientcolour} 100%)`,
+                        }}
                       >
                         <img src={project.image} />
                       </div>
