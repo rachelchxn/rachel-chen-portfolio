@@ -57,7 +57,10 @@ export async function getProjectBySlug(slug: string): Promise<Project> {
             primarycolour,
             secondarycolour,
             url,
-            content
+            intro,
+            content,
+            final,
+            reflection
         }`,
     { slug }
   );

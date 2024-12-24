@@ -8,8 +8,25 @@
 
 .projectpage {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  padding: 48px 24px;
+  padding: 60px 0px;
+}
+
+.white {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 80px;
+}
+
+.highlight {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 80px;
+  background-color: var(--highlight);
   align-items: center;
 }
 
@@ -155,7 +172,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding-top: 160px;
+    padding-top: 80px;
     width: 100%;
   }
 
@@ -184,17 +201,20 @@
   gap: var(--global-gap);
 }
 
-.content {
+.content,
+.intro,
+.final,
+.reflection {
   display: flex;
   flex-direction: column;
   margin: auto;
   width: 100%;
   align-items: flex-start;
-  gap: 20px;
+  gap: 12px;
+  max-width: 900px;
 
   img {
-    margin-top: 24px;
-    margin-bottom: 12px;
+    margin-top: 12px;
   }
 
   .regularImage {
@@ -212,15 +232,12 @@
   }
 
   h4 {
-    font-size: 24px;
-    margin-top: 60px;
-    margin-bottom: 0;
-    padding-top: 60px;
     width: 100%;
   }
 
   h5 {
-    padding-top: 24px;
+    padding-top: 64px;
+    padding-bottom: 4px;
   }
 
   p {
@@ -242,17 +259,21 @@
     justify-content: space-between;
     align-items: stretch;
     gap: var(--global-gap);
-    padding-top: var(--global-gap);
+    padding-top: 12px;
     padding-left: 0;
 
     li {
       list-style: none;
       display: flex;
-      align-items: center;
-      padding: var(--global-gap) calc(var(--global-gap) * 1.5);
-      background-color: var(--highlight);
+      flex-direction: column;
       width: 100%;
-      border-radius: var(--border-radius);
+      font-family: "NewYork";
+      font-size: 1.5rem;
+
+      li {
+        font-family: "Geist";
+        font-size: 1.125rem;
+      }
     }
   }
 
@@ -264,6 +285,30 @@
       margin-bottom: 8px;
     }
   }
+}
+
+.finalDesign {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  align-items: center;
+  padding: 40px 0;
+
+  img {
+    width: 560px !important;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.reflection h4 {
+  margin-bottom: 0;
+  margin-top: 16px;
+  padding-bottom: 0;
 }
 
 .head {

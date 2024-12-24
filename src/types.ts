@@ -14,7 +14,10 @@ export interface Project {
   overview: string;
   slug: string;
   image: string;
+  intro: any;
   content: any;
+  final: any;
+  reflection: any;
   primarycolour: string;
   secondarycolour: string;
 }
