@@ -89,6 +89,13 @@ a {
 }
 
 @font-face {
+  font-family: "NewYork";
+  src: url("../../fonts/newyork/new-york-extra-large_semibold-italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
   font-family: "Geist";
   src: url("../../fonts/geist/Geist-Regular.ttf");
   font-weight: 400;

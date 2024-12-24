@@ -17,10 +17,14 @@ export default function HomePage() {
               alt={"rachel-chen"}
             />
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "4px" }}
+              style={{ display: "flex", flexDirection: "column", gap: "2px" }}
             >
-              <h2>Rachel Chen</h2>
-              <IconList />
+              <h2 style={{ fontStyle: "italic", fontWeight: "bold" }}>
+                Rachel Chen
+              </h2>
+              <p className="sm-p" style={{ marginBottom: "0" }}>
+                Product Designer & Developer
+              </p>
             </div>
           </div>
         </div>
@@ -143,6 +147,7 @@ export default function HomePage() {
             <button className="btnSecondary">See My Resume</button>
           </Link>
         </div>
+        <IconList />
         <div className={styles.footer}>
           {/* <p>
             Designed and built with <span>♥</span> by Rachel
