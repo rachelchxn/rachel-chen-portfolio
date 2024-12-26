@@ -41,7 +41,7 @@ export default function Home() {
                 className={!isFeaturedTab ? styles.tabCurrent : styles.tab}
                 onClick={() => setIsFeaturedTab(false)}
               >
-                Case Studies + More
+                Hackathons + More
               </h5>
             </div>
           </div>
