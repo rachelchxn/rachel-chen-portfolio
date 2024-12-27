@@ -30,7 +30,7 @@ export default function HomePage() {
         </div>
 
         <p>
-          I’m a 0 to 1 product designer who codes and builds products that
+          I’m a 0 to 1 product builder who designs and codes experiences that
           empower ✨
         </p>
 
