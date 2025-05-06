@@ -1,0 +1,27 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Tab from "./Tab";
+import Image from "next/image";
+export default function Navbar() {
+  const pathname = usePathname();
+  return (
+    <div className="flex items-center justify-between p-6 border-t border-foreground/10">
+      <div className="flex gap-4">
+        <h4 className="font-bold flex items-center gap-2">
+          Designed + Coded with{" "}
+          <Image src="/home/heart.svg" alt="heart" width={24} height={24} />
+          by Rachel Chen
+        </h4>
+      </div>
+      <div className="flex gap-8">
+        <Tab href="https://www.linkedin.com/in/rachel-jiayi-chen/">
+          Linkedin
+        </Tab>
+        <Tab href="mailto:rachelc0715@gmail.com">Email</Tab>
+        <Tab href="https://x.com/racheljychen">X</Tab>
+        <Tab href="https://github.com/rachelchxn">Github</Tab>
+        <Tab href="https://devpost.com/rachelc0715">Devpost</Tab>
+      </div>
+    </div>
+  );
+}
