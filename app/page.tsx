@@ -24,7 +24,7 @@ export default function Home() {
               n {``}
             </span>
           </span>
-          <span className="relative text-primary after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
+          <span className="italic relative text-primary after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
             + code
           </span>
           .
