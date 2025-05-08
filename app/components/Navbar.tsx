@@ -14,15 +14,14 @@ export default function Navbar() {
         <Tab href="/" active={pathname === "/"}>
           Work
         </Tab>
+
+        <Tab href="/projects" active={pathname === "/projects"}>
+          Fun
+        </Tab>
         <Tab href="/about" active={pathname === "/about"}>
           About
         </Tab>
-        <Tab href="/projects" active={pathname === "/projects"}>
-          Projects
-        </Tab>
-        <Tab href="/contact" active={pathname === "/contact"}>
-          Contact
-        </Tab>
+        <Tab href="/resume">Resume</Tab>
       </div>
     </div>
   );

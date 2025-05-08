@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "heading": "Innovation management for Fortune 500s",
+      "title": "Earth",
+      "tag": "Shipped 2023",
+      "image": "/projects/earth.svg",
+      "gif": "/projects/earth.gif"
+    },
+    {
+      "heading": "The world’s first AI poker coach",
+      "title": "PokerGPT",
+      "tag": "Shipped 2023",
+      "image": "/projects/pokergpt.svg",
+      "gif": "/projects/pokergpt.gif"
+    },
+    {
+      "heading": "A new era for access management & enterprise security",
+      "title": "1Password",
+      "tag": "Shipped 2025",
+      "image": "/projects/1password.svg",
+      "gif": "/projects/1password.gif"
+    },
+    {
+      "heading": "Generative AI for RBC’s Global HR Center",
+      "title": "heyHR",
+      "tag": "Handed off 2024",
+      "image": "/projects/heyhr.svg",
+      "gif": "/projects/heyhr.gif"
+    },
+    {
+      "heading": "Job application tracking on LinkedIn",
+      "title": "LinkedIn",
+      "tag": "Pitched 2024",
+      "image": "/projects/linkedin.svg",
+      "gif": "/projects/linkedin.gif"
+    },
+    {
+      "heading": "A dating app, but for professional connections",
+      "title": "Chattin",
+      "tag": "Shipped 2024",
+      "image": "/projects/chattin.svg",
+      "gif": "/projects/chattin.gif"
+    }
+  ]
+}

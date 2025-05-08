@@ -15,7 +15,12 @@ export default function Tab({
   return (
     <div>
       {href.startsWith("https://") ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="custom-pointer"
+        >
           <h4
             className={`${
               active

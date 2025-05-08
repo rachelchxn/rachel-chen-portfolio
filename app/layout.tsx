@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${crimsonPro.variable} ${crimsonProItalic.variable} antialiased font-[family-name:var(--font-geist-sans)] grid grid-rows-[auto_1fr_auto] min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${crimsonPro.variable} ${crimsonProItalic.variable} antialiased font-[family-name:var(--font-geist-sans)] custom-cursor`}
       >
         <Navbar />
         {children}

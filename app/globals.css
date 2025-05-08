@@ -21,6 +21,14 @@
   }
 }
 
+/* .custom-cursor {
+  cursor: url("/cursor.svg"), auto;
+}
+
+.custom-pointer {
+  cursor: url("/home/heart.svg"), auto;
+} */
+
 h1 {
   font-family: var(--font-crimson-pro);
   font-size: 3.5rem;
@@ -50,6 +58,16 @@ h4 {
 
 p {
   font-family: var(--font-sans);
+  color: #22222280;
+}
+
+a {
+  color: #222222 !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 body {
