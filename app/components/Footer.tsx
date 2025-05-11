@@ -2,6 +2,8 @@
 import { usePathname } from "next/navigation";
 import Tab from "./Tab";
 import Image from "next/image";
+import React from "react";
+
 export default function Navbar() {
   const pathname = usePathname();
   return (
