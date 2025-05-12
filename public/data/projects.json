@@ -5,42 +5,76 @@
       "title": "Earth",
       "tag": "Shipped 2023",
       "image": "/projects/earth.svg",
-      "gif": "/projects/earth.gif"
+      "gif": "/projects/earth.gif",
+      "slug": "earth",
+      "role": "Product Designer & Frontend Engineer",
+      "timeline": "Jan - Dec 2023",
+      "team": ["1 PM", "2 Engineers", "1 Designer (me!)"],
+      "skills": ["Product Design", "Frontend Engineering", "User Research"]
     },
     {
-      "heading": "The world’s first AI poker coach",
+      "heading": "The world's first AI poker coach",
       "title": "PokerGPT",
       "tag": "Shipped 2023",
       "image": "/projects/pokergpt.svg",
-      "gif": "/projects/pokergpt.gif"
+      "gif": "/projects/pokergpt.gif",
+      "slug": "pokergpt",
+      "role": "Product Designer & Frontend Engineer",
+      "timeline": "May 2023 - April 2024",
+      "team": ["1 PM", "2 Engineers", "1 Designer (me!)"],
+      "skills": ["Product Design", "Frontend Engineering", "User Research"]
     },
     {
       "heading": "A new era for access management & enterprise security",
       "title": "1Password",
       "tag": "Shipped 2025",
       "image": "/projects/1password.svg",
-      "gif": "/projects/1password.gif"
+      "gif": "/projects/1password.gif",
+      "slug": "1password",
+      "role": "Product Design Intern",
+      "timeline": "Jan - April 2025",
+      "team": ["Various PMs", "Designers", "Engineers"],
+      "skills": ["User Research", "Competitive Analysis", "Prototyping"]
     },
     {
-      "heading": "Generative AI for RBC’s Global HR Center",
-      "title": "heyHR",
+      "heading": "Generative AI for RBC's Global HR Center",
+      "title": "RBC: heyHR",
       "tag": "Handed off 2024",
       "image": "/projects/heyhr.svg",
-      "gif": "/projects/heyhr.gif"
+      "gif": "/projects/heyhr.gif",
+      "slug": "RBC",
+      "role": "Developer, unofficial product designer",
+      "timeline": "Jan - Dec 2024",
+      "team": ["1 PM", "2 Engineers", "1 Designer (me!)"],
+      "skills": [
+        "Product Strategy",
+        "Full Stack Engineering",
+        "Pitching & Storytelling"
+      ]
     },
     {
       "heading": "Job application tracking on LinkedIn",
       "title": "LinkedIn",
       "tag": "Pitched 2024",
       "image": "/projects/linkedin.svg",
-      "gif": "/projects/linkedin.gif"
+      "gif": "/projects/linkedin.gif",
+      "slug": "linkedin",
+      "role": "Product Strategist & Designer",
+      "timeline": "Jan - Feb 2024",
+      "team": ["Only me!"],
+      "skills": ["Product Strategy", "User Research", "Prototyping"]
     },
     {
       "heading": "A dating app, but for professional connections",
       "title": "Chattin",
       "tag": "Shipped 2024",
       "image": "/projects/chattin.svg",
-      "gif": "/projects/chattin.gif"
+      "gif": "/projects/chattin.gif",
+      "slug": "chattin",
+      "role": "Founder & Product Designer",
+      "timeline": "May - July 2024",
+      "team": ["Only me!"],
+      "skills": ["Product Design", "Marketing", "Full Stack Engineering"]
     }
   ]
 }

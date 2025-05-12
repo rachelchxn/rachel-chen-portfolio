@@ -10,9 +10,20 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex items-center justify-between p-6 border-b border-foreground/10 relative">
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row sm:inline-flex sm:gap-4 gap-0">
         <h4 className="font-bold !opacity-100">Rachel Chen</h4>
-        <h4 className="opacity-50">0{"->"}1 Design Engineer</h4>
+        <h4 className="opacity-50 flex items-center gap-0">
+          0
+          <span>
+            <Image
+              src={"/arrow-right.svg"}
+              alt="Right"
+              width={18}
+              height={18}
+            />
+          </span>
+          1 Design Engineer
+        </h4>
       </div>
       <div className="md:flex hidden gap-8">
         <Tab href="/" active={pathname === "/"}>

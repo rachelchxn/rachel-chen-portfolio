@@ -1,13 +1,17 @@
 import Image from "next/image";
-import projects from "../public/data/projects.json";
+import projectsData from "../public/data/projects.json";
 import React from "react";
+import Link from "next/link";
+import { ProjectsData } from "@/types/project";
+
+const projects = projectsData as ProjectsData;
 
 export default function Home() {
   return (
     <div className="flex flex-col p-6 py-12 gap-12 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-12">
         <h1 className="max-w-4xl">
-          I’m Rachel, a product builder who loves bringing ideas to life with
+          I'm Rachel, a product builder who loves bringing ideas to life with
           {` `}
           <span className="whitespace-nowrap">
             <span
@@ -86,17 +90,27 @@ export default function Home() {
         </div>
 
         <div className="h-2" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.projects.map((project) => (
-            <div key={project.title} className="flex flex-col gap-2">
-              <img src={project.image} alt={project.title} className="w-full" />
-              <div className="flex flex-col gap-1">
-                <h3>{project.heading}</h3>
-                <h4>
-                  {project.title} • {project.tag}
-                </h4>
+            <Link
+              key={project.slug}
+              href={`/projects/${project.slug}`}
+              className="hover:!opacity-75 transition-opacity"
+            >
+              <div className="flex flex-col gap-2">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full"
+                />
+                <div className="flex flex-col gap-1">
+                  <h3>{project.heading}</h3>
+                  <h4>
+                    {project.title} • {project.tag}
+                  </h4>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </main>

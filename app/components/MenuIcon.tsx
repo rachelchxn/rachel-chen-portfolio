@@ -16,11 +16,11 @@ export default function MenuIcon({
       viewBox="0 0 24 24"
       fill="none"
       onClick={onClick}
-      className="cursor-pointer"
+      className="cursor-pointer hover:opacity-50"
     >
       <path
         className={`transition-all duration-300 origin-center ${
-          isOpen ? "rotate-45 translate-y-[3px]" : ""
+          isOpen ? "rotate-45 translate-y-[2.5px]" : ""
         }`}
         d="M4 8H20"
         stroke="currentColor"
