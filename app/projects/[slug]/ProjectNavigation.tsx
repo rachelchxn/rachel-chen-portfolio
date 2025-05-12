@@ -25,7 +25,7 @@ export default function ProjectNavigation({
         });
       },
       {
-        rootMargin: "-40px 0px 0% 0px", // Triggers when section is in middle of viewport
+        rootMargin: "-10px 0px -90% 0px", // Triggers when section is in middle of viewport
         threshold: 0,
       }
     );
