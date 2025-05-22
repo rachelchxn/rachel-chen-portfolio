@@ -1,8 +1,9 @@
 @import "tailwindcss";
 :root {
-  --background: #fafaf7;
-  --foreground: #222222;
-  --primary: #e2683b;
+  --background: #fafcfd;
+  --foreground: #32404f;
+  --foreground-light: #32404f95;
+  --primary: #3266d0;
 }
 
 @theme inline {
@@ -11,33 +12,28 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-crimson-pro);
+  --font-tiempos: var(--font-tiempos-text);
+  --font-tiempos-italic: var(--font-tiempos-text-italic);
+  --color-primary: var(--primary);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary: #e2683b;
   }
-}
-
-/* .custom-cursor {
-  cursor: url("/cursor.svg"), auto;
-}
-
-.custom-pointer {
-  cursor: url("/home/heart.svg"), auto;
 } */
 
 h1 {
-  font-family: var(--font-crimson-pro);
-  font-size: 3.5rem;
+  font-family: var(--font-tiempos-text), serif;
+  font-size: 3rem;
   letter-spacing: -0.02em;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 h2 {
-  font-family: var(--font-crimson-pro);
+  font-family: var(--font-tiempos-text), serif;
   line-height: 1.2;
   font-size: 2rem;
   margin-bottom: 0.25rem;
@@ -45,8 +41,8 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-crimson-pro);
-  font-size: 1.5rem;
+  font-family: var(--font-tiempos-text), serif;
+  font-size: 1.325rem;
   letter-spacing: -0.02em;
 }
 
@@ -60,11 +56,11 @@ h4 {
 
 p {
   font-family: var(--font-sans);
-  color: #22222280;
+  color: var(--foreground-light);
 }
 
 a {
-  color: #222222 !important;
+  color: var(--foreground) !important;
   text-decoration: none !important;
 }
 

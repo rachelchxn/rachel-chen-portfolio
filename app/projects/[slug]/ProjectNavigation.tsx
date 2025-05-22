@@ -4,14 +4,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Tab from "../../components/Tab";
 import { Section } from "../../components/projectContent/types";
-import { useRouter } from "next/navigation";
 
 export default function ProjectNavigation({
   sections,
 }: {
   sections: Section[];
 }) {
-  const router = useRouter();
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
@@ -39,7 +37,7 @@ export default function ProjectNavigation({
   }, [sections]);
 
   return (
-    <aside className="md:sticky md:top-0 md:h-fit px-6 py-12">
+    <aside className="md:sticky md:top-0 md:h-fit px-0 pt-12 pb-0 md:py-12">
       <Tab href={"/"}>
         <div className="flex items-center gap-2">
           <Image src={"/arrow-left.svg"} alt="Back" width={18} height={18} />
@@ -47,7 +45,7 @@ export default function ProjectNavigation({
         </div>
       </Tab>
 
-      <nav className="mt-8">
+      <nav className="hidden md:block mt-8">
         <ul className="flex flex-col gap-2">
           {sections.map((section) => (
             <li key={section.id}>

@@ -6,7 +6,7 @@ export const projectContent: Record<string, Section[]> = {
   earth,
   pokergpt,
   "1password": [],
-  RBC: [],
   linkedin: [],
+  RBC: [],
   chattin: [],
 } as const;

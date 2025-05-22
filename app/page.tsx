@@ -1,108 +1,109 @@
-import Image from "next/image";
+"use client";
 import projectsData from "../public/data/projects.json";
 import React from "react";
 import Link from "next/link";
 import { ProjectsData } from "@/types/project";
+import ProjectThumbnail from "./components/ProjectThumbnail";
 
 const projects = projectsData as ProjectsData;
 
 export default function Home() {
   return (
-    <div className="flex flex-col p-6 py-12 gap-12 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-12">
-        <h1 className="max-w-4xl">
-          I'm Rachel, a product builder who loves bringing ideas to life with
-          {` `}
-          <span className="whitespace-nowrap">
-            <span
-              className={
-                " italic relative text-primary after:absolute after:bottom-[0.05em] after:left-[1px] after:right-[7px] after:h-[3px] after:bg-[var(--primary)]"
-              }
-            >
-              desi
+    <div className="flex flex-col p-6 w-full items-center gap-12 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col w-full  max-w-[1600px] gap-12">
+        <div className="flex flex-col gap-12 py-12">
+          <h1 className="max-w-4xl">
+            I&apos;m Rachel, a product builder who loves bringing ideas to life
+            with
+            {` `}
+            <span className="whitespace-nowrap">
+              <span
+                className={
+                  " italic relative after:absolute after:bottom-[0.05em] after:left-[1px] after:right-[7px] after:h-[3px] after:bg-[var(--primary)]"
+                }
+              >
+                desi
+              </span>
+              <span className={"italic "}>g</span>
+              <span
+                className={
+                  "italic relative after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]"
+                }
+              >
+                n {``}
+              </span>
             </span>
-            <span className={"italic "}>g</span>
-            <span
-              className={
-                "italic relative text-primary after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]"
-              }
-            >
-              n {``}
+            <span className="whitespace-nowrap italic relative after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
+              + code
             </span>
-          </span>
-          <span className="whitespace-nowrap italic relative text-primary after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
-            + code
-          </span>
-          .
-        </h1>
-        <div className="flex flex-col md:flex-row gap-12">
-          <div className="flex flex-col gap-2">
-            <h4>Soon</h4>
-            <p className="">
-              Engineering{" "}
-              <span>
-                <a
-                  href="https://bloomberg.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @Bloomberg
-                </a>
-              </span>
-            </p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <h4>Previously</h4>
-            <p className="">
-              Designed & engineered{" "}
-              <span>
-                <a
-                  href="https://1password.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @1Password
-                </a>
-              </span>
-              ,{" "}
-              <span>
-                <a
-                  href="https://rbc.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @RBC
-                </a>
-              </span>
-              , and{" "}
-              <span>
-                <a
-                  href="https://onova.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @Onova
-                </a>
-              </span>
-              .
-            </p>
+            .
+          </h1>
+          <div className="flex flex-col md:flex-row gap-12">
+            <div className="flex flex-col gap-2">
+              <h4>Soon</h4>
+              <p className="">
+                Engineering{" "}
+                <span>
+                  <a
+                    href="https://bloomberg.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Bloomberg
+                  </a>
+                </span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h4>Previously</h4>
+              <p className="">
+                Designed & engineered{" "}
+                <span>
+                  <a
+                    href="https://1password.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @1Password
+                  </a>
+                </span>
+                ,{" "}
+                <span>
+                  <a
+                    href="https://rbc.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @RBC
+                  </a>
+                </span>
+                , and{" "}
+                <span>
+                  <a
+                    href="https://onova.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Onova
+                  </a>
+                </span>
+                .
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="h-2" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.projects.map((project) => (
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="hover:!opacity-75 transition-opacity"
+              className="!opacity-100 transition-all duration-300 ease-in-out"
             >
               <div className="flex flex-col gap-2">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full"
-                />
+                <div className="relative w-full aspect-[16/9] hover:border-primary transition-all duration-300 ease-in-out border-1 border-foreground/10 overflow-hidden box-border">
+                  <ProjectThumbnail project={project} />
+                </div>
                 <div className="flex flex-col gap-1">
                   <h3>{project.heading}</h3>
                   <h4>

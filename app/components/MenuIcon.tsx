@@ -11,8 +11,8 @@ export default function MenuIcon({
 }) {
   return (
     <svg
-      width="24"
-      height="24"
+      width="26"
+      height="26"
       viewBox="0 0 24 24"
       fill="none"
       onClick={onClick}
@@ -20,7 +20,7 @@ export default function MenuIcon({
     >
       <path
         className={`transition-all duration-300 origin-center ${
-          isOpen ? "rotate-45 translate-y-[2.5px]" : ""
+          isOpen ? "rotate-45 translate-y-[2.9px]" : ""
         }`}
         d="M4 8H20"
         stroke="currentColor"
@@ -28,7 +28,7 @@ export default function MenuIcon({
       />
       <path
         className={`transition-all duration-300 origin-center ${
-          isOpen ? "-rotate-45 -translate-y-[3px]" : ""
+          isOpen ? "-rotate-45 -translate-y-[2.9px]" : ""
         }`}
         d="M4 16H20"
         stroke="currentColor"

@@ -37,8 +37,21 @@
       "skills": ["User Research", "Competitive Analysis", "Prototyping"]
     },
     {
+      "heading": "Job application tracking on LinkedIn",
+      "title": "LinkedIn",
+      "tag": "Pitched 2024",
+      "image": "/projects/linkedin.svg",
+      "gif": "/projects/linkedin.gif",
+      "slug": "linkedin",
+      "role": "Product Strategist & Designer",
+      "timeline": "Jan - Feb 2024",
+      "team": ["Only me!"],
+      "skills": ["Product Strategy", "User Research", "Prototyping"]
+    },
+
+    {
       "heading": "Generative AI for RBC's Global HR Center",
-      "title": "RBC: heyHR",
+      "title": "RBC-heyHR",
       "tag": "Handed off 2024",
       "image": "/projects/heyhr.svg",
       "gif": "/projects/heyhr.gif",
@@ -51,18 +64,6 @@
         "Full Stack Engineering",
         "Pitching & Storytelling"
       ]
-    },
-    {
-      "heading": "Job application tracking on LinkedIn",
-      "title": "LinkedIn",
-      "tag": "Pitched 2024",
-      "image": "/projects/linkedin.svg",
-      "gif": "/projects/linkedin.gif",
-      "slug": "linkedin",
-      "role": "Product Strategist & Designer",
-      "timeline": "Jan - Feb 2024",
-      "team": ["Only me!"],
-      "skills": ["Product Strategy", "User Research", "Prototyping"]
     },
     {
       "heading": "A dating app, but for professional connections",

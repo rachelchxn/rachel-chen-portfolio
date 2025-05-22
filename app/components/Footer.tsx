@@ -1,11 +1,9 @@
 "use client";
-import { usePathname } from "next/navigation";
 import Tab from "./Tab";
 import Image from "next/image";
 import React from "react";
 
 export default function Navbar() {
-  const pathname = usePathname();
   return (
     <div className="flex items-center justify-between p-6 border-t border-foreground/10">
       <div className="flex gap-2">

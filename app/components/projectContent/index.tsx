@@ -17,7 +17,7 @@ export default function ProjectContent({ project }: { project: string }) {
           id={section.id}
           className="flex flex-col gap-4"
         >
-          <h4>{section.title}</h4>
+          <h4 className="!text-primary !opacity-100">{section.title}</h4>
 
           {section.content.map((element, index) => {
             switch (element.type) {
