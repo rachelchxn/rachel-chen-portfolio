@@ -34,7 +34,8 @@ export default function Home() {
               </span>
             </span>
             <span className="whitespace-nowrap italic relative after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
-              + code
+              <span className="!font-serif italic whitespace-nowrap  ">+ </span>
+              <span className="whitespace-nowrap italic">code</span>
             </span>
             .
           </h1>
@@ -98,15 +99,17 @@ export default function Home() {
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className="!opacity-100 transition-all duration-300 ease-in-out"
+              className="group block transition-all duration-300 ease-in-out !opacity-100"
             >
               <div className="flex flex-col gap-2">
-                <div className="relative w-full aspect-[16/9] hover:border-primary transition-all duration-300 ease-in-out border-1 border-foreground/10 overflow-hidden box-border">
+                <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden box-border transition-all duration-300 ease-in-out group-hover:border-primary">
                   <ProjectThumbnail project={project} />
                 </div>
-                <div className="flex flex-col gap-1">
-                  <h3>{project.heading}</h3>
-                  <h4>
+                <div className="flex flex-col gap-1 transition-colors duration-300 ease-in-out">
+                  <h3 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
+                    {project.heading}
+                  </h3>
+                  <h4 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
                     {project.title} • {project.tag}
                   </h4>
                 </div>
