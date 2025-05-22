@@ -12,8 +12,10 @@ export default function Navbar() {
     <div className="flex items-center justify-center p-6 border-b border-foreground/10 relative">
       <div className="flex items-center justify-between w-full max-w-[1600px]">
         <div className="flex flex-col sm:flex-row sm:inline-flex sm:gap-4 gap-0">
-          <h4 className="font-bold !opacity-100">Rachel Chen</h4>
-          <h4 className="opacity-50 flex items-center gap-0">
+          <h4 className="font-bold !opacity-100 !text-foreground">
+            Rachel Chen
+          </h4>
+          <h4 className="flex items-center gap-0">
             0
             <span>
               <Image
@@ -21,6 +23,7 @@ export default function Navbar() {
                 alt="Right"
                 width={18}
                 height={18}
+                className="opacity-50"
               />
             </span>
             1 Design Engineer

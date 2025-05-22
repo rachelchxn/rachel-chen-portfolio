@@ -13,37 +13,37 @@ export default function Tab({
 }) {
   const router = useRouter();
 
-  return (
-    <div>
-      {href.startsWith("https://") ? (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="custom-pointer"
-        >
-          <h4
-            className={`${
-              active
-                ? "text-[var(--primary)] !opacity-100 cursor-default"
-                : "hover:!opacity-100"
-            } cursor-pointer`}
-          >
-            {children}
-          </h4>
-        </a>
-      ) : (
+  if (href.startsWith("https://")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:!opacity-100"
+      >
         <h4
-          onClick={() => router.push(href)}
           className={`${
-            active
-              ? "text-[var(--primary)] !opacity-100 cursor-default"
-              : "hover:!opacity-100"
-          } cursor-pointer`}
+            active && "!text-primary !opacity-100 cursor-default"
+          } cursor-pointer !opacity-100 hover:!text-foreground`}
         >
           {children}
         </h4>
-      )}
-    </div>
-  );
+      </a>
+    );
+  } else {
+    return (
+      <div onClick={() => router.push(href)}>
+        <h4
+          className={`${
+            active
+              ? "!text-primary !opacity-100 cursor-default"
+              : "hover:!text-foreground"
+          } cursor-pointer`}
+          onClick={() => router.push(href)}
+        >
+          {children}
+        </h4>
+      </div>
+    );
+  }
 }

@@ -39,8 +39,14 @@ export default function ProjectNavigation({
   return (
     <aside className="md:sticky md:top-0 md:h-fit px-0 pt-12 pb-0 md:py-12">
       <Tab href={"/"}>
-        <div className="flex items-center gap-2">
-          <Image src={"/arrow-left.svg"} alt="Back" width={18} height={18} />
+        <div className="flex items-center gap-2 hover:!opacity-100 group">
+          <Image
+            src={"/arrow-left.svg"}
+            alt="Back"
+            width={18}
+            height={18}
+            className="opacity-50 group-hover:!opacity-100"
+          />
           Back
         </div>
       </Tab>
