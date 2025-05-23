@@ -32,7 +32,7 @@ export default async function ProjectPage({ params }: PageProps) {
     <div className="min-h-screen px-6">
       <main className="grid max-w-[1600px] mx-auto  grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-0 md:gap-8">
         <ProjectNavigation sections={sections} />
-        <div className="w-fill md:w-4xl py-12 flex flex-col gap-24">
+        <div className="w-fill md:w-4xl py-12 flex flex-col gap-12 md:gap-24">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <h4>
@@ -43,7 +43,7 @@ export default async function ProjectPage({ params }: PageProps) {
             <div className="w-full aspect-[16/9] border-1 border-foreground/10">
               <ProjectThumbnail project={project} />
             </div>
-            <div className="flex gap-12">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12">
               <div className="flex w-full flex-col gap-2">
                 <h4 className="!text-primary !opacity-100">Role</h4>
                 <p>{project.role}</p>
