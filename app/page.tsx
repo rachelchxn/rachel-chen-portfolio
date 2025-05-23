@@ -4,14 +4,20 @@ import React from "react";
 import Link from "next/link";
 import { ProjectsData } from "@/types/project";
 import ProjectThumbnail from "./components/ProjectThumbnail";
+import { motion } from "framer-motion";
 
 const projects = projectsData as ProjectsData;
 
 export default function Home() {
   return (
     <div className="flex flex-col p-6 w-full items-center gap-12 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col w-full  max-w-[1600px] gap-12">
-        <div className="flex flex-col gap-12 py-12">
+      <main className="flex flex-col w-full max-w-[1600px] gap-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col gap-12 py-12"
+        >
           <h1 className="max-w-4xl">
             I&apos;m Rachel, a product builder who loves bringing ideas to life
             with
@@ -39,7 +45,12 @@ export default function Home() {
             </span>
             .
           </h1>
-          <div className="flex flex-col md:flex-row gap-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            className="flex flex-col md:flex-row gap-12"
+          >
             <div className="flex flex-col gap-2">
               <h4>Soon</h4>
               <p className="">
@@ -91,10 +102,15 @@ export default function Home() {
                 .
               </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
           {projects.projects.map((project) => (
             <Link
               key={project.slug}
@@ -116,7 +132,7 @@ export default function Home() {
               </div>
             </Link>
           ))}
-        </div>
+        </motion.div>
       </main>
     </div>
   );
