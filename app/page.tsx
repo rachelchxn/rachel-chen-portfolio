@@ -109,7 +109,7 @@ export default function Home() {
                   <h3 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
                     {project.heading}
                   </h3>
-                  <h4 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
+                  <h4 className="transition-colors duration-300 ease-in-out group-hover:!text-primary/70">
                     {project.title} • {project.tag}
                   </h4>
                 </div>
