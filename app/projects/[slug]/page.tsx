@@ -2,11 +2,9 @@ import { notFound } from "next/navigation";
 import projectsData from "../../../public/data/projects.json";
 import React from "react";
 import { ProjectsData } from "../../../types/project";
-// import ProjectContent from "../../components/projectContent";
 import { projectContent } from "../../components/projectContent/content";
 import { Section } from "../../components/projectContent/types";
 import ProjectNavigation from "./ProjectNavigation";
-// import ProjectThumbnail from "@/app/components/ProjectThumbnail";
 import AnimatedProjectContent from "./AnimatedProjectContent";
 
 const projects = projectsData as ProjectsData;
@@ -33,7 +31,7 @@ export default async function ProjectPage({ params }: PageProps) {
     <div className="min-h-screen px-6">
       <main className="grid max-w-[1600px] mx-auto grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-0 md:gap-8">
         <ProjectNavigation sections={sections} />
-        <AnimatedProjectContent project={project} sections={sections} />
+        <AnimatedProjectContent project={project} />
         <div className="p-6 py-12" />
       </main>
     </div>

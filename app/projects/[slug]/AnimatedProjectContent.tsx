@@ -3,17 +3,14 @@
 import { motion } from "framer-motion";
 import ProjectThumbnail from "@/app/components/ProjectThumbnail";
 import ProjectContent from "@/app/components/projectContent";
-import { Section } from "@/app/components/projectContent/types";
 import { Project } from "@/types/project";
 
 interface AnimatedProjectContentProps {
   project: Project;
-  sections: Section[];
 }
 
 export default function AnimatedProjectContent({
   project,
-  sections,
 }: AnimatedProjectContentProps) {
   return (
     <div className="w-fill md:w-4xl py-12 flex flex-col gap-12 md:gap-24">
@@ -49,15 +46,15 @@ export default function AnimatedProjectContent({
           className="flex flex-col md:flex-row gap-6 md:gap-12"
         >
           <div className="flex w-full flex-col gap-2">
-            <h4 className="!text-primary !opacity-100">Role</h4>
+            <h4 className="!opacity-100">Role</h4>
             <p>{project.role}</p>
           </div>
           <div className="flex w-full flex-col gap-2">
-            <h4 className="!text-primary !opacity-100">Timeline</h4>
+            <h4 className="!opacity-100">Timeline</h4>
             <p>{project.timeline}</p>
           </div>
           <div className="flex w-full flex-col gap-2">
-            <h4 className="!text-primary !opacity-100">Team</h4>
+            <h4 className="!opacity-100">Team</h4>
             <div className="flex flex-col gap-0">
               {project.team.map((t) => (
                 <p key={t}>{t}</p>
@@ -65,7 +62,7 @@ export default function AnimatedProjectContent({
             </div>
           </div>
           <div className="flex w-full flex-col gap-2">
-            <h4 className="!text-primary !opacity-100">Skills</h4>
+            <h4 className="!opacity-100">Skills</h4>
             <div className="flex flex-col gap-0">
               {project.skills.map((s) => (
                 <p key={s}>{s}</p>

@@ -1,6 +1,6 @@
 export type ContentElement = {
-  type: "h2" | "p" | "image";
-  content: string;
+  type: "h2" | "h4" | "p" | "image" | "bullet-list" | "divider" | "video";
+  content: string | string[];
   caption?: string;
 };
 
