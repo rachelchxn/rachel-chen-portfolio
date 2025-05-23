@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between p-6 border-t border-foreground/10">
+    <div className="flex flex-col md:flex-row w-full items-start md:items-center justify-between p-6 border-t border-foreground/10 gap-6">
       <div className="flex gap-2">
         <span>
           <h4 className="font-bold flex items-center gap-2">
@@ -19,7 +19,7 @@ export default function Navbar() {
           <h4>by Rachel Chen</h4>
         </span>
       </div>
-      <div className="flex gap-8">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-8">
         <Tab href="https://www.linkedin.com/in/rachel-jiayi-chen/">
           Linkedin
         </Tab>
