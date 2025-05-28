@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Crimson_Pro, Geist, Geist_Mono } from "next/font/google";
-// import tiempos text from /fonts/TiemposText-Regular.otf
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";

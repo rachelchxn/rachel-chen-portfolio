@@ -212,7 +212,7 @@ export const earth: Section[] = [
       {
         type: "h2",
         content:
-          "We launched Earth at the Capgemini x Google Cloud Gen AI Hackathon 2023",
+          "We launched Earth at the Capgemini x Google Cloud Gen AI Hackathon 2023.",
       },
       {
         type: "p",

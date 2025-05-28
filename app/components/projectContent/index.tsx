@@ -46,9 +46,9 @@ export default function ProjectContent({ project }: { project: string }) {
                         return (
                           <div
                             key={index}
-                            className="flex flex-col gap-2 w-full"
+                            className="flex flex-col gap-1 w-full"
                           >
-                            <h2>{item}</h2>
+                            <h3>{item}</h3>
                             <p>{(element.content as string[])[index + 1]}</p>
                           </div>
                         );
@@ -98,6 +98,14 @@ export default function ProjectContent({ project }: { project: string }) {
                       loop
                       className="w-full h-auto object-contain border-[1px] border-foreground/10 my-4"
                     />
+                  </div>
+                );
+              case "quote":
+                return (
+                  <div key={index} className="w-full">
+                    <h3 className="italic py-0 my-6 pl-4 border-l-2 border-foreground-light">
+                      {element.content}
+                    </h3>
                   </div>
                 );
             }

@@ -1,5 +1,13 @@
 export type ContentElement = {
-  type: "h2" | "h4" | "p" | "image" | "bullet-list" | "divider" | "video";
+  type:
+    | "h2"
+    | "h4"
+    | "p"
+    | "image"
+    | "bullet-list"
+    | "divider"
+    | "video"
+    | "quote";
   content: string | string[];
   caption?: string;
 };

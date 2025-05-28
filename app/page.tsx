@@ -40,7 +40,7 @@ export default function Home() {
               </span>
             </span>
             <span className="whitespace-nowrap italic relative after:absolute after:bottom-[0.05em] after:left-0 after:w-full after:h-[3px] after:bg-[var(--primary)]">
-              <span className="!font-serif italic whitespace-nowrap  ">+ </span>
+              <span className="italic whitespace-nowrap">+ </span>
               <span className="whitespace-nowrap italic">code</span>
             </span>
             .
