@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Tab from "./Tab";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -8,10 +8,14 @@ import MenuIcon from "./MenuIcon";
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   return (
     <div className="flex items-center justify-center p-6 border-b border-foreground/10 relative">
       <div className="flex items-center justify-between w-full max-w-[1600px]">
-        <div className="flex flex-col sm:flex-row sm:inline-flex sm:gap-4 gap-0">
+        <div
+          onClick={() => router.push("/")}
+          className="flex flex-col sm:flex-row sm:inline-flex sm:gap-4 gap-0 cursor-pointer"
+        >
           <h4 className="font-bold !opacity-100 !text-foreground">
             Rachel Chen
           </h4>
@@ -40,7 +44,7 @@ export default function Navbar() {
           <Tab href="/about" active={pathname === "/about"}>
             About
           </Tab>
-          <Tab href="/resume">Resume</Tab>
+          <Tab href="/RachelChen_Resume.pdf">Resume</Tab>
         </div>
         <div className="md:hidden flex gap-4">
           <MenuIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
