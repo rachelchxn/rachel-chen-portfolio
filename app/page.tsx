@@ -109,7 +109,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           {projects.projects.map((project) => (
             <Link
@@ -120,6 +120,7 @@ export default function Home() {
               <div className="flex flex-col gap-2">
                 <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden box-border transition-all duration-300 ease-in-out group-hover:border-primary">
                   <ProjectThumbnail project={project} />
+                  <div className="absolute inset-0 bg-background/0 transition-colors duration-300 ease-in-out group-hover:bg-background/20" />
                 </div>
                 <div className="flex flex-col gap-0.5 mt-1 transition-colors duration-300 ease-in-out">
                   <h3 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
