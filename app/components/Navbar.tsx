@@ -38,7 +38,7 @@ export default function Navbar() {
             Work
           </Tab>
 
-          <Tab href="/projects" active={pathname === "/projects"}>
+          <Tab href="/fun" active={pathname === "/fun"}>
             Fun
           </Tab>
           <Tab href="/about" active={pathname === "/about"}>
