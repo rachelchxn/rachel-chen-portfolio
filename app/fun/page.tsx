@@ -27,14 +27,14 @@ export default function FunPage() {
             <div className="flex flex-col gap-2">
               <h4>Currently</h4>
               <p className="">
-                Leading design at{" "}
+                Leading design{" "}
                 <span>
                   <a
                     href="https://hackwestern.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    @HackWestern
+                    @Hack Western
                   </a>
                 </span>
                 , learning{" "}
