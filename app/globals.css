@@ -48,7 +48,7 @@ h4 {
 }
 
 p {
-  font-family: var(--font-sans);
+  font-family: var(--font-geist-sans);
   color: var(--foreground-light);
 }
 
@@ -70,7 +70,6 @@ body {
 section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   padding-top: 2rem;
 }
 

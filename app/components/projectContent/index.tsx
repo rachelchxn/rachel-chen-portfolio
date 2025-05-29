@@ -15,7 +15,7 @@ export default function ProjectContent({ project }: { project: string }) {
         <section
           key={section.id}
           id={section.id}
-          className="flex flex-col gap-4"
+          className="flex flex-col !gap-4"
         >
           <h4 className="!opacity-100 mb-1">{section.title}</h4>
 

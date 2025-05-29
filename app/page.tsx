@@ -52,7 +52,7 @@ export default function Home() {
             className="flex flex-col md:flex-row gap-12"
           >
             <div className="flex flex-col gap-2">
-              <h4>Soon</h4>
+              <h4>Currently</h4>
               <p className="">
                 Engineering{" "}
                 <span>

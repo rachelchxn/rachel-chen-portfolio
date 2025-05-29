@@ -86,5 +86,171 @@ export const pokergpt: Section[] = [
       },
     ],
   },
-  // Add more sections as needed
+  {
+    id: "market-research",
+    title: "Market Research",
+    content: [
+      {
+        type: "image",
+        content: "/projects/pokergpt/3-market-position.svg",
+      },
+      {
+        type: "h4",
+        content: "Poker Solvers",
+      },
+      {
+        type: "p",
+        content:
+          "Platforms like GTO Wizard, Deepsolver, and more recently, Ruse AI provide interfaces to complex mathematical models to calculate hand analysis, pot odds, and Game Theory Optimal (GTO) strategies. These tools are robust but often require a solid understanding of poker theory to interpret and apply effectively, making them less suitable for beginners or intermediate players.",
+      },
+      {
+        type: "h4",
+        content: "Courses & Bootcamps",
+      },
+      {
+        type: "p",
+        content:
+          "Poker bootcamps and online courses provide structured learning for players at various stages of their poker journey. However, they are also costly and require a lot of time commitment, which is often not what beginner/casual players are looking for.",
+      },
+      {
+        type: "h4",
+        content: "Personal Coaching",
+      },
+      {
+        type: "p",
+        content:
+          "One-on-one personalized coaching can be highly effective in improving poker skills. however, it often requires a significant time investment for sessions, homework, and study, and a huge cost investment as coaches generally go for hundreds of dollars per hour of coaching.",
+      },
+      {
+        type: "p",
+        content: "",
+      },
+      {
+        type: "p",
+        content: "",
+      },
+      {
+        type: "p",
+        content:
+          "And from there, we had a clear idea of the problem were solving and the market gap we were filling.",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/4-hmw.svg",
+      },
+    ],
+  },
+  {
+    id: "becoming-my-users",
+    title: "Becoming my Users",
+    content: [
+      {
+        type: "h2",
+        content: "I didn't know how to play poker... so I learned!",
+      },
+      {
+        type: "p",
+        content:
+          "Starting with Youtube videos, playing online, and I started to learn the basics and eventually threw in (and lost) a few hundred dollars.",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/5-learning.svg",
+      },
+    ],
+  },
+  {
+    id: "competitor-research",
+    title: "Competitor Research",
+    content: [
+      {
+        type: "h2",
+        content:
+          "Competitor interfaces are highly complex and not beginner-friendly",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/6-competitors.svg",
+      },
+      {
+        type: "p",
+        content:
+          "The current poker solvers on the market are highly complex and mathematical - great for the serious poker people, but not for those who want a way to casually learn and improve their performance.",
+      },
+    ],
+  },
+  {
+    id: "solution",
+    title: "Solution",
+    content: [
+      {
+        type: "h2",
+        content:
+          "What if we moved towards a familiar, chat-like interface for poker analytics and strategies?",
+      },
+      {
+        type: "p",
+        content: "And to answer that question, the wireframing began!",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/7-mvp.svg",
+      },
+      {
+        type: "p",
+        content:
+          "The concept of an AI chatbot for poker solving had already been validated by our initial user research, but this also led us to another problem...",
+      },
+      {
+        type: "p",
+        content: "",
+      },
+      {
+        type: "p",
+        content: "",
+      },
+      {
+        type: "h2",
+        content:
+          "How might we provide a better poker learning experience than ChatGPT?",
+      },
+      {
+        type: "p",
+        content:
+          "I started by exploring a design for a more structured and visual interface tailored to poker analysis responses.",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/8-chatgpt-interface.svg",
+      },
+      {
+        type: "p",
+        content:
+          "Next, our team looked into streamlining the flow of prompting with a built-in hand history template that makes it easy to copy over past games and suggested prompts to get the conversations started.",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/9-feature-exploration.svg",
+      },
+    ],
+  },
+  {
+    id: "final-designs",
+    title: "Final Designs",
+    content: [
+      {
+        type: "h2",
+        content: "We prioritized a simple, familiar, and clean interface.",
+      },
+      {
+        type: "p",
+        content:
+          "Our main interface is a chat with structured responses and the ability to set game formations. This offers a familiar chat-style experience with poker-tailored features.",
+      },
+      {
+        type: "image",
+        content: "/projects/pokergpt/10-mockups.svg",
+      },
+    ],
+  },
 ];
