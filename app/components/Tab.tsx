@@ -13,7 +13,7 @@ export default function Tab({
 }) {
   const router = useRouter();
 
-  if (href.startsWith("https://") || href === "/RachelChen_Resume.pdf") {
+  if (href.startsWith("https://") || href === "/Rachel_Chen_Resume.pdf") {
     return (
       <a
         href={href}

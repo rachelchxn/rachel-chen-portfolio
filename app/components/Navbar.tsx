@@ -44,7 +44,7 @@ export default function Navbar() {
           <Tab href="/about" active={pathname === "/about"}>
             About
           </Tab>
-          <Tab href="/RachelChen_Resume.pdf">Resume</Tab>
+          <Tab href="/Rachel_Chen_Resume.pdf">Resume</Tab>
         </div>
         <div className="md:hidden flex gap-4">
           <MenuIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
