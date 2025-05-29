@@ -142,7 +142,7 @@ export const pokergpt: Section[] = [
   },
   {
     id: "becoming-my-users",
-    title: "Becoming my Users",
+    title: "Becoming My Users",
     content: [
       {
         type: "h2",
