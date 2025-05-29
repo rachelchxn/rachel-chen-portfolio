@@ -121,7 +121,7 @@ export default function Home() {
                 <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden box-border transition-all duration-300 ease-in-out group-hover:border-primary">
                   <ProjectThumbnail project={project} />
                 </div>
-                <div className="flex flex-col gap-1 transition-colors duration-300 ease-in-out">
+                <div className="flex flex-col gap-0.5 mt-1 transition-colors duration-300 ease-in-out">
                   <h3 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
                     {project.heading}
                   </h3>
