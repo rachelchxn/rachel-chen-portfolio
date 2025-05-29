@@ -15,7 +15,7 @@ export default function ProjectContent({ project }: { project: string }) {
         <section
           key={section.id}
           id={section.id}
-          className="flex flex-col !gap-4"
+          className="flex flex-col gap-4"
         >
           <h4 className="!opacity-100 mb-1">{section.title}</h4>
 
@@ -29,7 +29,7 @@ export default function ProjectContent({ project }: { project: string }) {
                 );
               case "h4":
                 return (
-                  <h4 key={index} className="!opacity-100 mt-12">
+                  <h4 key={index} className="!opacity-100 mt-8">
                     {element.content}
                   </h4>
                 );
@@ -39,7 +39,7 @@ export default function ProjectContent({ project }: { project: string }) {
                 return (
                   <div
                     key={index}
-                    className="flex w-full flex-col md:flex-row gap-2"
+                    className="flex w-full flex-col md:flex-row gap-2 mt-4"
                   >
                     {(element.content as string[]).map((item, index) => {
                       if (index % 2 === 0) {
