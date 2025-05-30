@@ -39,7 +39,7 @@ export default function ProjectContent({ project }: { project: string }) {
                 return (
                   <div
                     key={index}
-                    className="flex w-full flex-col md:flex-row gap-2 mt-4"
+                    className="flex w-full flex-col md:flex-row gap-6 mt-4"
                   >
                     {(element.content as string[]).map((item, index) => {
                       if (index % 2 === 0) {
