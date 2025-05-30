@@ -81,3 +81,14 @@ section {
     transform: scaleX(1);
   }
 }
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+}

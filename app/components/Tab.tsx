@@ -19,7 +19,7 @@ export default function Tab({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:!opacity-100"
+        className="hover:!opacity-100 "
       >
         <h4
           className={`${
@@ -32,18 +32,22 @@ export default function Tab({
     );
   } else {
     return (
-      <div onClick={() => router.push(href)}>
+      <button
+        onClick={() => router.push(href)}
+        data-cursor="pointer"
+        className="w-full text-left"
+      >
         <h4
           className={`${
             active
               ? "!text-primary !opacity-100 cursor-default"
               : "hover:!text-foreground"
-          } cursor-pointer`}
+          } hover:cursor-pointer`}
           onClick={() => router.push(href)}
         >
           {children}
         </h4>
-      </div>
+      </button>
     );
   }
 }

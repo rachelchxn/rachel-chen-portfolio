@@ -52,11 +52,11 @@ export default function ProjectNavigation({
       </Tab>
 
       <nav className="hidden md:block mt-8">
-        <ul className="flex flex-col gap-2">
+        <div className="flex flex-col items-start gap-2">
           {sections.map((section) => (
-            <li key={section.id}>
+            <button key={section.id} className="flex items-start">
               <p
-                className={`transition-colors cursor-pointer ${
+                className={`transition-colors cursor-pointer text-left ${
                   activeSection === section.id
                     ? "!text-foreground"
                     : "hover:text-foreground"
@@ -79,9 +79,9 @@ export default function ProjectNavigation({
               >
                 {section.title}
               </p>
-            </li>
+            </button>
           ))}
-        </ul>
+        </div>
       </nav>
     </aside>
   );

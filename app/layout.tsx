@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 import React from "react";
 
 const geistSans = Geist({
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${crimsonPro.variable} ${crimsonProItalic.variable} ${tiemposText.variable} antialiased custom-cursor custom-pointer font-[family-name:var(--font-geist-sans)]`}
       >
+        <CustomCursor />
         <Navbar />
         {children}
         <Footer />
