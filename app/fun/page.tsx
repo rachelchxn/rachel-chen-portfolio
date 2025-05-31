@@ -65,6 +65,8 @@ export default function FunPage() {
             <Link
               key={fun.title}
               href={fun.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block transition-all duration-300 ease-in-out !opacity-100"
               data-cursor={fun.data}
             >
