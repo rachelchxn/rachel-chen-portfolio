@@ -17,7 +17,7 @@ const CustomCursor = () => {
   const [isGithub, setIsGithub] = useState(false);
 
   const isPill = isCaseStudy || isVideo || isDevpost || isBlog || isGithub;
-  const pillOffset = isPill ? 16 : 8;
+  const pillOffset = isPill ? 12 : 8;
 
   useEffect(() => {
     // Check if device is mobile
@@ -138,9 +138,9 @@ const CustomCursor = () => {
           transform: isMouseDown
             ? "scale(0.75)"
             : isPointer && !isPill
-            ? "scale(1.25)"
+            ? "scale(1.5)"
             : "scale(1)",
-          opacity: isPointer && !isPill ? 0.5 : 1,
+          opacity: isPointer && !isPill ? 0.35 : 1,
         }}
       >
         <span
