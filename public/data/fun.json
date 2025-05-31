@@ -5,35 +5,40 @@
       "description": "Mobile app for spontaneous hangouts and quality time with friends",
       "tag": "1st place @ UXL designathon 2024",
       "image": "/fun/bubbl.png",
-      "link": "https://drive.google.com/file/d/1AK_tyewVfWShq_pyKfeYv-6P3nHvEd1E/view"
+      "link": "https://drive.google.com/file/d/1AK_tyewVfWShq_pyKfeYv-6P3nHvEd1E/view",
+      "data": "video"
     },
     {
       "title": "infu",
       "description": "Facial recognition + speech-to-text summarization to never forget people",
       "tag": "2nd place @ Hack Western 10",
       "image": "/fun/infu.png",
-      "link": "https://devpost.com/software/infu"
+      "link": "https://devpost.com/software/infu",
+      "data": "devpost"
     },
     {
       "title": "empa",
       "description": "Real-time emotion mapping with a custom computer vision model",
       "tag": "1st place @ Shehacks 2024",
       "image": "/fun/empa.png",
-      "link": "https://devpost.com/software/empa"
+      "link": "https://devpost.com/software/empa",
+      "data": "devpost"
     },
     {
       "title": "Visionary",
       "description": "Eye-tracking application for eye health",
       "tag": "1st place @ Hack the North 2023",
       "image": "/fun/visionary.png",
-      "link": "https://devpost.com/software/visionary-bzvo5p"
+      "link": "https://devpost.com/software/visionary-bzvo5p",
+      "data": "devpost"
     },
     {
       "title": "dataquest",
       "description": "Predictive modelling and data analysis for preventing hotel cancellations",
       "tag": "1st place @ Dataquest 2024",
       "image": "/fun/dataquest.png",
-      "link": "https://devpost.com/software/the-best-solution"
+      "link": "https://devpost.com/software/the-best-solution",
+      "data": "devpost"
     },
 
     {
@@ -41,28 +46,32 @@
       "description": "Youtube video to organized notes",
       "tag": "Best Cohere Hack @ UofTHacks X",
       "image": "/fun/tldw.png",
-      "link": "https://devpost.com/software/tldw-too-long-didn-t-watch"
+      "link": "https://devpost.com/software/tldw-too-long-didn-t-watch",
+      "data": "devpost"
     },
     {
       "title": "Zensphere",
       "description": "Chrome extension using AI to block distressing content for mental health",
       "tag": "Best health hack @ Methacks 2024",
       "image": "/fun/zensphere.png",
-      "link": "https://devpost.com/software/zensphere"
+      "link": "https://devpost.com/software/zensphere",
+      "data": "devpost"
     },
     {
       "title": "RachelAI",
       "description": "Talking chatbot of myself with stable diffusion and Google Vertex AI",
       "tag": "Client Project",
       "image": "/fun/rachelai.png",
-      "link": "https://www.onova.io/innovation-insights/rachelai-a-behind-the-scenes-look-at-creating-a-virtual-ai-chatbot-in-24-hours#the-impact-of-rachelai"
+      "link": "https://www.onova.io/innovation-insights/rachelai-a-behind-the-scenes-look-at-creating-a-virtual-ai-chatbot-in-24-hours#the-impact-of-rachelai",
+      "data": "blog"
     },
     {
       "title": "ASL Translator",
       "description": "Real-time sign language translation with computer vision",
       "tag": "Personal Project",
       "image": "/fun/asl.png",
-      "link": "https://github.com/rachelchxn/asl-translator-deployed"
+      "link": "https://github.com/rachelchxn/asl-translator-deployed",
+      "data": "github"
     }
   ]
 }

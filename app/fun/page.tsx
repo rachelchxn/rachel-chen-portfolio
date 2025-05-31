@@ -64,6 +64,7 @@ export default function FunPage() {
               key={fun.title}
               href={fun.link}
               className="group block transition-all duration-300 ease-in-out !opacity-100"
+              data-cursor={fun.data}
             >
               <div className="flex flex-col gap-2">
                 <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden transition-all duration-300 ease-in-out group-hover:border-primary box-border">

@@ -1,6 +1,6 @@
 "use client";
 import projectsData from "../public/data/projects.json";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ProjectsData } from "@/types/project";
 import ProjectThumbnail from "./components/ProjectThumbnail";
@@ -116,6 +116,7 @@ export default function Home() {
               key={project.slug}
               href={`/projects/${project.slug}`}
               className="group block transition-all duration-300 ease-in-out !opacity-100"
+              data-cursor="case-study"
             >
               <div className="flex flex-col gap-2">
                 <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden box-border transition-all duration-300 ease-in-out group-hover:border-primary">
