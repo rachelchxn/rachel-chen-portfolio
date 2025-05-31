@@ -206,7 +206,7 @@ export const onePassword: Section[] = [
       },
       {
         type: "video",
-        content: "/projects/1password/9-final.mov",
+        content: "/projects/1password/9-final-flow.mp4",
       },
     ],
   },

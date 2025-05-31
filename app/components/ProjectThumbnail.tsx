@@ -25,7 +25,7 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
 
   useEffect(() => {
     // Check if video exists
-    fetch(`/projects/${project.slug}/${project.slug}.mov`)
+    fetch(`/projects/${project.slug}/${project.slug}.mp4`)
       .then((response) => {
         if (response.ok) {
           setHasVideo(true);
@@ -57,8 +57,8 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
           />
           <video
             ref={videoRef}
-            src={`/projects/${project.slug}/${project.slug}.mov`}
-            poster={`/projects/${project.slug}/${project.slug}.mov#t=0.1`}
+            src={`/projects/${project.slug}/${project.slug}.mp4`}
+            poster={`/projects/${project.slug}/${project.slug}.mp4#t=0.1`}
             className={`w-full h-full object-cover scale-110 transition-opacity duration-500 ${
               isVideoReady ? "opacity-100" : "opacity-0"
             }`}
