@@ -1,6 +1,6 @@
 "use client";
 import projectsData from "../public/data/projects.json";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { ProjectsData } from "@/types/project";
 import ProjectThumbnail from "./components/ProjectThumbnail";

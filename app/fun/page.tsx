@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { fun } from "../../public/data/fun.json";
+import funData from "../../public/data/fun.json";
+import { Fun } from "@/types/fun";
+
 import Image from "next/image";
 
 export default function FunPage() {
@@ -59,7 +61,7 @@ export default function FunPage() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           className="grid grid-cols-1 lg:grid-cols-3 gap-6"
         >
-          {fun.map((fun) => (
+          {funData.fun.map((fun: Fun) => (
             <Link
               key={fun.title}
               href={fun.link}
