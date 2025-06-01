@@ -7,7 +7,8 @@ export type ContentElement = {
     | "bullet-list"
     | "divider"
     | "video"
-    | "quote";
+    | "quote"
+    | "demo";
   content: string | string[];
   caption?: string;
 };

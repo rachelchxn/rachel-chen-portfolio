@@ -108,6 +108,30 @@ export default function ProjectContent({ project }: { project: string }) {
                     </h3>
                   </div>
                 );
+              case "demo":
+                return (
+                  <div key={index} className="w-full flex gap-6 items-center">
+                    <div className="flex flex-col md:flex-row gap-2 md:gap-8 md:items-center">
+                      {element.caption && (
+                        <h3 className="md:hidden mt-2 text-sm">
+                          {element.caption}
+                        </h3>
+                      )}
+                      <video
+                        src={element.content as string}
+                        autoPlay
+                        muted
+                        loop
+                        className="w-full md:w-3/5 h-auto object-contain border-[1px] border-foreground/10 my-4"
+                      />
+                      {element.caption && (
+                        <h3 className="hidden md:block mt-2 text-sm">
+                          {element.caption}
+                        </h3>
+                      )}
+                    </div>
+                  </div>
+                );
             }
           })}
         </section>

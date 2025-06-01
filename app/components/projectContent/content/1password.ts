@@ -208,6 +208,25 @@ export const onePassword: Section[] = [
         type: "video",
         content: "/projects/1password/9-final-flow.mp4",
       },
+      {
+        type: "h4",
+        content: "Autofill Flows",
+      },
+      {
+        type: "demo",
+        content: "/projects/1password/autofill.mp4",
+        caption: "Autofilling login credentials on macOS",
+      },
+      {
+        type: "demo",
+        content: "/projects/1password/save-passkey.mp4",
+        caption: "Saving a new passkey on macOS",
+      },
+      {
+        type: "demo",
+        content: "/projects/1password/sign-in-passkey.mp4",
+        caption: "Signing in with a passkey on macOS",
+      },
     ],
   },
 ];
