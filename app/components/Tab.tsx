@@ -6,10 +6,12 @@ export default function Tab({
   href,
   active = false,
   children,
+  dataCursor,
 }: {
   href: string;
   active?: boolean;
   children: React.ReactNode;
+  dataCursor?: string;
 }) {
   const router = useRouter();
 
@@ -20,6 +22,7 @@ export default function Tab({
         target="_blank"
         rel="noopener noreferrer"
         className="hover:!opacity-100 "
+        data-cursor={dataCursor}
       >
         <h4
           className={`${

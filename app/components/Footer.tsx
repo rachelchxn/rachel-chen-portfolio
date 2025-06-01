@@ -24,7 +24,15 @@ export default function Footer() {
           <Tab href="https://www.linkedin.com/in/rachel-jiayi-chen/">
             Linkedin
           </Tab>
-          <Tab href="mailto:rachelc0715@gmail.com">Email</Tab>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText("rachelc0715@gmail.com");
+            }}
+            data-cursor="email"
+            className="hover:!opacity-100 opacity-60 text-foreground font-mono font-medium"
+          >
+            EMAIL
+          </button>
           <Tab href="https://x.com/racheljychen">X</Tab>
           <Tab href="https://github.com/rachelchxn">Github</Tab>
           <Tab href="https://devpost.com/rachelc0715">Devpost</Tab>

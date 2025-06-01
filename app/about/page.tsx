@@ -46,7 +46,9 @@ export default function About() {
                 </span>{" "}
                 or by{" "}
                 <span>
-                  <a href="mailto:rachelc0715@gmail.com">email</a>
+                  <a href="mailto:rachelc0715@gmail.com" data-cursor="email">
+                    email
+                  </a>
                 </span>
                 . I&apos;m trying to become an{" "}
                 <span>

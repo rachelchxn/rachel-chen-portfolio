@@ -1,22 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Eye, ArrowUpRight } from "lucide-react";
+import { Eye, ArrowUpRight, Mail } from "lucide-react";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const [isCaseStudy, setIsCaseStudy] = useState(false);
   const [isVideo, setIsVideo] = useState(false);
   const [isDevpost, setIsDevpost] = useState(false);
   const [isBlog, setIsBlog] = useState(false);
   const [isGithub, setIsGithub] = useState(false);
+  const [isEmail, setIsEmail] = useState(false);
+  const [isEmailCopied, setIsEmailCopied] = useState(false);
 
-  const isPill = isCaseStudy || isVideo || isDevpost || isBlog || isGithub;
+  const isPill =
+    isCaseStudy || isVideo || isDevpost || isBlog || isGithub || isEmail;
   const pillOffset = isPill ? 12 : 8;
 
   useEffect(() => {
@@ -33,6 +37,10 @@ const CustomCursor = () => {
 
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      if (!isInitialized) {
+        setIsInitialized(true);
+        setIsVisible(true);
+      }
     };
 
     const updatePointer = (e: MouseEvent) => {
@@ -46,6 +54,7 @@ const CustomCursor = () => {
       const isDevpost = target.closest('[data-cursor="devpost"]') !== null;
       const isBlog = target.closest('[data-cursor="blog"]') !== null;
       const isGithub = target.closest('[data-cursor="github"]') !== null;
+      const isEmail = target.closest('[data-cursor="email"]') !== null;
 
       setIsPointer(isClickable);
       setIsCaseStudy(isCase);
@@ -53,8 +62,12 @@ const CustomCursor = () => {
       setIsDevpost(isDevpost);
       setIsBlog(isBlog);
       setIsGithub(isGithub);
+      setIsEmail(isEmail);
 
-      console.log(isDevpost);
+      // Reset email copied state when hovering over a new element
+      if (!isEmail) {
+        setIsEmailCopied(false);
+      }
     };
 
     const handleMouseDown = () => setIsMouseDown(true);
@@ -68,6 +81,23 @@ const CustomCursor = () => {
       setIsVisible(true);
     };
 
+    // Add click handler for email copying
+    const handleClick = async (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const emailElement = target.closest('[data-cursor="email"]');
+
+      if (emailElement) {
+        e.preventDefault();
+        try {
+          await navigator.clipboard.writeText("rachelc0715@gmail.com");
+          setIsEmailCopied(true);
+          setTimeout(() => setIsEmailCopied(false), 3000);
+        } catch (err) {
+          console.error("Failed to copy email:", err);
+        }
+      }
+    };
+
     document.addEventListener("mousemove", updatePosition);
     document.addEventListener("mouseover", updatePointer);
     document.addEventListener("mouseout", updatePointer);
@@ -75,6 +105,7 @@ const CustomCursor = () => {
     document.addEventListener("mouseup", handleMouseUp);
     document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("mouseenter", handleMouseEnter);
+    document.addEventListener("click", handleClick);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
@@ -85,6 +116,7 @@ const CustomCursor = () => {
       document.removeEventListener("mouseup", handleMouseUp);
       document.removeEventListener("mouseleave", handleMouseLeave);
       document.removeEventListener("mouseenter", handleMouseEnter);
+      document.removeEventListener("click", handleClick);
     };
   }, []);
 
@@ -103,8 +135,9 @@ const CustomCursor = () => {
         transform: isPill
           ? `translate(-${pillOffset}px, -50%)`
           : "translateY(-50%)",
-        opacity: isVisible ? 1 : 0,
-        transition: "opacity 0.2s ease-out, transform 0.1s ease-out",
+        opacity: isVisible && isInitialized ? 1 : 0,
+        transition: "opacity 0.3s ease-out, transform 0.1s ease-out",
+        visibility: isInitialized ? "visible" : "hidden",
       }}
     >
       <div
@@ -123,6 +156,10 @@ const CustomCursor = () => {
               ? 122
               : isGithub
               ? 164
+              : isEmailCopied
+              ? 154
+              : isEmail
+              ? 130
               : 16,
           height: isPill ? 30 : 16,
           fontWeight: 500,
@@ -158,6 +195,8 @@ const CustomCursor = () => {
             <Eye style={{ width: 16, height: 16 }} />
           ) : isVideo || isDevpost || isBlog || isGithub ? (
             <ArrowUpRight style={{ width: 16, height: 16 }} />
+          ) : isEmail ? (
+            <Mail style={{ width: 16, height: 16 }} />
           ) : (
             <></>
           )}
@@ -182,6 +221,10 @@ const CustomCursor = () => {
             ? "VIEW BLOG"
             : isGithub
             ? "VIEW ON GITHUB"
+            : isEmail
+            ? isEmailCopied
+              ? "EMAIL COPIED!"
+              : "COPY EMAIL"
             : ""}
         </span>
       </div>
