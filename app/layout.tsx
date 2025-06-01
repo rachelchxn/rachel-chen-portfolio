@@ -48,8 +48,9 @@ const tiemposText = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Rachel Chen",
-  description: "0→1 Design Engineer",
+  title: "Rachel Chen | 0→1 Product Designer & Engineer",
+  description:
+    "I'm Rachel, a product builder who loves bringing ideas to life with design + code.",
 };
 
 export default function RootLayout({
