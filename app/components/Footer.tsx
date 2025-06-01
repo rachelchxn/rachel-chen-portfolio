@@ -29,7 +29,7 @@ export default function Footer() {
               navigator.clipboard.writeText("rachelc0715@gmail.com");
             }}
             data-cursor="email"
-            className="hover:!opacity-100 opacity-60 text-foreground font-mono font-medium"
+            className="hover:!opacity-100 opacity-60 text-foreground font-mono font-medium text-start"
           >
             EMAIL
           </button>
