@@ -13,7 +13,7 @@ export default function AnimatedProjectContent({
   project,
 }: AnimatedProjectContentProps) {
   return (
-    <div className="w-fill md:w-4xl py-12 flex flex-col gap-12 md:gap-24">
+    <div className="w-fill md:max-w-3xl lg:max-w-4xl py-12 flex flex-col gap-12 md:gap-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

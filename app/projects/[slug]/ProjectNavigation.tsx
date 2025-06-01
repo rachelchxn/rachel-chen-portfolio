@@ -37,7 +37,7 @@ export default function ProjectNavigation({
   }, [sections]);
 
   return (
-    <aside className="md:sticky md:top-0 md:h-fit px-0 pt-12 pb-0 md:py-12">
+    <aside className="md:sticky md:top-0 md:h-fit px-0 pt-12 pb-0 md:py-12 min-w-40">
       <Tab href={"/"}>
         <div className="flex items-center gap-2 hover:!opacity-100 group">
           <Image
