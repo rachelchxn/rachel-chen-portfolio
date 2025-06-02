@@ -195,4 +195,23 @@ export const linkedin: Section[] = [
       },
     ],
   },
+  {
+    id: "reflection",
+    title: "Reflection",
+    content: [
+      {
+        type: "h2",
+        content: "What I learned",
+      },
+      {
+        type: "bullet-list",
+        content: [
+          "Don't reinvent the wheel.",
+          "Innovation is important, but so is familiarity. I found that the best approach was to bring a familiar experience to a place where it was needed.",
+          "Design meets business goals.",
+          "As a designer, we speak for the user, but work for the business. In this project, meeting the user's needs was the best way to keep users on the platform and increase engagement.",
+        ],
+      },
+    ],
+  },
 ];

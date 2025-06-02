@@ -239,4 +239,25 @@ export const earth: Section[] = [
       },
     ],
   },
+  {
+    id: "reflection",
+    title: "Reflection",
+    content: [
+      {
+        type: "h2",
+        content: "What I learned",
+      },
+      {
+        type: "bullet-list",
+        content: [
+          "Build fast, iterate faster.",
+          "Startups don't wait for the perfect product. They build, test, and iterate. We needed to be able to build and test quickly to get feedback and improve the product.",
+          "Design systems are foundational.",
+          "Although we had to prioritize speed over perfection, I would have taken the time to build a more robust design system to support the product's growth. Design system shortcuts only end up producing technical debt long-term.",
+          "Design and development are not separate disciplines.",
+          "A lot of my time was spent developing the front-end of the product. By understanding how the product was built, I was able to make more informed design decisions and ship faster",
+        ],
+      },
+    ],
+  },
 ];

@@ -253,4 +253,23 @@ export const pokergpt: Section[] = [
       },
     ],
   },
+  {
+    id: "reflection",
+    title: "Reflection",
+    content: [
+      {
+        type: "h2",
+        content: "What I learned",
+      },
+      {
+        type: "bullet-list",
+        content: [
+          "Keep cutting it down the to MLP.",
+          "We were laser-focused on shipping a Minimum Lovable Product, and that's what allowed us to shi[] fast and quickly gather feedback.",
+          "User research is not enough.",
+          "Observing user stories and conducting interviews is not enough. Espcecially for a niche market, you need to become your users to truly empathize with their needs.",
+        ],
+      },
+    ],
+  },
 ];

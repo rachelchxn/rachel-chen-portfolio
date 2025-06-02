@@ -229,4 +229,23 @@ export const onePassword: Section[] = [
       },
     ],
   },
+  {
+    id: "reflection",
+    title: "Reflection",
+    content: [
+      {
+        type: "h2",
+        content: "What I learned",
+      },
+      {
+        type: "bullet-list",
+        content: [
+          "Flows aren't always perfect because the tech isn't always perfect.",
+          "Technical constraints with API availability and conflicting applications were inevitable. The user flow couldn't be perfect, but we had to work with it.",
+          "Features don't stand alone. We need to consider their dependencies, where they live, and how they're discovered.",
+          "Although we knew that this feature was something power users would adopt, we needed to consider how we would introduce it to new and existing users, as well as how other parts of the product would be affected.",
+        ],
+      },
+    ],
+  },
 ];
