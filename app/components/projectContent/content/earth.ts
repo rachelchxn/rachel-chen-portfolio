@@ -205,6 +205,7 @@ export const earth: Section[] = [
       },
     ],
   },
+
   {
     id: "big-launch",
     title: "The Big Launch!",
@@ -239,6 +240,32 @@ export const earth: Section[] = [
       },
     ],
   },
+  {
+    id: "final-designs",
+    title: "Final Designs",
+    content: [
+      {
+        type: "h2",
+        content: "Here are some of the key flows on Earth...",
+      },
+      {
+        type: "demo",
+        content: "/projects/earth/home-page.mp4",
+        caption: "Customizable event home page with CMS",
+      },
+      {
+        type: "demo",
+        content: "/projects/earth/create-team.mp4",
+        caption: "Create teams and invite members",
+      },
+      {
+        type: "demo",
+        content: "/projects/earth/admin-dashboard.mp4",
+        caption: "Admin dashboard for event organizers",
+      },
+    ],
+  },
+
   {
     id: "reflection",
     title: "Reflection",
