@@ -18,9 +18,18 @@ const CustomCursor = () => {
   const [isGithub, setIsGithub] = useState(false);
   const [isEmail, setIsEmail] = useState(false);
   const [isEmailCopied, setIsEmailCopied] = useState(false);
+  const [isSite, setIsSite] = useState(false);
+  const [isOverview, setIsOverview] = useState(false);
 
   const isPill =
-    isCaseStudy || isVideo || isDevpost || isBlog || isGithub || isEmail;
+    isCaseStudy ||
+    isVideo ||
+    isDevpost ||
+    isBlog ||
+    isGithub ||
+    isEmail ||
+    isSite ||
+    isOverview;
   const pillOffset = isPill ? 12 : 8;
 
   useEffect(() => {
@@ -55,6 +64,8 @@ const CustomCursor = () => {
       const isBlog = target.closest('[data-cursor="blog"]') !== null;
       const isGithub = target.closest('[data-cursor="github"]') !== null;
       const isEmail = target.closest('[data-cursor="email"]') !== null;
+      const isSite = target.closest('[data-cursor="site"]') !== null;
+      const isOverview = target.closest('[data-cursor="overview"]') !== null;
 
       setIsPointer(isClickable);
       setIsCaseStudy(isCase);
@@ -63,6 +74,8 @@ const CustomCursor = () => {
       setIsBlog(isBlog);
       setIsGithub(isGithub);
       setIsEmail(isEmail);
+      setIsSite(isSite);
+      setIsOverview(isOverview);
 
       // Reset email copied state when hovering over a new element
       if (!isEmail) {
@@ -160,6 +173,10 @@ const CustomCursor = () => {
               ? 154
               : isEmail
               ? 130
+              : isSite
+              ? 148
+              : isOverview
+              ? 156
               : 16,
           height: isPill ? 30 : 16,
           fontWeight: 500,
@@ -191,9 +208,9 @@ const CustomCursor = () => {
             overflow: "hidden",
           }}
         >
-          {isCaseStudy ? (
+          {isCaseStudy || isOverview ? (
             <Eye style={{ width: 16, height: 16 }} />
-          ) : isVideo || isDevpost || isBlog || isGithub ? (
+          ) : isVideo || isDevpost || isBlog || isGithub || isSite ? (
             <ArrowUpRight style={{ width: 16, height: 16 }} />
           ) : isEmail ? (
             <Mail style={{ width: 16, height: 16 }} />
@@ -221,6 +238,10 @@ const CustomCursor = () => {
             ? "VIEW BLOG"
             : isGithub
             ? "VIEW ON GITHUB"
+            : isSite
+            ? "VIEW WEBSITE"
+            : isOverview
+            ? "VIEW OVERVIEW"
             : isEmail
             ? isEmailCopied
               ? "EMAIL COPIED!"

@@ -9,6 +9,8 @@ export type Project = {
   timeline: string;
   team: string[];
   skills: string[];
+  data?: string;
+  url?: string;
 };
 
 export type ProjectsData = {

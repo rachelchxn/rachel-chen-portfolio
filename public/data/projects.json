@@ -49,32 +49,50 @@
       "skills": ["Product Strategy", "User Research", "Prototyping"]
     },
     {
-      "heading": "Generative AI for RBC's Global HR Center",
-      "title": "RBC-heyHR",
+      "heading": "Patent-pending generative AI for RBC's Global HR Center",
+      "title": "RBC - heyHR",
       "tag": "Handed off 2024",
-      "image": "/projects/heyhr.svg",
-      "gif": "/projects/heyhr.gif",
-      "slug": "RBC",
+      "image": "/projects/rbc/rbc.svg",
+      "gif": "/projects/rbc/rbc.gif",
+      "slug": "rbc",
+      "url": "/projects/rbc",
       "role": "Developer, unofficial product designer",
-      "timeline": "Jan - Dec 2024",
-      "team": ["1 PM", "2 Engineers", "1 Designer (me!)"],
+      "timeline": "May - August 2024",
+      "team": ["1 Business Analyst", "1 Data Engineer", "2 Engineers"],
       "skills": [
         "Product Strategy",
         "Full Stack Engineering",
         "Pitching & Storytelling"
-      ]
+      ],
+      "data": "overview"
     },
     {
       "heading": "A dating app, but for professional connections",
       "title": "Chattin",
       "tag": "Shipped 2024",
-      "image": "/projects/chattin.svg",
-      "gif": "/projects/chattin.gif",
+      "image": "/projects/chattin/chattin.svg",
+      "gif": "/projects/chattin/chattin.gif",
       "slug": "chattin",
+      "url": "https://startchattin.vercel.app",
       "role": "Founder & Product Designer",
       "timeline": "May - July 2024",
       "team": ["Only me!"],
-      "skills": ["Product Design", "Marketing", "Full Stack Engineering"]
+      "skills": ["Product Design", "Marketing", "Full Stack Engineering"],
+      "data": "site"
+    },
+    {
+      "heading": "The home page of an emerging biotech startup",
+      "title": "Biogenesis",
+      "tag": "Shipped 2024",
+      "image": "/projects/biogenesis/biogenesis.svg",
+      "gif": "/projects/biogenesis/biogenesis.gif",
+      "slug": "biogenesis",
+      "url": "https://mybiogenesis.com",
+      "role": "Founder & Product Designer",
+      "timeline": "May - July 2024",
+      "team": ["Only me!"],
+      "skills": ["Product Design", "Marketing", "Full Stack Engineering"],
+      "data": "site"
     }
   ]
 }

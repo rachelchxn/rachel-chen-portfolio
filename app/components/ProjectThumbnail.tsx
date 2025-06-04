@@ -13,7 +13,7 @@ const projectColors: Record<string, string> = {
   earth: "#1351C9",
   pokergpt: "#7952E9",
   "1password": "#D9EAD5",
-  RBC: "#0C72D9",
+  rbc: "#0C72D9",
   linkedin: "#7FB9F5",
   chattin: "#D97555",
 };
@@ -22,6 +22,9 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
   const [hasVideo, setHasVideo] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [hasImage, setHasImage] = useState(false);
+  const [isImageReady, setIsImageReady] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     // Check if video exists
@@ -33,6 +36,19 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
       })
       .catch(() => {
         setHasVideo(false);
+      });
+  }, [project.slug]);
+
+  useEffect(() => {
+    // Check if image exists
+    fetch(`/projects/${project.slug}/${project.slug}.svg`)
+      .then((response) => {
+        if (response.ok) {
+          setHasImage(true);
+        }
+      })
+      .catch(() => {
+        setHasImage(false);
       });
   }, [project.slug]);
 
@@ -70,6 +86,15 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
             onLoadedData={handleVideoLoad}
           />
         </>
+      ) : hasImage ? (
+        <img
+          ref={imageRef}
+          src={`/projects/${project.slug}/${project.slug}.svg`}
+          className={`w-full h-full object-cover scale-110 transition-opacity duration-500 ${
+            isImageReady ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setIsImageReady(true)}
+        />
       ) : (
         <div
           className="absolute inset-0"

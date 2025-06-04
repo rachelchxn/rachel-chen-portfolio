@@ -112,7 +112,11 @@ export default function Home() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           {projects.projects.map((project) => {
-            if (project.slug !== "RBC" && project.slug !== "chattin") {
+            if (
+              project.slug !== "rbc" &&
+              project.slug !== "chattin" &&
+              project.slug !== "biogenesis"
+            ) {
               return (
                 <Link
                   key={project.slug}
@@ -138,6 +142,50 @@ export default function Home() {
               );
             }
           })}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+          className="flex flex-col gap-6 py-12"
+        >
+          <div className="flex items-center gap-6">
+            <h3 className="whitespace-nowrap">More Work</h3>
+            <div className="flex w-full h-[1px] bg-foreground/10" />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {projects.projects.map((project) => {
+              if (
+                project.slug == "rbc" ||
+                project.slug == "chattin" ||
+                project.slug == "biogenesis"
+              ) {
+                return (
+                  <Link
+                    key={project.slug}
+                    href={project.url ? project.url : "/work"}
+                    className="group block transition-all duration-300 ease-in-out !opacity-100"
+                    data-cursor={project.data ? project.data : "case-study"}
+                  >
+                    <div className="flex flex-col gap-2">
+                      <div className="relative w-full aspect-[16/9] border-1 border-foreground/10 overflow-hidden box-border transition-all duration-300 ease-in-out group-hover:border-primary">
+                        <ProjectThumbnail project={project} />
+                        <div className="absolute inset-0 bg-background/0 transition-colors duration-300 ease-in-out group-hover:bg-background/20" />
+                      </div>
+                      <div className="flex flex-col gap-0.5 mt-1 transition-colors duration-300 ease-in-out">
+                        <h3 className="transition-colors duration-300 ease-in-out group-hover:text-primary">
+                          {project.heading}
+                        </h3>
+                        <h4 className="transition-colors duration-300 ease-in-out group-hover:!text-primary/70">
+                          {project.title} • {project.tag}
+                        </h4>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              }
+            })}
+          </div>
         </motion.div>
       </main>
     </div>
