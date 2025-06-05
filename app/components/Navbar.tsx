@@ -63,13 +63,13 @@ export default function Navbar() {
               <Tab href="/" active={pathname === "/"}>
                 Work
               </Tab>
-              <Tab href="/projects" active={pathname === "/projects"}>
+              <Tab href="/fun" active={pathname === "/fun"}>
                 Fun
               </Tab>
               <Tab href="/about" active={pathname === "/about"}>
                 About
               </Tab>
-              <Tab href="/resume">Resume</Tab>
+              <Tab href="/Rachel_Chen_Resume.pdf">Resume</Tab>
             </div>
           </div>
         </div>
