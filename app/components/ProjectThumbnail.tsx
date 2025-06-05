@@ -87,14 +87,22 @@ export default function ProjectThumbnail({ project }: ProjectThumbnailProps) {
           />
         </>
       ) : hasImage ? (
-        <img
-          ref={imageRef}
-          src={`/projects/${project.slug}/${project.slug}.svg`}
-          className={`w-full h-full object-cover scale-110 transition-opacity duration-500 ${
-            isImageReady ? "opacity-100" : "opacity-0"
-          }`}
-          onLoad={() => setIsImageReady(true)}
-        />
+        <div
+          className="absolute inset-0 transition-opacity duration-500"
+          style={{
+            backgroundColor: projectColors[project.slug] || "#1A1A1A",
+            opacity: isImageReady ? 1 : 0.25,
+          }}
+        >
+          <img
+            ref={imageRef}
+            src={`/projects/${project.slug}/${project.slug}.svg`}
+            className={`w-full h-full object-cover scale-110 transition-opacity duration-500 ${
+              isImageReady ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setIsImageReady(true)}
+          />
+        </div>
       ) : (
         <div
           className="absolute inset-0"

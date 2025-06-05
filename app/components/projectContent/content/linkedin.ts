@@ -193,6 +193,25 @@ export const linkedin: Section[] = [
         content:
           "The current user journey involves going back in forth between job boards like LinkedIn and external tracking tools like Excel, Google Sheets, and Notion. With a new streamlined, centralized journey of job tracking, we can solve user pain points while keeping them on LinkedIn, reducing the time spent away from the platform while job-searching.",
       },
+      {
+        type: "h4",
+        content: "Demo of the features",
+      },
+      {
+        type: "demo",
+        content: "/projects/linkedin/tags.mp4",
+        caption: "More tags to organize job listings and applications",
+      },
+      {
+        type: "demo",
+        content: "/projects/linkedin/list-view.mp4",
+        caption: "Spreadsheet-like list view for better organization",
+      },
+      {
+        type: "demo",
+        content: "/projects/linkedin/search-export.mp4",
+        caption: "Search your jobs and export for easy transfer to other tools",
+      },
     ],
   },
   {

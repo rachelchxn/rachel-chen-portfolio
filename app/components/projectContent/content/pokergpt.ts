@@ -251,6 +251,21 @@ export const pokergpt: Section[] = [
         type: "image",
         content: "/projects/pokergpt/10-mockups.svg",
       },
+      {
+        type: "demo",
+        content: "/projects/pokergpt/formation.mp4",
+        caption: "Set Game Formation with an intuitive modal",
+      },
+      {
+        type: "demo",
+        content: "/projects/pokergpt/chat.mp4",
+        caption: "Ask poker questions and get structured responses",
+      },
+      {
+        type: "demo",
+        content: "/projects/pokergpt/handhistory.mp4",
+        caption: "Easily input hand history with a template",
+      },
     ],
   },
   {
